@@ -1,0 +1,11 @@
+uuid: cb057a2b-7ef9-410a-b094-faf4152a7fae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.test_view_mode
+label: 'test view mode'
+description: ''
+targetEntityType: node
+cache: true

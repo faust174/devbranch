@@ -16,9 +16,16 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
-        "drupal/core-recommended": "^10.2"
+        "drupal/core-recommended": "^10.2",
+        "drupal/fontawesome": "^2.26",
+        "drupal/menu_block": "^1.10",
+        "drupal/paragraphs": "^1.17",
+        "drupal/pathauto": "^1.12",
+        "drupal/redirect": "^1.9",
+        "drupal/webform": "^6.2"
     },
     "conflict": {
         "drupal/drupal": "*"
