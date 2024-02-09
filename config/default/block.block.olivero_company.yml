@@ -1,0 +1,31 @@
+uuid: f89f84d6-6fd8-4b94-af40-9ec7d1706b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.company-menu
+  module:
+    - menu_block
+  theme:
+    - olivero
+id: olivero_company
+theme: olivero
+region: footer_top
+weight: -10
+provider: null
+plugin: 'menu_block:company-menu'
+settings:
+  id: 'menu_block:company-menu'
+  label: Company
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'company-menu:'
+  suggestion: company_menu
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 23e6505e-6e25-4c5d-8607-224471c5c8ed
+langcode: en
+status: true
+dependencies: {  }
+id: company-menu
+label: Company
+description: ''
+locked: false

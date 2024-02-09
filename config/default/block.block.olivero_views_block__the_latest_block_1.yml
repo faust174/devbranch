@@ -1,0 +1,24 @@
+uuid: 0612ad5f-06a2-442f-b013-628902a1d2f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.the_latest
+  module:
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__the_latest_block_1
+theme: olivero
+region: footer_top
+weight: -9
+provider: null
+plugin: 'views_block:the_latest-block_1'
+settings:
+  id: 'views_block:the_latest-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

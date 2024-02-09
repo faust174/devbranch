@@ -1,0 +1,8 @@
+uuid: c7ecb457-ce9b-4e2d-b942-8dce9f50d300
+langcode: en
+status: true
+dependencies: {  }
+id: social-media
+label: 'Social media'
+description: ''
+locked: false

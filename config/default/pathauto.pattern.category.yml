@@ -1,0 +1,22 @@
+uuid: 869d8640-118f-4d4c-9c9c-1290f0f8fe7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: category
+label: category
+type: 'canonical_entities:taxonomy_term'
+pattern: 'news/[term:name]'
+selection_criteria:
+  98d2866f-4cc0-429e-8056-7abf89221920:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 98d2866f-4cc0-429e-8056-7abf89221920
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      category: category
+selection_logic: and
+weight: -5
+relationships: {  }
