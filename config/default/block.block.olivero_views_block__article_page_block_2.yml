@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__article_page_block_2
 theme: olivero
 region: content
-weight: -22
+weight: -23
 provider: null
 plugin: 'views_block:article_page-block_2'
 settings:
