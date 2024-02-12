@@ -1,24 +1,24 @@
-uuid: ad3ec6cd-b3a7-43a0-9ea1-52c39d8375f8
+uuid: 49c1af2d-67d3-4f0a-8709-049d6c716564
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:test2:3ea28505-e091-440f-8195-c32b758e9f7e'
+    - 'block_content:basic:07cff609-e47d-435d-8c05-b918faba4c24'
   module:
     - block_content
     - system
   theme:
     - olivero
-id: olivero_discovermore
+id: olivero_subscribe_3
 theme: olivero
 region: highlighted
-weight: -21
+weight: -23
 provider: null
-plugin: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
+plugin: 'block_content:07cff609-e47d-435d-8c05-b918faba4c24'
 settings:
-  id: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
-  label: 'Discover more '
-  label_display: '0'
+  id: 'block_content:07cff609-e47d-435d-8c05-b918faba4c24'
+  label: Subscribe
+  label_display: visible
   provider: block_content
   status: true
   info: ''

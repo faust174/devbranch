@@ -11,8 +11,8 @@ dependencies:
     - olivero
 id: olivero_advertisement
 theme: olivero
-region: highlighted
-weight: -17
+region: sidebar
+weight: -24
 provider: null
 plugin: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: olivero_views_block__celebrity_block_1
 theme: olivero
 region: highlighted
-weight: -9
+weight: -15
 provider: null
 plugin: 'views_block:celebrity-block_1'
 settings:

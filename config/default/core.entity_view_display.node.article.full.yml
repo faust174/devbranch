@@ -30,7 +30,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   comment:
     type: comment_default
@@ -39,15 +39,15 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
+    weight: 5
     region: content
   field_category:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 112
+    weight: 1
     region: content
   field_image:
     type: image
@@ -58,7 +58,7 @@ content:
       image_loading:
         attribute: eager
     third_party_settings: {  }
-    weight: -1
+    weight: 0
     region: content
   field_tags:
     type: entity_reference_label
@@ -66,12 +66,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden:
   field_checkbox: true

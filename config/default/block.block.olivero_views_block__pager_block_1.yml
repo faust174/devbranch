@@ -1,29 +1,30 @@
-uuid: 45c6859d-dd22-4ceb-91c0-54613e10db68
+uuid: dd15f26f-6f6b-4e3e-93d3-d55016dbae18
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.politics
+    - views.view.pager
   module:
     - system
     - views
   theme:
     - olivero
-id: olivero_views_block__politics_block_1
+id: olivero_views_block__pager_block_1
 theme: olivero
-region: highlighted
-weight: -16
+region: content_above
+weight: -21
 provider: null
-plugin: 'views_block:politics-block_1'
+plugin: 'views_block:pager-block_1'
 settings:
-  id: 'views_block:politics-block_1'
+  id: 'views_block:pager-block_1'
   label: ''
   label_display: '0'
   provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: '/node/*'

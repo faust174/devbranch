@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__test_block_2
 theme: olivero
 region: sidebar
-weight: -20
+weight: -25
 provider: null
 plugin: 'views_block:test-block_2'
 settings:

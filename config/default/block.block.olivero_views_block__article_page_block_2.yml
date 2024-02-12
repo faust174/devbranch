@@ -1,22 +1,22 @@
-uuid: d5d24ce0-8511-4d1b-85ea-d2c591dc9316
+uuid: 30dd49f4-2946-40b0-8665-f34041a97340
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - views.view.breaking
+    - views.view.article_page
   module:
     - system
     - views
   theme:
     - olivero
-id: olivero_views_block__breaking_block_1
+id: olivero_views_block__article_page_block_2
 theme: olivero
-region: highlighted
-weight: -17
+region: content
+weight: -22
 provider: null
-plugin: 'views_block:breaking-block_1'
+plugin: 'views_block:article_page-block_2'
 settings:
-  id: 'views_block:breaking-block_1'
+  id: 'views_block:article_page-block_2'
   label: ''
   label_display: visible
   provider: views
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: '/node/*'

@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__categories_test_block_5
 theme: olivero
 region: highlighted
-weight: -19
+weight: -25
 provider: null
 plugin: 'views_block:categories_test-block_5'
 settings:

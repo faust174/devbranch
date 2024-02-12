@@ -1,6 +1,6 @@
-uuid: d5d24ce0-8511-4d1b-85ea-d2c591dc9316
+uuid: b4f2771c-0761-43c0-b502-5d8275f67e4e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.breaking
@@ -9,10 +9,10 @@ dependencies:
     - views
   theme:
     - olivero
-id: olivero_views_block__breaking_block_1
+id: olivero_views_block__breaking_block_1_2
 theme: olivero
-region: highlighted
-weight: -17
+region: sidebar
+weight: -21
 provider: null
 plugin: 'views_block:breaking-block_1'
 settings:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: '/user/*'
