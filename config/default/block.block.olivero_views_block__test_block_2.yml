@@ -1,0 +1,29 @@
+uuid: fa7a8034-c66a-4dc0-958f-29fad302204c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.test
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__test_block_2
+theme: olivero
+region: sidebar
+weight: -20
+provider: null
+plugin: 'views_block:test-block_2'
+settings:
+  id: 'views_block:test-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

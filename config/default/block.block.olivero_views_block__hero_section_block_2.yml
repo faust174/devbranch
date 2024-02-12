@@ -1,0 +1,29 @@
+uuid: cf15cb20-402f-4471-bf99-036100364e24
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_section
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__hero_section_block_2
+theme: olivero
+region: hero
+weight: -17
+provider: null
+plugin: 'views_block:hero_section-block_2'
+settings:
+  id: 'views_block:hero_section-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n"

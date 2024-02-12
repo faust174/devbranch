@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c172ca8525fad942cd1a477b4eb732a9",
+    "content-hash": "97b9ddfcfd071c73b5f51a229f33f937",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -365,6 +365,97 @@
             "time": "2023-02-01T09:20:38+00:00"
         },
         {
+            "name": "doctrine/common",
+            "version": "3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common.git",
+                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/8b5e5650391f851ed58910b3e3d48a71062eeced",
+                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/persistence": "^2.0 || ^3.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0 || ^10.0",
+                "doctrine/collections": "^1",
+                "phpstan/phpstan": "^1.4.1",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpunit/phpunit": "^7.5.20 || ^8.5 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symfony/phpunit-bridge": "^6.1",
+                "vimeo/psalm": "^4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, proxies and much more.",
+            "homepage": "https://www.doctrine-project.org/projects/common.html",
+            "keywords": [
+                "common",
+                "doctrine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/common/issues",
+                "source": "https://github.com/doctrine/common/tree/3.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-09T11:47:59+00:00"
+        },
+        {
             "name": "doctrine/deprecations",
             "version": "1.1.2",
             "source": {
@@ -410,6 +501,97 @@
                 "source": "https://github.com/doctrine/deprecations/tree/1.1.2"
             },
             "time": "2023-09-27T20:04:15+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "reference": "750671534e0241a7c50ea5b43f67e23eb5c96f32",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^10",
+                "phpstan/phpstan": "^1.8.8",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "event dispatcher",
+                "event manager",
+                "event system",
+                "events"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/event-manager/issues",
+                "source": "https://github.com/doctrine/event-manager/tree/2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-12T20:59:15+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -490,6 +672,104 @@
             "time": "2022-12-14T08:49:07+00:00"
         },
         {
+            "name": "doctrine/persistence",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/persistence.git",
+                "reference": "63fee8c33bef740db6730eb2a750cd3da6495603"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/63fee8c33bef740db6730eb2a750cd3da6495603",
+                "reference": "63fee8c33bef740db6730eb2a750cd3da6495603",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/event-manager": "^1 || ^2",
+                "php": "^7.2 || ^8.0",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0"
+            },
+            "conflict": {
+                "doctrine/common": "<2.10"
+            },
+            "require-dev": {
+                "composer/package-versions-deprecated": "^1.11",
+                "doctrine/coding-standard": "^11",
+                "doctrine/common": "^3.0",
+                "phpstan/phpstan": "1.9.4",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpunit/phpunit": "^8.5 || ^9.5",
+                "symfony/cache": "^4.4 || ^5.4 || ^6.0",
+                "vimeo/psalm": "4.30.0 || 5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Persistence\\": "src/Persistence"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
+            "homepage": "https://www.doctrine-project.org/projects/persistence.html",
+            "keywords": [
+                "mapper",
+                "object",
+                "odm",
+                "orm",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/persistence/issues",
+                "source": "https://github.com/doctrine/persistence/tree/3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-05-17T18:32:04+00:00"
+        },
+        {
             "name": "drupal/admin_toolbar",
             "version": "3.4.2",
             "source": {
@@ -568,6 +848,60 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_barrio",
+            "version": "5.5.16",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
+                "reference": "5.5.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.16.zip",
+                "reference": "5.5.16",
+                "shasum": "c69cae4d197e7ae0c11acc276c9bd8a1ce1d31b7"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "twbs/bootstrap": "^5.0.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "5.5.16",
+                    "datestamp": "1701646126",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alberto Siles",
+                    "homepage": "https://www.drupal.org/user/827704",
+                    "email": "alberto@siles.pe"
+                },
+                {
+                    "name": "Ricardo.Castaneda",
+                    "homepage": "https://www.drupal.org/user/3520894"
+                },
+                {
+                    "name": "WillAcon",
+                    "homepage": "https://www.drupal.org/user/2824325"
+                }
+            ],
+            "description": "Bootstrap 5 base theme.",
+            "homepage": "https://www.drupal.org/project/bootstrap_barrio",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_barrio"
             }
         },
         {
@@ -988,6 +1322,73 @@
             }
         },
         {
+            "name": "drupal/devel",
+            "version": "5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/devel.git",
+                "reference": "5.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-5.1.2.zip",
+                "reference": "5.1.2",
+                "shasum": "9b35e38bf2043bf87f88585b3d9100f38da8f07f"
+            },
+            "require": {
+                "doctrine/common": "^2.7 || ^3.4",
+                "drupal/core": "^9 || ^10",
+                "php": ">=7.4",
+                "symfony/var-dumper": "^4 || ^5 || ^6"
+            },
+            "conflict": {
+                "kint-php/kint": "<3"
+            },
+            "require-dev": {
+                "drush/drush": "^11"
+            },
+            "suggest": {
+                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.1.2",
+                    "datestamp": "1686161028",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drupalspoons",
+                    "homepage": "https://www.drupal.org/user/3647684"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "https://www.drupal.org/project/devel",
+            "support": {
+                "source": "https://gitlab.com/drupalspoons/devel",
+                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
+                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            }
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.11.0",
             "source": {
@@ -1167,6 +1568,157 @@
             "homepage": "https://www.drupal.org/project/menu_block",
             "support": {
                 "source": "https://git.drupalcode.org/project/menu_block"
+            }
+        },
+        {
+            "name": "drupal/menu_item_extras",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
+                "reference": "3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "e9a86d3e703f480f93992237c5cc6e5a88671106"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.2",
+                    "datestamp": "1685006505",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
+            }
+        },
+        {
+            "name": "drupal/owlcarousel",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/owl-carousel.git",
+                "reference": "3.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/owlcarousel-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "923aca93c60796daea3e0e541cbbb6b08c60e0e2"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "suggest": {
+                "owlcarousel2/owlcarousel2": "The owlcarousel2 library is required to use the drupal/owlcarousel module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.1",
+                    "datestamp": "1693160156",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "aburrows",
+                    "homepage": "https://www.drupal.org/user/577844"
+                },
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "danielzigo",
+                    "homepage": "https://www.drupal.org/user/3569258"
+                },
+                {
+                    "name": "Hebl",
+                    "homepage": "https://www.drupal.org/user/3688118"
+                },
+                {
+                    "name": "ipwa",
+                    "homepage": "https://www.drupal.org/user/130909"
+                },
+                {
+                    "name": "Sebastien M.",
+                    "homepage": "https://www.drupal.org/user/380104"
+                },
+                {
+                    "name": "swim",
+                    "homepage": "https://www.drupal.org/user/1968266"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Drupal integration for Owl Carousel",
+            "homepage": "https://www.drupal.org/project/owlcarousel",
+            "support": {
+                "source": "https://git.drupalcode.org/project/owl-carousel",
+                "issues": "https://www.drupal.org/project/owlcarousel"
             }
         },
         {
@@ -1374,6 +1926,54 @@
             }
         },
         {
+            "name": "drupal/statistics_counter",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/statistics_counter.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/statistics_counter-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "15814d8b109295d5e476e164fd67d5e32b4560c6"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1682957091",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gisle",
+                    "homepage": "https://www.drupal.org/user/409554"
+                },
+                {
+                    "name": "thmnhat",
+                    "homepage": "https://www.drupal.org/user/998946"
+                }
+            ],
+            "description": "Logs access statistics in week, month and year for your site.",
+            "homepage": "https://www.drupal.org/project/statistics_counter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/statistics_counter"
+            }
+        },
+        {
             "name": "drupal/token",
             "version": "1.13.0",
             "source": {
@@ -1440,6 +2040,123 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/views_field_view",
+            "version": "1.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_field_view.git",
+                "reference": "8.x-1.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_field_view-8.x-1.0-beta5.zip",
+                "reference": "8.x-1.0-beta5",
+                "shasum": "fe6f0d62661cc764229c01ab01916a13ba3e8c22"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta5",
+                    "datestamp": "1675318984",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "tizzo",
+                    "homepage": "https://www.drupal.org/user/168251"
+                },
+                {
+                    "name": "voxpelli",
+                    "homepage": "https://www.drupal.org/user/341713"
+                }
+            ],
+            "description": "Adds a view field handler to embed views inside views.",
+            "homepage": "https://www.drupal.org/project/views_field_view",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_field_view"
+            }
+        },
+        {
+            "name": "drupal/views_taxonomy_term_name_depth",
+            "version": "7.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_taxonomy_term_name_depth.git",
+                "reference": "7.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_taxonomy_term_name_depth-7.2.0.zip",
+                "reference": "7.2.0",
+                "shasum": "1d189877b96b3bfc76396a34b13f05f269f4277f"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/pathauto": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "7.2.0",
+                    "datestamp": "1673521148",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                },
+                {
+                    "name": "JayKandari",
+                    "homepage": "https://www.drupal.org/user/2876519"
+                },
+                {
+                    "name": "manojapare",
+                    "homepage": "https://www.drupal.org/user/2825053"
+                },
+                {
+                    "name": "rakesh.gectcr",
+                    "homepage": "https://www.drupal.org/user/1177822"
+                }
+            ],
+            "description": "The module provides the Views plugin for Contextual filter with Taxonomy Term Name Depth.",
+            "homepage": "https://www.drupal.org/project/views_taxonomy_term_name_depth",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_taxonomy_term_name_depth"
             }
         },
         {
@@ -5363,6 +6080,56 @@
                 }
             ],
             "time": "2023-11-06T11:00:25+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v5.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "344e912d04b5b6a04482113eff20ab416ff01048"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/344e912d04b5b6a04482113eff20ab416ff01048",
+                "reference": "344e912d04b5b6a04482113eff20ab416ff01048",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v5.3.2"
+            },
+            "time": "2023-09-14T14:19:27+00:00"
         },
         {
             "name": "twig/twig",
@@ -12064,7 +12831,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/views_field_view": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

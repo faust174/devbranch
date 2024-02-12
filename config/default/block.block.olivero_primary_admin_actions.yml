@@ -1,6 +1,6 @@
 uuid: 59991610-ec95-4320-8b08-4783d54aecf2
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - olivero
@@ -9,7 +9,7 @@ _core:
 id: olivero_primary_admin_actions
 theme: olivero
 region: highlighted
-weight: -5
+weight: -8
 provider: null
 plugin: local_actions_block
 settings:

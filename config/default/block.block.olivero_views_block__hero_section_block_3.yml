@@ -1,0 +1,29 @@
+uuid: e358ac48-4c60-4612-a1bd-82ca38c193f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_section
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__hero_section_block_3
+theme: olivero
+region: hero
+weight: -18
+provider: null
+plugin: 'views_block:hero_section-block_3'
+settings:
+  id: 'views_block:hero_section-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
