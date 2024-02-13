@@ -1,30 +1,29 @@
-uuid: e5ba1f09-ca09-498c-85b4-3090ea4f6a0e
+uuid: f9c649b6-c5da-4bea-83e6-129d077e0b40
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.categories_test
+    - views.view.pager_for_article
   module:
     - system
     - views
   theme:
     - olivero
-id: olivero_views_block__categories_test_block_9
+id: olivero_views_block__pager_for_article_block_1
 theme: olivero
 region: content
-weight: -21
+weight: -25
 provider: null
-plugin: 'views_block:categories_test-block_9'
+plugin: 'views_block:pager_for_article-block_1'
 settings:
-  id: 'views_block:categories_test-block_9'
+  id: 'views_block:pager_for_article-block_1'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
-  context_mapping: {  }
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '/user/*'
+    pages: '/node/*'

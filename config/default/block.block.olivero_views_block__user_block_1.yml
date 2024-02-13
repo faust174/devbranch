@@ -11,7 +11,7 @@ dependencies:
 id: olivero_views_block__user_block_1
 theme: olivero
 region: content
-weight: -23
+weight: -24
 provider: null
 plugin: 'views_block:user-block_1'
 settings:
