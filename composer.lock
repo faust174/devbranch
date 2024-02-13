@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b6840920c4c3365ad004e99c08c56be",
+    "content-hash": "75d6da9caa4cdc3dbaf48af90c748209",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1389,55 +1389,6 @@
             }
         },
         {
-            "name": "drupal/entity_pager",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/entity_pager.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_pager-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "1f055d29fa7b1d2f27b5f2adf993a1e434eeb347"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/token": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1670761637",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bmcclure",
-                    "homepage": "https://www.drupal.org/user/278485"
-                },
-                {
-                    "name": "Wongjn",
-                    "homepage": "https://www.drupal.org/user/3055747"
-                }
-            ],
-            "description": "Provides Next and Previous navigation on entities.",
-            "homepage": "https://www.drupal.org/project/entity_pager",
-            "support": {
-                "source": "https://git.drupalcode.org/project/entity_pager"
-            }
-        },
-        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.11.0",
             "source": {
@@ -1768,54 +1719,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/owl-carousel",
                 "issues": "https://www.drupal.org/project/owlcarousel"
-            }
-        },
-        {
-            "name": "drupal/pager_for_content_type",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/pager_for_content_type.git",
-                "reference": "8.x-1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pager_for_content_type-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "10fef276746cf100333c0d7c024da1638de37574"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1682453955",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "schiavone",
-                    "homepage": "https://www.drupal.org/user/708140"
-                },
-                {
-                    "name": "svipsa",
-                    "homepage": "https://www.drupal.org/user/1421594"
-                }
-            ],
-            "description": "Provides pager for node",
-            "homepage": "https://www.drupal.org/project/pager_for_content_type",
-            "support": {
-                "source": "https://git.drupalcode.org/project/pager_for_content_type"
             }
         },
         {

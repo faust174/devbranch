@@ -1,0 +1,26 @@
+uuid: 6b232f3f-9f6a-4c33-a8c9-af14d8505bcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.category-menu.field_title
+    - system.menu.category-menu
+id: menu_link_content.category-menu.default
+targetEntityType: menu_link_content
+bundle: category-menu
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__categories_test_block_6_2
 theme: olivero
 region: hero
-weight: -24
+weight: -21
 provider: null
 plugin: 'views_block:categories_test-block_6'
 settings:
