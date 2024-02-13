@@ -1,22 +1,20 @@
-uuid: 5f61416f-6e2a-45cd-976e-3d809addc872
+uuid: 0c92e16e-9f0d-4fbd-b5ea-afd1d6cc9ab0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.article
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.image
   module:
     - image
-_core:
-  default_config_hash: j0riO_-77ZFWNLtj0iJ31HnohiNjdn8HUL86RueCF-M
-id: node.article.field_image
+id: paragraph.image.field_image
 field_name: field_image
-entity_type: node
-bundle: article
-label: Image
+entity_type: paragraph
+bundle: image
+label: image
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: olivero_views_block__hero_section_block_2
 theme: olivero
 region: hero
-weight: -17
+weight: -22
 provider: null
 plugin: 'views_block:hero_section-block_2'
 settings:

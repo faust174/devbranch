@@ -28,6 +28,7 @@
         "drupal/owlcarousel": "^3.0",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",
+        "drupal/quick_node_clone": "^1.17",
         "drupal/redirect": "^1.9",
         "drupal/statistics_counter": "^1.0",
         "drupal/views_field_view": "^1.0@beta",
