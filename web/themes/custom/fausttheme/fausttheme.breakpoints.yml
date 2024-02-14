@@ -1,0 +1,15 @@
+fausttheme.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+fausttheme.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 26em)'
+fausttheme.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 41em)'
+fausttheme.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+fausttheme.large:
+  label: large
+  mediaQuery: 'all and (min-width: 61.25em)'
