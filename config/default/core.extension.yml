@@ -10,6 +10,7 @@ module:
   breakpoint: 0
   ckeditor5: 0
   comment: 0
+  components: 0
   config: 0
   contact: 0
   contextual: 0
@@ -17,6 +18,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  emulsify_twig: 0
   entity_pager: 0
   entity_reference_revisions: 0
   field: 0
@@ -61,4 +63,6 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  fausttheme: 0
 profile: standard

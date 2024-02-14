@@ -44,4 +44,8 @@ web/modules/contrib
 web/themes/contrib
 web/core
 .idea
+.cache
+
+
+
 
