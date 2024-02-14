@@ -1,0 +1,29 @@
+uuid: b3ba7970-837b-408b-8456-d404a46af9bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_page
+  module:
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__article_page_block_1
+theme: fausttheme
+region: sidebar
+weight: -11
+provider: null
+plugin: 'views_block:article_page-block_1'
+settings:
+  id: 'views_block:article_page-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'

@@ -1,0 +1,30 @@
+uuid: 846b5c4f-5ac4-4bf0-b834-9ce231054345
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  module:
+    - block_content
+    - system
+  theme:
+    - fausttheme
+id: fausttheme_more
+theme: fausttheme
+region: sidebar
+weight: -12
+provider: null
+plugin: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+settings:
+  id: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  label: More
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/*\r\n/node/*\r\n/user/*"

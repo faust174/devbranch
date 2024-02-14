@@ -1,0 +1,25 @@
+uuid: 17b67bff-0488-4205-9466-34763f9a8461
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fausttheme
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: fausttheme_site_branding
+theme: fausttheme
+region: footer
+weight: -14
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

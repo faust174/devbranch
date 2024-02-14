@@ -1,0 +1,29 @@
+uuid: cfa95acc-0d80-44e5-b17e-56a3303d7b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_section
+  module:
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__hero_section_block_2
+theme: fausttheme
+region: hero_section
+weight: -15
+provider: null
+plugin: 'views_block:hero_section-block_2'
+settings:
+  id: 'views_block:hero_section-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n"
