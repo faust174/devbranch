@@ -2,11 +2,12 @@
 .main-menu__link {
   display: block;
   padding: $space $space-triple $space $space-double;
-  color: clr(accent);
-  font-size: 1.2rem;
+  color: clr(text);
+  font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
   text-decoration: none;
+
 
   &--with-sub {
     width: 80%;
@@ -17,8 +18,8 @@
     color: clr(text);
 
     @include medium {
-      background-color: clr(accent-high);
-      color: clr(highlight-high);
+      //background-color: clr(accent-high);
+      //color: clr(highlight-high);
     }
   }
 
@@ -28,14 +29,14 @@
     padding: $space;
     width: auto;
     border-bottom: none;
-    font-size: 1.1rem;
+    font-size: 14px;
     text-transform: none;
 
-    &::after {
-      display: inline-block;
-      content: '>';
-      margin-left: 0.5rem;
-    }
+    //&::after {
+    //  display: inline-block;
+    //  content: '>';
+    //  margin-left: 0.5rem;
+    //}
 
     &--sub::after {
       display: none;

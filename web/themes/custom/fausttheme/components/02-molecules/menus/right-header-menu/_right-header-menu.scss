@@ -1,0 +1,35 @@
+.right-header-menu li {
+  @include menu;
+}
+.right-header-menu a {
+  @include menu;
+}
+.right-header-menu div {
+  @include menu;
+}
+.right-header-menu {
+  display: none;
+  @include medium {
+    display: flex;
+  }
+}
+
+
+.button-primary-no-hover  {
+  @include primary-no-hover;
+}
+.button-secondary-red {
+  @include secondary-red;
+}
+.menu-icon {
+  @include menu-icon;
+}
+
+.search_button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  @include medium {
+    display: none;
+  }
+}

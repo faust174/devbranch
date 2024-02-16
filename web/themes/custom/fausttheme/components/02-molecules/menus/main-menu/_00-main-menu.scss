@@ -5,11 +5,15 @@ $main-menu-medium: $medium;
 .main-nav {
   display: none;
 
+
   @include medium {
     display: block;
+    text-align: center;
+    border: 0;
   }
 
   &--open {
+
     position: absolute;
     left: 0;
     right: 0;
@@ -36,7 +40,7 @@ $main-menu-medium: $medium;
 
   position: relative;
   z-index: 10;
-  border-bottom: 1px solid;
+  //border-bottom: 1px solid;
 
   @include medium {
     border-bottom: none;
@@ -54,6 +58,7 @@ $main-menu-medium: $medium;
   width: 100%;
   border-bottom: none;
   background-color: clr(muted);
+
 
   @include medium {
     position: absolute;
@@ -95,3 +100,7 @@ $main-menu-medium: $medium;
     display: none; /* Never shown on large screens */
   }
 }
+
+
+
+

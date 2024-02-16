@@ -1,0 +1,16 @@
+<div class="right-header-menu">
+  {% for item in right_header_menu_items %}
+    <div class="button-{{ item.style }}">{{ item.title }}
+      {% if item.show_icon %}
+        <img class="menu-icon" src="{{ item.icon }}" alt="&nbsp;">
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="search_button">
+  <img src="https://www.svgrepo.com/show/7109/search.svg" alt="search">
+</div>
+
+
+

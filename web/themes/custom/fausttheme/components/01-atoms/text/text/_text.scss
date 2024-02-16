@@ -42,3 +42,29 @@ pre {
   margin: 0;
   background-color: var(--c-background-section);
 }
+
+.site_logo {
+  display: flex;
+  align-items: flex-start;
+}
+.word_one {
+  color: #ec3535;
+  //font-family: PT Serif !important;
+  font-size: 100px !important;
+  line-height: 1.2 !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  letter-spacing: -5px !important;
+}
+.word_two {
+  margin-top: 0;
+  margin-left: 0;
+  color: #000000;
+  font-size: 16px !important;
+  line-height: 4.6 !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+.site_logo_link {
+  text-decoration: none;
+}

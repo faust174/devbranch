@@ -1,5 +1,7 @@
 .header {
   margin-bottom: 4em;
+  display: flex;
+  justify-content: space-around;
 
   &__inner {
     @include wrapper;

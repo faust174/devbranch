@@ -1,0 +1,10 @@
+.nav-menu {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+}
+.nav-menu li {
+  margin-right: 10px;
+}
+
+
