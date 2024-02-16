@@ -9,7 +9,7 @@ dependencies:
 id: fausttheme_sitebranding
 theme: fausttheme
 region: header
-weight: -3
+weight: -17
 provider: null
 plugin: system_branding_block
 settings:
