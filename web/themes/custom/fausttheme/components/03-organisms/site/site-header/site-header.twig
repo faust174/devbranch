@@ -1,26 +1,98 @@
+
 {% set header__base_class = 'header' %}
-{# If `directory` is defined, set the path relative for Drupal.
- # Otherwise, set the path relative to the Component Library. #}
-{% set header__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : 'logo.png' %}
 
 <header {{ bem(header__base_class) }}>
-  <div {{ bem('inner', [], header__base_class) }}>
-    <div {{ bem('primary', [], header__base_class) }}>
-{#      <div {{ bem('branding', [], header__base_class) }}>#}
-{#        {% block header__branding %}#}
-{#          {% include "@organisms/site/site-header/_site-header-branding.twig" %}#}
-{#        {% endblock %}#}
-{#      </div>#}
-      <div {{ bem('menu', [], header__base_class) }}>
+  {% block header__region %}
         {% block header__menu %}
           {% include "@molecules/menus/main-menu/main-menu.twig" %}
         {% endblock %}
+
+      <div class="right-header-menu">
+        {% block right__menu %}
+          {% for item in right__menu %}
+          {% include "@molecules/menus/right-header-menu/menu--right-header-menu.html.twig" with {
+            title: 'Test'
+          }%}
+          {% endfor %}
+        {% endblock %}
       </div>
-    </div>
-    <div {{ bem('secondary', [], header__base_class) }}>
-      {% block header__breadcrumbs %}
-        {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
-      {% endblock %}
-    </div>
-  </div>
+
+    {% endblock %}
 </header>
+
+
+
+{#{% set header__base_class = 'header' %}#}
+
+{#<header {{ bem(header__base_class) }}>#}
+
+{#  {% block header__menu %}#}
+{#              {% include "@molecules/menus/main-menu/main-menu.twig" %}#}
+{#  {% endblock %}#}
+
+{#</header>#}
+
+
+
+
+
+
+
+
+{#<header {{ bem(header__base_class) }}>#}
+
+
+{#    <div class="right-header-menu">#}
+{#      {% block right__menu %}#}
+{#        {% include "@molecules/menus/right-header-menu/menu--right-header-menu.twig" %}#}
+{#      {% endblock %}#}
+{#    </div>#}
+
+{#    <div class="left-header-menu">#}
+{#      {% block left__menu %}#}
+{#        {% include "@molecules/menus/left-header-menu/left-header-menu.twig" %}#}
+{#      {% endblock %}#}
+{#    </div>#}
+
+{#    <div {{ bem('primary', [], header__base_class) }}>#}
+{#      <div class="site_logo">#}
+{#        {% include "@atoms/text/text/logo.twig" %}#}
+{#      </div>#}
+
+{#      <div {{ bem('menu', [], header__base_class) }}>#}
+{#        {% block header__menu %}#}
+{#          {% include "@molecules/menus/main-menu/main-menu.twig" %}#}
+{#        {% endblock %}#}
+{#      </div>#}
+{#    </div>#}
+
+{#</header>#}
+
+
+
+
+
+
+
+
+{#<header {{ bem(header__base_class) }}>#}
+{#  <div {{ bem('inner', [], header__base_class) }}>#}
+{#    <div {{ bem('primary', [], header__base_class) }}>#}
+{#      #}{##}{#      <div {{ bem('branding', [], header__base_class) }}>#}
+{#      #}{##}{#        {% block header__branding %}#}
+{#      #}{##}{#          {% include "@organisms/site/site-header/_site-header-branding.twig" %}#}
+{#      #}{##}{#        {% endblock %}#}
+{#      #}{##}{#      </div>#}
+{#      <div {{ bem('menu', [], header__base_class) }}>#}
+{#        {% block header__menu %}#}
+{#          {% include "@molecules/menus/main-menu/main-menu.twig" %}#}
+{#        {% endblock %}#}
+{#      </div>#}
+{#    </div>#}
+{#    <div {{ bem('secondary', [], header__base_class) }}>#}
+{#      {% block header__breadcrumbs %}#}
+{#        {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}#}
+{#      {% endblock %}#}
+{#    </div>#}
+{#  </div>#}
+{#</header>#}

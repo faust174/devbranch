@@ -1,0 +1,26 @@
+.left-header-menu li {
+  @include menu;
+}
+.left-header-menu a {
+  @include menu;
+}
+.left-header-menu div {
+  @include menu;
+}
+.left-header-menu {
+  display: flex;
+}
+
+
+.button-primary  {
+  @include primary;
+}
+.button-secondary {
+  @include secondary;
+}
+
+.menu-icon {
+  @include menu-icon;
+  fill: red;
+}
+

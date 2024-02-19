@@ -3,24 +3,25 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid;
+  //border-top: 1px solid;
 
   @include medium {
     display: inline-block;
-    border-top: none;
+    border: none;
 
     /* Only top level */
     &:not(.main-menu__item--sub):focus-within,
-    &:not(.main-menu__item--sub):hover {
-      background-color: clr(accent-high);
-      color: clr(highlight-high);
+    &:not(.main-menu__item--sub):hover
+    {
+      //background-color: clr(accent-high);
+      color: clr(text);
 
       > .main-menu__link {
-        color: clr(highlight);
+        color: clr(text-inverse);
 
         &:hover,
         &:focus {
-          color: clr(highlight-high);
+          color: clr(text-inverse);
         }
       }
 
@@ -36,7 +37,6 @@
   position: relative;
   display: block;
   width: 20%;
-  background-color: clr(accent-high);
   color: clr(text-inverse);
   cursor: pointer;
 
@@ -45,24 +45,24 @@
   }
 
   /* Down triangle */
-  &::after {
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    content: '';
-    display: block;
-    margin-right: -12px;
-    margin-top: -6px;
-    width: 0;
-    border: 15px solid;
-    border-bottom-color: transparent;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-  }
+  //&::after {
+  //  position: absolute;
+  //  right: 50%;
+  //  top: 50%;
+  //  content: '';
+  //  display: block;
+  //  margin-right: -12px;
+  //  margin-top: -6px;
+  //  width: 0;
+  //  border: 15px solid;
+  //  border-bottom-color: transparent;
+  //  border-left: 12px solid transparent;
+  //  border-right: 12px solid transparent;
+  //}
 
   /* See main-menu.js */
   &--open {
-    background-color: clr(accent-high);
+    //background-color: clr(accent-high);
     color: clr(muted);
 
     &::after {
@@ -83,7 +83,9 @@
     display: block;
 
     &:not(:first-child) {
-      border-top: 1px solid clr(highlight);
+      //border-top: 1px solid clr(highlight);
     }
   }
 }
+
+

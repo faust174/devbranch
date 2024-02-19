@@ -3,10 +3,16 @@ import inlineMenu from './inline/inline-menu.twig';
 import mainMenu from './main-menu/main-menu.twig';
 import socialMenu from './social-menu/social-menu.twig';
 
+import leftHeaderMenu from './left-header-menu/left-header-menu.twig';
+import rightHeaderMenu from './right-header-menu/right-header-menu.twig';
+
 import breadcrumbsData from './breadcrumbs/breadcrumbs.yml';
 import inlineMenuData from './inline/inline-menu.yml';
 import mainMenuData from './main-menu/main-menu.yml';
 import socialMenuData from './social-menu/social-menu.yml';
+
+import leftHeaderMenuData from './left-header-menu/left-header-menu.yml';
+import rightHeaderMenuData from './right-header-menu/right-header-menu.yml';
 
 import './main-menu/main-menu';
 
@@ -22,3 +28,6 @@ export const inline = () => inlineMenu(inlineMenuData);
 export const main = () => mainMenu(mainMenuData);
 
 export const social = () => socialMenu(socialMenuData);
+
+export const left = () => leftHeaderMenu(leftHeaderMenuData);
+export const right = () => rightHeaderMenu(rightHeaderMenuData);

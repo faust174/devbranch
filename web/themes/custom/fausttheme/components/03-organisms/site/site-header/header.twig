@@ -1,0 +1,45 @@
+{% set header__base_class = 'header' %}
+
+{#<header {{ bem(header__base_class) }}>#}
+
+{#  {% block header__menu %}#}
+{#              {% include "@molecules/menus/main-menu/main-menu.twig" %}#}
+{#  {% endblock %}#}
+
+{#</header>#}
+
+
+
+
+
+
+
+
+<header {{ bem(header__base_class) }}>
+  <div {{ bem('inner', [], header__base_class) }}>
+
+    <div class="right-header-menu">
+      {% block right__menu %}
+        {% include "@molecules/menus/right-header-menu/right-header-menu.twig" %}
+      {% endblock %}
+    </div>
+
+    <div class="left-header-menu">
+      {% block left__menu %}
+        {% include "@molecules/menus/left-header-menu/left-header-menu.twig" %}
+      {% endblock %}
+    </div>
+
+    <div {{ bem('primary', [], header__base_class) }}>
+      <div class="site_logo">
+        {% include "@atoms/text/text/logo.twig" %}
+      </div>
+
+      <div {{ bem('menu', [], header__base_class) }}>
+        {% block header__menu %}
+          {% include "@molecules/menus/main-menu/main-menu.twig" %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</header>

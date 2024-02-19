@@ -1,0 +1,68 @@
+// Sass map to define colors. Each set should have a "Dark" variation when required.
+// e.g. `default` and `default-dark`. Or `purple` and `purple-dark`.
+$button-colors: (
+  primary: (
+    text: clr(background),
+    bg: clr(text-inverse),
+    text-hover: clr(background),
+    bg-hover: clr(text),
+  ),
+  primary-no-hover: (
+    text: clr(background),
+    bg: clr(text-inverse)
+  ),
+  secondary: (
+    text: clr(text-inverse),
+    bg: clr(background),
+    text-hover: clr(text-hover),
+    bg-hover: clr(background),
+  ),
+  secondary-black: (
+    text: clr(text),
+    bg: clr(background),
+    text-hover: clr(text-inverse),
+    bg-hover: clr(background),
+  ),
+);
+
+@mixin button {
+  display: flex;
+  align-items: center;
+}
+
+@mixin primary {
+  @include button;
+  color: red;
+  &:hover {
+    color: darkred;
+  }
+  font-weight: 600;
+  font-size: 14px;
+}
+@mixin secondary {
+  color: black;
+  &:hover {
+    color: red;
+  }
+  font-weight: 600;
+  font-size: 14px;
+}
+@mixin primary-no-hover {
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+}
+@mixin secondary-red {
+  color: white;
+  background-color: red;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+

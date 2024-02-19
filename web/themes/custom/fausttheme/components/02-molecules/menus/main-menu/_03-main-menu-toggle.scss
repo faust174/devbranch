@@ -8,7 +8,7 @@
   margin-left: -1rem;
   margin-top: -1rem;
   padding: $space;
-  width: 100vw;
+  //width: 100vw;
   text-decoration: none;
 
   /* See main-menu.js */
@@ -36,6 +36,7 @@
   height: 3rem;
   width: 3rem;
   margin: 0 auto;
+
 }
 
 .toggle-expand__open {
@@ -46,7 +47,6 @@
   .toggle-expand--open & {
     display: none;
   }
-
   svg {
     fill: clr(text);
   }
@@ -64,4 +64,20 @@
   svg {
     fill: clr(text-inverse);
   }
+}
+
+.sign_in_button {
+  all: initial;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  @include medium {
+    display: none;
+  }
+}
+.sign_in_button span:hover {
+  color:red;
 }

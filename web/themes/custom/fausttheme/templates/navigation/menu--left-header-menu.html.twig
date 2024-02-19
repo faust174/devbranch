@@ -20,15 +20,19 @@
 #}
 
 {#
-  We call a macro which calls itself to render the full tree.
-  @see http://twig.sensiolabs.org/doc/tags/macro.html
+We call a macro which calls itself to render the full tree.
+@see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
+
+
+
+
 {% macro menu_links(items, attributes, menu_level, menu_class, menu_modifiers, menu_blockname, item_base_class, item_modifiers, item_blockname, directory) %}
   {% import _self as menus %}
   {% if items %}
 
-    {# Set classes #}
-    {% set menu_class = menu_class|default('menu') %}
+{#     Set classes#}
+    {% set menu_class = 'left-header-menu' %}
     {% if not menu_modifiers %}
       {% set menu_modifiers = [] %}
     {% endif %}
@@ -40,9 +44,42 @@
   {% endif %}
 {% endmacro %}
 
-
-
-
 {% import _self as menus %}
 
 {{ menus.menu_links(items, attributes, 0, menu_class, menu_modifiers, menu_blockname, item_base_class, item_modifiers, item_blockname, directory) }}
+
+
+
+
+
+
+
+{# {% include "@molecules/menus/_menu.twig" with {#}
+{#{  menu_class: 'left-header-menu'}#}
+{#} %}#}
+{#{% for item in left_header_menu_items %}#}
+{#  <div class="left-header-menu">#}
+{#    <div class="button-{{ item.style }}">{{ item.title }}#}
+{#      <img class="menu-icon" src="{{ item.icon }}" alt="&nbsp;">#}
+{#    </div>#}
+{#  </div>#}
+
+{#  {% include "@atoms/header-buttons/header-button.twig" with }#}
+
+{#  } %}#}
+{#{% endfor %}#}
+
+
+{#<div class="left-header-menu">#}
+{#    {% for item in left_header_menu_items %}#}
+{#      <div class="button-{{ item.style }}">{{ item.title }}#}
+{#        <img class="menu-icon" src="{{ item.icon }}" alt="&nbsp;">#}
+{#      </div>#}
+{#  {% endfor %}#}
+{#</div>#}
+
+
+
+
+
+
