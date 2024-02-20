@@ -8,6 +8,7 @@
   @include menu;
 }
 .right-header-menu {
+  font-family: Work Sans;
   display: none;
   @include medium {
     display: flex;
@@ -32,4 +33,11 @@
   @include medium {
     display: none;
   }
+}
+
+.right-header-menu .button:nth-child(1) {
+  @include primary-no-hover
+}
+.right-header-menu .button:nth-child(2) {
+  @include secondary-red
 }

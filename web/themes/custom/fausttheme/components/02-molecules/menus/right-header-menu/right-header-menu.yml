@@ -3,10 +3,7 @@ right_header_menu_items:
     url: '#'
     icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSpAnV7Eqy1ajdV__BGRrAU9KkCa3aJGDly4funAkQzosa99R5KIOe4oFG4e_H3cNfgFw&usqp=CAU'
     style: 'primary-no-hover'
-    show_icon: true
   - title: 'Subscribe'
     url: '#'
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg'
     style: 'secondary-red'
-    show_icon: false
 

@@ -6,17 +6,6 @@
         {% block header__menu %}
           {% include "@molecules/menus/main-menu/main-menu.twig" %}
         {% endblock %}
-
-      <div class="right-header-menu">
-        {% block right__menu %}
-          {% for item in right__menu %}
-          {% include "@molecules/menus/right-header-menu/menu--right-header-menu.html.twig" with {
-            title: 'Test'
-          }%}
-          {% endfor %}
-        {% endblock %}
-      </div>
-
     {% endblock %}
 </header>
 

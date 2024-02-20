@@ -11,7 +11,7 @@ dependencies:
 id: fausttheme_leftheadermenu
 theme: fausttheme
 region: header
-weight: -18
+weight: -19
 provider: null
 plugin: 'system_menu_block:left-header-menu'
 settings:

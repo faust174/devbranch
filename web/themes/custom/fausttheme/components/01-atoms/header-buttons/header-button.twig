@@ -1,13 +1,4 @@
-{#
-/**
- * Available variables:
- * - button__content - the content of the button (typically text)
- *
- * Available blocks:
- * - button__content - used to replace the content of the button with something other than text
- *   for example: to insert an icon
- */
-#}
+
 
 {% set button__base_class = button__base_class|default('button') %}
 {% set button__attributes = button__attributes|default([]) %}
@@ -18,11 +9,14 @@
 
 <button {{ add_attributes(button__attributes) }}>
   {% block button__content %}
-    <div class="button-{{ button__class }}"> {{ button__content }}
+    <div class="{{ button__class }}"> {{ button__content }}
+      {% if image %}
         <img class="menu-icon" src="{{ button__icon }}" alt="&nbsp;">
+      {% endif %}
     </div>
   {% endblock %}
 </button>
+
 
 
 
