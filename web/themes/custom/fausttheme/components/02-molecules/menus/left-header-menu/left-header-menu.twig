@@ -1,46 +1,12 @@
 
-
 <div class="left-header-menu">
   {% for item in left_header_menu_items %}
-  {% include "@atoms/header-buttons/header-button.twig" with {
-    button__content: item.title,
-    button__icon: item.icon,
-    button__class: item.style
-  } %}
+    {% set image = file_url(item.entity.fields.field_image.entity.fileuri) %}
+    {% include "@atoms/header-buttons/header-button.twig" with {
+      button__content: item.title,
+      button__class: item.style,
+      button__icon: image
+    } %}
   {% endfor %}
 </div>
-{#  {% for item in left_header_menu_items %}#}
-{#    <div class="button-{{ item.style }}">{{ item.title }}#}
-{#      {% if item.show_icon %}#}
-{#        <img class="menu-icon" src="{{ item.icon }}" alt="&nbsp;">#}
-{#      {% endif %}#}
-{#    </div>#}
-{#  {% endfor %}#}
-
-
-
-
-{#{% include "@molecules/menus/_menu.twig" with {#}
-{#  menu_class: 'left-header-menu',#}
-{#  items: left_header_menu_items,#}
-{#} %}#}
-
-
-
-
-
-{#<div class="menu">#}
-{#  <div class="menu-item">#}
-{#    {% include '@atoms/header-buttons/header-button.twig' with {'button__content':'Menu'} %}#}
-{#  </div>#}
-{#  <div class="menu-item">#}
-{#    {% include '@atoms/header-buttons/header-button.twig' with {'button__label': 'Button 2'} %}#}
-{#  </div>#}
-{#  <div class="menu">#}
-{#    <div class="menu-item {{ menu_item_class }}">#}
-{#      {% include '@atoms/header-buttons/header-button.twig' with {'button__label': 'Button 3', 'button__class': 'button-secondary-dark'} %}#}
-{#    </div>#}
-{#  </div>#}
-
-{#</div>#}
 

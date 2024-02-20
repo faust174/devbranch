@@ -1,5 +1,5 @@
 button__content: 'Menu'
 button__url: '#'
 button__icon: 'https://ainsleyagency.com/wp-content/uploads/2022/12/Hambburger.svg'
-button__class: 'primary'
+button__class: 'button-primary'
 

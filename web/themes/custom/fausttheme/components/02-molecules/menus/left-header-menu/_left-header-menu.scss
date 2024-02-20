@@ -8,9 +8,11 @@
   @include menu;
 }
 .left-header-menu {
-  display: flex;
+  display: none;
+  @include medium {
+    display: flex;
+  }
 }
-
 
 .button-primary  {
   @include primary;
@@ -21,6 +23,42 @@
 
 .menu-icon {
   @include menu-icon;
-  fill: red;
 }
+
+
+.button_with_icon {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.menu-icon-search {
+  stroke: black;
+}
+.menu-icon-burger {
+  stroke: red;
+}
+.button_with_icon:hover .menu-icon-search{
+  stroke: red;
+}
+.button_with_icon:hover .menu-icon-burger{
+  stroke: darkred;
+}
+
+
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.left-header-menu .button:nth-child(1) {
+  @include primary
+}
+.left-header-menu .button:nth-child(2) {
+  @include secondary
+}
+
+
 

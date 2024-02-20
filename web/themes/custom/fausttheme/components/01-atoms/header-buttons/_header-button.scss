@@ -34,7 +34,7 @@ $button-colors: (
   @include button;
   color: red;
   &:hover {
-    color: darkred;
+    color:darkred;
   }
   font-weight: 600;
   font-size: 14px;
@@ -55,9 +55,9 @@ $button-colors: (
 @mixin secondary-red {
   color: white;
   background-color: red;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px;
   border-radius: 5px;
   &:hover {
     color: white;
