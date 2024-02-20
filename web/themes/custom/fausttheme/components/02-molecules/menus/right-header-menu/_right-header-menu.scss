@@ -8,7 +8,7 @@
   @include menu;
 }
 .right-header-menu {
-  font-family: Work Sans;
+  //font-family: Work Sans;
   display: none;
   @include medium {
     display: flex;
@@ -40,4 +40,13 @@
 }
 .right-header-menu .button:nth-child(2) {
   @include secondary-red
+}
+
+
+.menu-icon-mobile {
+  width: 25px;
+  height: 25px;
+  @include medium {
+    display: none;
+  }
 }

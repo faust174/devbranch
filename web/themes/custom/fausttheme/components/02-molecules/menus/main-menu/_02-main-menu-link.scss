@@ -2,8 +2,8 @@
 .main-menu__link {
   display: block;
   padding: $space $space-triple $space $space-double;
-  color: clr(text);
-  font-size: 14px;
+  color: clr(background);
+  font-size: 13px;
   font-weight: bold;
   line-height: 1.5;
   text-decoration: none;
@@ -29,9 +29,11 @@
     padding: $space;
     width: auto;
     border-bottom: none;
-    font-size: 14px;
     text-transform: none;
-
+    color: clr(text);
+  @include large {
+    font-size: 14px;
+  }
     //&::after {
     //  display: inline-block;
     //  content: '>';

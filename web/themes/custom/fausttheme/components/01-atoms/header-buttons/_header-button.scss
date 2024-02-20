@@ -37,7 +37,10 @@ $button-colors: (
     color:darkred;
   }
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  @include large {
+    font-size: 14px;
+  }
 }
 @mixin secondary {
   color: black;
@@ -45,23 +48,33 @@ $button-colors: (
     color: red;
   }
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  @include large {
+    font-size: 14px;
+  }
 }
 @mixin primary-no-hover {
   color: black;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+  @include large {
+    font-size: 13px;
+  }
 }
 @mixin secondary-red {
   color: white;
   background-color: red;
   font-weight: 600;
-  font-size: 16px;
-  padding: 5px;
   border-radius: 5px;
+  font-size: 12px;
+  padding: 6px 8px;
   &:hover {
     color: white;
     background-color: black;
+  }
+  @include large {
+    font-size: 13px;
+    padding: 8px 10px;
   }
 }
 

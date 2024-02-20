@@ -12,6 +12,7 @@
 {% endif %}
 
 <div {{ bem('layout-container', layout_modifiers) }}>
+  <div class="header_container">
   {% block page_header %}
     {% include "@organisms/site/site-header/site-header.twig" %}
   {% endblock %}
@@ -19,7 +20,7 @@
   {% endblock %}
 
   {% block page_navigation %}{% endblock %}
-
+  </div>
   {% block page_hero_section %}{% endblock %}
 
   <div {{ bem(main_base_class, main_modifiers, main_blockname) }}>

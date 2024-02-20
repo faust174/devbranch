@@ -6,9 +6,19 @@
  * components/00-base/base/_breakpoints.css
 */
 
-// Fonts
-$font-body: 'Work Sans';
-$font-heading:'PT Serif' sans-serif;
+ //Fonts
+//@font-face {
+//  font-family: 'Work Sans';
+//  src: url('../04-fonts/work-sans/WorkSansRegular.woff') format('woff');
+//  src: url('../04-fonts/work-sans/WorkSansBold.woff') format('woff');
+//}
+//@font-face {
+//  font-family: 'PT Serif';
+//  src: url('../04-fonts/pt-serif') format('woff');
+//}
+
+$font-body: 'Work Sans', sans-serif;
+$font-heading:'PT Serif', serif;
 
 // Spacing
 $space: 1rem;

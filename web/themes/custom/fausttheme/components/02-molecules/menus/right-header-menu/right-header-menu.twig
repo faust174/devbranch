@@ -1,20 +1,14 @@
 
 <div class="right-header-menu">
   {% for item in right_header_menu_items %}
-    {% if item.entity.fields.field_menu_image.entity is not empty %}
       {% set image = file_url(item.entity.fields.field_menu_image.entity.fileuri) %}
-    {% endif %}
-    {% if image %}
       {% include "@atoms/header-buttons/header-button.twig" with {
         button__content: item.title,
         button__class: item.style,
         button__icon: image
       } %}
-    {% else %}
-      {% include "@atoms/header-buttons/header-button.twig" with {
-        button__content: item.title,
-        button__class: item.style,
-      } %}
-    {% endif %}
   {% endfor %}
+</div>
+<div>
+  <img class="menu-icon menu-icon-mobile" src="https://www.svgrepo.com/show/7109/search.svg" alt="">
 </div>
