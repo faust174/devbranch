@@ -5,7 +5,6 @@ $main-menu-medium: $medium;
 .main-nav {
   display: none;
 
-
   @include medium {
     display: block;
     text-align: center;
@@ -14,14 +13,12 @@ $main-menu-medium: $medium;
 
   &--open {
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 110px;
+    padding-top: 50px;
     display: block;
     overflow-y: scroll;
-    width: 100%;
-    background-color: clr(background);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
 
     @include medium {
       position: relative;
@@ -30,6 +27,7 @@ $main-menu-medium: $medium;
       top: auto;
       width: auto;
       overflow-y: visible;
+      background-color: clr(background);
     }
   }
 }
@@ -39,7 +37,6 @@ $main-menu-medium: $medium;
   @include list-reset;
 
   position: relative;
-  z-index: 10;
   //border-bottom: 1px solid;
 
   @include medium {
@@ -102,5 +99,11 @@ $main-menu-medium: $medium;
 }
 
 
-
+#block-fausttheme-mainnavigation-2 {
+  position: absolute;
+  top:0;
+  @include medium {
+    position: static;
+  }
+}
 

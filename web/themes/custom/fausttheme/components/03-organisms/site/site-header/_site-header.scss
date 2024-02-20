@@ -1,11 +1,14 @@
 .header {
-  margin-bottom: 4em;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  //justify-content: space-around;
-  //align-items: flex-start;
-  //flex-wrap: wrap;
+
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //justify-content: space-around;
+    //align-items: flex-start;
+    //flex-wrap: wrap;
+
+
 
   &__inner {
     @include wrapper;
@@ -35,28 +38,3 @@
   }
 }
 
-
-// погратись
-
-
-//.left-header-menu {
-//  width: calc(25% - 10px); /* Adjust width to fit 4 elements in one line */
-//  margin-bottom: 10px; /* Add margin between elements */
-//}
-//.site-logo {
-//  width: calc(25% - 10px); /* Adjust width to fit 4 elements in one line */
-//  margin-bottom: 10px; /* Add margin between elements */
-//}
-//.right-header-menu {
-//  width: calc(25% - 10px); /* Adjust width to fit 4 elements in one line */
-//  margin-bottom: 10px; /* Add margin between elements */
-//}
-//.main-menu {
-//  width: calc(25% - 10px); /* Adjust width to fit 4 elements in one line */
-//  margin-bottom: 10px; /* Add margin between elements */
-//  display: flex;
-//  //align-self: flex-end;
-//}
-//.main-nav {
-//  display: flex;
-//}

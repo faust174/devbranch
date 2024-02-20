@@ -1,14 +1,11 @@
 /* Toggle */
 .toggle-expand {
   @include link;
-
   position: absolute;
-  top: 1rem;
+  pointer-events: none;
   display: inline-block;
-  margin-left: -1rem;
-  margin-top: -1rem;
   padding: $space;
-  //width: 100vw;
+  width: 100vw;
   text-decoration: none;
 
   /* See main-menu.js */
@@ -33,8 +30,8 @@
 
 /* SVG icon */
 .toggle-expand__icon {
-  height: 3rem;
-  width: 3rem;
+  height: 25px;
+  width: 25px;
   margin: 0 auto;
 
 }
@@ -43,7 +40,9 @@
   display: inline-block;
   float: right;
   text-align: center;
-
+  position: absolute;
+  left: 10px;
+  pointer-events: initial;
   .toggle-expand--open & {
     display: none;
   }
@@ -56,8 +55,14 @@
   display: none;
   float: right;
   text-align: center;
+  position: absolute;
+  right: 10px;
+
+
+
 
   .toggle-expand--open & {
+    pointer-events: initial;
     display: inline-block;
   }
 
@@ -68,6 +73,7 @@
 
 .sign_in_button {
   all: initial;
+  color: clr(background);
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
@@ -80,4 +86,10 @@
 }
 .sign_in_button span:hover {
   color:red;
+}
+.header_container {
+  position: relative;
+}
+.header_navigation {
+  position: relative;
 }

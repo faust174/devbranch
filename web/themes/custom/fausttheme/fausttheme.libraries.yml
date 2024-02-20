@@ -3,17 +3,17 @@ global:
     theme:
       dist/css/style.css: {}
 
-google-fonts-work:
-  version: 1.x
-  css:
-    theme:
-      //fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap: { type: external }
-
-google-fonts-serif:
-  version: 1.x
-  css:
-    theme:
-      //fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap: { type: external }
+#google-fonts-work:
+#  version: 1.x
+#  css:
+#    theme:
+#      //fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap: { type: external }
+#
+#google-fonts-serif:
+#  version: 1.x
+#  css:
+#    theme:
+#      //fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap: { type: external }
 
 
 
