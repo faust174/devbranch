@@ -1,0 +1,31 @@
+uuid: 90997588-439c-431a-80c5-908bc937aeac
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.company-menu
+  module:
+    - menu_block
+  theme:
+    - fausttheme
+id: fausttheme_company
+theme: fausttheme
+region: footer
+weight: -15
+provider: null
+plugin: 'menu_block:company-menu'
+settings:
+  id: 'menu_block:company-menu'
+  label: Company
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'company-menu:'
+  suggestion: company_menu
+visibility: {  }

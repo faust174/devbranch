@@ -1,0 +1,31 @@
+uuid: df7132ad-deed-4f2a-ad0b-96747a0cf6ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.social-media.field_social_image
+    - system.menu.social-media
+  module:
+    - image
+id: menu_link_content.social-media.default
+targetEntityType: menu_link_content
+bundle: social-media
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

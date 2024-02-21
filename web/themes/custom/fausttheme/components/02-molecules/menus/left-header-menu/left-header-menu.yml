@@ -1,11 +1,11 @@
-left_header_menu_items:
-  - title: 'Menu'
-    url: '#'
-    icon: 'https://ainsleyagency.com/wp-content/uploads/2022/12/Hambburger.svg'
-    style: 'button-primary'
-  - title: 'Search'
-    url: '#'
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg'
-    style: 'button-secondary'
-
-
+#left_header_menu_items:
+#  - title: 'Menu'
+#    url: '#'
+#    icon: 'https://ainsleyagency.com/wp-content/uploads/2022/12/Hambburger.svg'
+#    style: 'button-primary'
+#  - title: 'Search'
+#    url: '#'
+#    icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg'
+#    style: 'button-secondary'
+#
+#
