@@ -1,6 +1,13 @@
 .footer {
   background-color: #ededed;
   padding: 0 20px;
+  @include large {
+    font-size: 13px;
+  }
+  @include xl {
+    font-size: 15px;
+  }
+
   &__inner {
     @include wrapper;
 
@@ -33,7 +40,14 @@
     text-align: right;
   }
 }
+.footer_blocks {
+  @include large {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
+}
 .footer__branding {
   max-width: 10rem;
 }
@@ -47,16 +61,6 @@
   text-align: center;
   border: 0;
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-    right: 5px;
-    height: 2px;
-    background-color: black;
-    transform: translateY(-50%);
-  }
 }
 
 .footer .main-menu__item {
@@ -65,6 +69,36 @@
   &:hover {
     color: clr(text-inverse);
   }
+}
+.footer .menu_footer {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: black;
+  }
+  @include large {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      height: 2px;
+      background-color: black;
+    }
+  }
+}
+.footer .footer_blocks * {
+  @include large {
+    max-width: 350px;
+  }
+
 }
 .footer .main-menu__link {
   position: relative;
@@ -104,6 +138,10 @@
 }
 .company_menu {
   line-height: 2.5;
+  margin-top: -22px;
+}
+#block-fausttheme-company {
+  margin-top: -27px;
 }
 
 .footer .views-field .field-content a {
@@ -129,7 +167,7 @@
     font-weight: 500;
 }
 .footer h2 {
-  margin-bottom: 5px;
+  font-size: 1.8rem;
 }
 .footer .views-row {
   margin-bottom: 5px;
@@ -154,6 +192,7 @@
   text-align: center;
   position: relative;
   padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 0;
   font-weight: 500;
   font-size: 14px;
@@ -166,4 +205,38 @@
     height: 1px;
     background-color: lightgray;
   }
+  @include large {
+    font-size: 11px;
+  }
+  @include xl {
+    font-size: 14px;
+  }
+}
+
+.footer .form-item {
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  .form-item__label a {
+    text-decoration: none;
+    color: red;
+  }
+}
+.footer .webform-button--submit {
+  pointer-events: none;
+  @include secondary-red;
+  background-color: black;
+  display: flex;
+  width: 415px;
+}
+.webform-submission-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-checkbox {
+  margin-right: 5px;
+}
+.footer .social-menu{
+  font-size: 15px;
+  padding-top: 10px;
 }

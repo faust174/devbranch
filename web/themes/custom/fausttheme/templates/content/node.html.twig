@@ -95,10 +95,22 @@
       </div>
     </footer>
   {% endif %}
-
   <div{{ content_attributes }}>
 
-    {{ content.field_image }}
+{#    {{ content.field_image }}#}
+    <div class="image-container">
+      <a href="#" class="category-link">
+        <div class="image">
+          {{ content.field_image }}
+        </div>
+
+        <div class="overlay">
+          <h2 class="category-title">{{ node.field_category.entity.name.value }}</h2>
+          <p class="post-title">{{ label }}</p>
+        </div>
+      </a>
+    </div>
+
     {{ content.field_image_paragraph }}
   </div>
 
