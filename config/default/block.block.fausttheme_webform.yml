@@ -1,0 +1,26 @@
+uuid: cdb3c153-9a6d-4828-99c3-0b00c83e7983
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.subscribe
+  module:
+    - webform
+  theme:
+    - fausttheme
+id: fausttheme_webform
+theme: fausttheme
+region: footer
+weight: -12
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Subscribe
+  label_display: visible
+  provider: webform
+  webform_id: subscribe
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

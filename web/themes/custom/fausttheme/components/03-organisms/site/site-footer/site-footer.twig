@@ -2,6 +2,7 @@
 <footer {{ bem(footer__base_class) }}>
       {% block footer__menu %}
 {#        {% include "@molecules/menus/inline/inline-menu.twig" %}#}
+        {{ content|without('fausttheme_aboutus') }}
       {% endblock %}
 </footer>
 

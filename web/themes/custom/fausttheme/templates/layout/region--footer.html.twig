@@ -15,34 +15,49 @@
 {% extends "@organisms/site/site-footer/site-footer.twig" %}
 
 {% block footer__menu %}
-  {{ content }}
+  <div class="menu_footer">
+    {% if elements['fausttheme_site_branding'] is defined %}
+      {{ elements['fausttheme_site_branding'] }}
+    {% endif %}
+    {% if elements['fausttheme_mainnavigation'] is defined %}
+      {{ elements['fausttheme_mainnavigation'] }}
+    {% endif %}
+  </div>
+
+  <div class="footer_blocks">
+    <div class="social_menu">
+      {% if elements['fausttheme_aboutus'] is defined %}
+        {{ elements['fausttheme_aboutus'] }}
+      {% endif %}
+      {% if elements['fausttheme_socialmedia_2'] is defined %}
+        {{ elements['fausttheme_socialmedia_2'] }}
+      {% endif %}
+    </div>
+
+
+    {% if elements['fausttheme_company'] is defined %}
+        {{ elements['fausttheme_company'] }}
+    {% endif %}
+
+
+    {% if elements['fausttheme_views_block__the_latest_block_1'] is defined %}
+        {{ elements['fausttheme_views_block__the_latest_block_1'] }}
+    {% endif %}
+
+
+    {% if elements['fausttheme_webform'] is defined %}
+        {{ elements['fausttheme_webform'] }}
+    {% endif %}
+
+
+    {% for key, element in elements %}
+      {% if key not in ['fausttheme_site_branding', 'fausttheme_mainnavigation', 'fausttheme_aboutus', 'fausttheme_socialmedia_2', 'fausttheme_company', 'fausttheme_views_block__the_latest_block_1', 'fausttheme_webform', 'fausttheme_copyright'] %}
+        {{ element['#markup']}}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if elements['fausttheme_copyright'] is defined %}
+      {{ elements['fausttheme_copyright'] }}
+  {% endif %}
 {% endblock %}
-
-
-
-
-
-
-{#<div class="footer-wrapper">#}
-{#  {% for item in elements %}#}
-{#    {% if item['#id'] == 'fausttheme_site_branding' %}#}
-{#      {{ item }}#}
-{#    {% elseif item['#id'] == 'fausttheme_mainnavigation'%}#}
-{#      {{ item }}#}
-{#    {% endif %}#}
-{#  {% endfor %}#}
-{#</div>#}
-{#<div class="social-wrapper">#}
-{#  {% for item in elements %}#}
-{#    {% if item['#id'] == 'fausttheme_aboutus' %}#}
-{#      {{ item }}#}
-{#    {% elseif item['#id'] == 'fausttheme_socialmedia_2'%}#}
-{#      {{ item }}#}
-{#    {% endif %}#}
-{#  {% endfor %}#}
-{#</div>#}
-{#{% for item in elements %}#}
-{#  {% if item['#id'] == 'fausttheme_company' or item['#id'] == 'fausttheme_views_block__the_latest_block_1' or item['#id'] == 'fausttheme_subscribe' or item['#id'] == 'fausttheme_copyright' %}#}
-{#    {{ item }}#}
-{#  {% endif %}#}
-{#{% endfor %}#}

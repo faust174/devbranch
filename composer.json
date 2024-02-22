@@ -34,6 +34,7 @@
         "drupal/quick_node_clone": "^1.17",
         "drupal/redirect": "^1.9",
         "drupal/statistics_counter": "^1.0",
+        "drupal/twig_tweak": "^3.2",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_taxonomy_term_name_depth": "^7.2",
         "drupal/webform": "^6.2"
