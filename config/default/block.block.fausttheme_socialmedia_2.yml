@@ -1,4 +1,4 @@
-uuid: ed826c78-1ecc-4110-ba23-12112b1c22af
+uuid: 32d69662-1958-4cae-87df-32fe1964d56b
 langcode: en
 status: true
 dependencies:
@@ -6,19 +6,18 @@ dependencies:
     - system.menu.social-media
   module:
     - menu_block
-    - system
   theme:
     - fausttheme
-id: fausttheme_socialmedia
+id: fausttheme_socialmedia_2
 theme: fausttheme
-region: sidebar
-weight: -18
+region: footer
+weight: -16
 provider: null
 plugin: 'menu_block:social-media'
 settings:
   id: 'menu_block:social-media'
-  label: 'Share post'
-  label_display: visible
+  label: 'Social media'
+  label_display: '0'
   provider: menu_block
   follow: false
   follow_parent: child
@@ -29,8 +28,4 @@ settings:
   expand_all_items: false
   parent: 'social-media:'
   suggestion: social_media
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '/node/*'
+visibility: {  }

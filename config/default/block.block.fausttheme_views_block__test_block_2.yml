@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__test_block_2
 theme: fausttheme
 region: sidebar
-weight: -18
+weight: -20
 provider: null
 plugin: 'views_block:test-block_2'
 settings:

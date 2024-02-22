@@ -22,9 +22,11 @@
   {% endfor %}
   href="{{ link_url }}"
 >
-  {% block link_content %}
-    {{ link_content }}
-  {% endblock %}
-
+{#  {% block link_content %}#}
+{#    {{ link_content }}#}
+{#  {% endblock %}#}
+   {% if image %}
+     <img class="social-icon" src="{{ link__icon }}" alt="&nbsp;">
+   {% endif %}
 </a>
 

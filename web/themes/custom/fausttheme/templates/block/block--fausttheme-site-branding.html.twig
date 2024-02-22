@@ -1,0 +1,10 @@
+{% block content %}
+  <a class="site_logo_link" href="/">
+    {% include "@atoms/text/text/logo.twig"  with {
+      site_name: {
+        word_one: 'NewsWeek',
+        word_two: 'Pro'
+      }
+    }%}
+  </a>
+{% endblock %}
