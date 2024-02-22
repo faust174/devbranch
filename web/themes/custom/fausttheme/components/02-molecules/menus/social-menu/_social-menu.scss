@@ -2,6 +2,7 @@ $social-icon-size: 16px;
 
 .social-menu {
   @include list-reset;
+  display: flex;
 }
 
 .social-menu__item {
@@ -30,4 +31,10 @@ $social-icon-size: 16px;
 
 .social-menu__text {
   font-weight: bold;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
 }

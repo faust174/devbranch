@@ -1,7 +1,6 @@
 .footer {
-  background-color: clr(highlight-high);
-  padding: $space 0;
-
+  background-color: #ededed;
+  padding: 0 20px;
   &__inner {
     @include wrapper;
 
@@ -14,7 +13,9 @@
     }
   }
 }
-
+.footer > * {
+  margin-bottom: 30px;
+}
 .footer__social {
   margin-bottom: $space;
 
@@ -35,4 +36,134 @@
 
 .footer__branding {
   max-width: 10rem;
+}
+
+.footer .toggle-expand {
+  display: none;
+}
+
+.footer .main-nav {
+  display: block;
+  text-align: center;
+  border: 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background-color: black;
+    transform: translateY(-50%);
+  }
+}
+
+.footer .main-menu__item {
+  display: inline-block;
+  border: none;
+  &:hover {
+    color: clr(text-inverse);
+  }
+}
+.footer .main-menu__link {
+  position: relative;
+  display: inline-block;
+  padding: $space;
+  width: auto;
+  border-bottom: none;
+  text-transform: none;
+  color: clr(text);
+  &:hover {
+    color: clr(text-inverse);
+  }
+}
+.footer .sign_in_button {
+  display: none;
+}
+
+.footer .word_one {
+  font-size: 42px !important;
+  letter-spacing: -2px !important;
+  color: black;
+}
+.footer .site_logo {
+  justify-content: center;
+}
+
+
+.company_menu a{
+ @include menu;
+  display: block;
+  color: clr(text);
+  font-size: 15px;
+  font-weight: 600;
+  &:hover {
+    color: clr(text-inverse);
+  }
+}
+.company_menu {
+  line-height: 2.5;
+}
+
+.footer .views-field .field-content a {
+  text-decoration: none;
+  color: clr(text);
+  &:hover {
+    color: clr(text-inverse);
+  }
+}
+.footer .views-field-title {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer .views-field-field-category {
+    color: clr(text);
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer .views-field-created {
+    font-size: 12px;
+    font-weight: 500;
+}
+.footer h2 {
+  margin-bottom: 5px;
+}
+.footer .views-row {
+  margin-bottom: 5px;
+  line-height: 2.5;
+  display: flex;
+  flex-wrap: wrap;
+
+  .views-field {
+    display: inline-block;
+  }
+
+ .views-field-title {
+  width: 100%;
+}
+ .views-field-field-category,
+  .views-field-created {
+   margin-right: 10px;
+}
+
+}
+.copyright {
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background-color: lightgray;
+  }
 }
