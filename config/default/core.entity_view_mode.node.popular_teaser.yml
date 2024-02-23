@@ -1,11 +1,11 @@
-uuid: cb057a2b-7ef9-410a-b094-faf4152a7fae
+uuid: 90ed259f-ea0c-41f2-8ea1-3017927c212a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.test_view_mode
-label: 'test view mode'
+id: node.popular_teaser
+label: 'Popular teaser'
 description: ''
 targetEntityType: node
 cache: true

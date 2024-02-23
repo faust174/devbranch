@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_discovermore
 theme: fausttheme
 region: content
-weight: -7
+weight: -9
 provider: null
 plugin: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
 settings:

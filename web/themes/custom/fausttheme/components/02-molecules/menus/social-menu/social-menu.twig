@@ -15,7 +15,7 @@
 <div class="social-menu">
   {% for item in items %}
     {% set image = file_url(item.entity.fields.field_social_image.entity.fileuri) %}
-    {% include "@atoms/links/link/link.twig" with {
+    {% include "@atoms/links/link/social-link.twig" with {
       link__icon: image,
       link_url: item.url
     } %}

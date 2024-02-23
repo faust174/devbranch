@@ -1,0 +1,20 @@
+uuid: 3bedd127-d9cf-4638-8a04-672834c03b08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_website
+  module:
+    - user
+id: user.user.field_website
+field_name: field_website
+entity_type: user
+bundle: user
+label: website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

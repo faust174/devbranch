@@ -1,0 +1,19 @@
+<div class="article-more-preview">
+
+  {% set image_src = content.field_image.0 %}
+      {% embed '@molecules/cards/card-popular-teaser/card-popular-teaser.twig' with {
+        card__extra_classes: ["grid__item"],
+        card__image__src: image_src,
+        card__heading: label,
+        image_url: url,
+      } %}
+  {% endembed %}
+
+  <div class="author-preview-block">
+  {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
+    image: author_picture,
+    author_name: author_name,
+    date: node.created.value|date('F j, Y'),
+  }%}
+  </div>
+</div>

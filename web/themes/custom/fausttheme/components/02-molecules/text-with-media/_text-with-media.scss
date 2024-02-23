@@ -7,3 +7,47 @@
     flex-direction: row-reverse;
   }
 }
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.category-title {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.author {
+  margin-top: 10px;
+  display: flex;
+}
+.authors_name {
+  padding-right: 20px;
+  border-right: 1px solid black;
+  margin-right: 20px;
+}
+
