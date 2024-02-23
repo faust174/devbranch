@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
+    - field.field.user.user.field_website
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -24,7 +25,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_name:
     type: string
@@ -32,7 +33,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_social:
     type: link
@@ -44,7 +45,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_website:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   user_picture:
     type: image

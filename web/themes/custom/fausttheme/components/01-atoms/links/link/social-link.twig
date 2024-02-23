@@ -1,0 +1,18 @@
+
+{% set link_base_class = link_base_class|default('link') %}
+
+<a
+{{ bem(link_base_class, link_modifiers, link_blockname) }}
+  {% for attribute, value in link_attributes %}
+{{ attribute }}="{{ value }}"
+{% endfor %}
+href="{{ link_url }}"
+>
+{#  {% block link_content %}#}
+{#    {{ link_content }}#}
+{#  {% endblock %}#}
+   {% if image %}
+     <img class="social-icon" src="{{ link__icon }}" alt="&nbsp;">
+   {% endif %}
+</a>
+

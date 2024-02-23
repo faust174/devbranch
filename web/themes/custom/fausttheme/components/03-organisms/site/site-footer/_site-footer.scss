@@ -213,7 +213,7 @@
   }
 }
 
-.footer .form-item {
+.form-item {
   display: flex;
   font-size: 13px;
   font-weight: 500;
@@ -222,7 +222,7 @@
     color: red;
   }
 }
-.footer .webform-button--submit {
+.webform-button--submit {
   pointer-events: none;
   @include secondary-red;
   background-color: black;

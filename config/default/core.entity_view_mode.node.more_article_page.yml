@@ -1,0 +1,11 @@
+uuid: 1d1ae3c2-8b0e-4300-866f-7feb0b6b0dfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.more_article_page
+label: 'More article page'
+description: ''
+targetEntityType: node
+cache: true

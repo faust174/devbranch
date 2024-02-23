@@ -37,13 +37,25 @@
 {#  </div>#}
 {#</div>#}
 
-
 <div class="image-container">
   <a href="#" class="category-link">
-    <img src="{{ image }}" alt="">
+    <div class="image">
+      {{ image }}
+    </div>
     <div class="overlay">
-      <h2 class="category-title">{{ category_name }}</h2>
-      <p class="post-title">{{ title }}</p>
+      <h2 class="category-title">{{ category }}</h2>
+      <p class="post-title">{{ label }}</p>
     </div>
   </a>
 </div>
+<div class="author">
+  <p class="authors_name">By: {{ author_name }}</p>
+  <p class="authors_date">Date: {{ date }}</p>
+</div>
+
+
+{#<div{{ author_attributes }}>#}
+{#  <p>By: {{ author_name }}</p>#}
+{#  <p>Date: {{ date }}</p>#}
+{#</div>#}
+{#</div>#}

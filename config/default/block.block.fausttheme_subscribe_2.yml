@@ -1,6 +1,6 @@
 uuid: 65bda2f7-a0b2-43d8-af3c-4e0dcd946adf
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:07cff609-e47d-435d-8c05-b918faba4c24'
@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_subscribe_2
 theme: fausttheme
 region: sidebar
-weight: -17
+weight: -15
 provider: null
 plugin: 'block_content:07cff609-e47d-435d-8c05-b918faba4c24'
 settings:

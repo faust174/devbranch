@@ -71,8 +71,8 @@
  */
 #}
 
-<article {{ bem("node") }}>
 
+<article {{ bem("node") }}>
   {{ title_prefix }}
   {% if not page %}
     {% include "@atoms/text/headings/_heading.twig" with {
@@ -86,33 +86,57 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+{#  {% if display_submitted %}#}
+{#    <footer>#}
+{#      {{ author_picture }}#}
+{#      <div{{ author_attributes }}>#}
+{#        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}#}
+{#        {{ metadata }}#}
+{#      </div>#}
+{#    </footer>#}
+{#  {% endif %}#}
+
+{#  <div{{ content_attributes }}>#}
+{#    {{ content }}#}
+{#  </div>#}
+{#</article>#}
+
+
+
+
+{#<article {{ bem("node") }}>#}
+{#  {{ title_prefix }}#}
+{#  {% if not page %}#}
+{#    {% include "@atoms/text/headings/_heading.twig" with {#}
+{#      "heading_level": 2,#}
+{#      "heading": label,#}
+{#      "heading_url": url,#}
+{#      "heading_link_attributes": {#}
+{#        'rel': 'bookmark'#}
+{#      },#}
+{#    } %}#}
+{#  {% endif %}#}
+{#  {{ title_suffix }}#}
+
+{#  {% if display_submitted %}#}
+{#    <footer>#}
+
+{#    </footer>#}
+
+{#  {% endif %}#}
   <div{{ content_attributes }}>
-
 {#    {{ content.field_image }}#}
-    <div class="image-container">
-      <a href="#" class="category-link">
-        <div class="image">
-          {{ content.field_image }}
-        </div>
-
-        <div class="overlay">
-          <h2 class="category-title">{{ node.field_category.entity.name.value }}</h2>
-          <p class="post-title">{{ label }}</p>
-        </div>
-      </a>
-    </div>
-
+    {% include '@molecules/text-with-media/text-with-media.twig' with {
+      image: content.field_image,
+      category: node.field_category.entity.name.value,
+      label: label,
+      author_name: author_name,
+      date: node.created.value|date('F j, Y'),
+    }
+    %}
     {{ content.field_image_paragraph }}
   </div>
 
 </article>
 
+{#{{ dump(metadata) }}#}

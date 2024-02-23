@@ -7,6 +7,7 @@ dependencies:
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
+    - field.field.user.user.field_website
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -34,4 +35,5 @@ hidden:
   field_body: true
   field_name: true
   field_social: true
+  field_website: true
   member_for: true

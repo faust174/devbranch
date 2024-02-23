@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.more_article_page
+    - core.entity_view_mode.node.popular_teaser
     - field.storage.node.field_image
     - image.style.medium
     - node.type.article
@@ -218,7 +220,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: popular_teaser
       query:
         type: views_query
         options:
@@ -281,8 +286,18 @@ display:
             field_identifier: ''
           exposed: false
           granularity: minute
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: more_article_page
       defaults:
         title: false
+        style: false
+        row: false
         sorts: false
       display_description: ''
       display_extenders: {  }
