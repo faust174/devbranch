@@ -10,13 +10,13 @@
 
 .image-container {
   position: relative;
-  width: 300px; /* Adjust width as needed */
-  height: auto; /* Allow height to adjust based on content */
+  width: 300px;
+  height: auto;
 }
 
 .image {
   width: 100%;
-  height: auto; /* Allow image to adjust its height based on aspect ratio */
+  height: auto;
 }
 
 .overlay {
@@ -24,7 +24,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   box-sizing: border-box;
 }
@@ -50,7 +50,4 @@
   border-right: 1px solid black;
   margin-right: 20px;
 }
-//.authors_name {
-//  margin-left: 10px;
-//}
 
