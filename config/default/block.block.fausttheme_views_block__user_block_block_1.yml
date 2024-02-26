@@ -1,6 +1,6 @@
 uuid: 33b8c906-4178-47f4-b480-ff22808ec57a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.user_block
@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__user_block_block_1
 theme: fausttheme
 region: content
-weight: -18
+weight: -5
 provider: null
 plugin: 'views_block:user_block-block_1'
 settings:

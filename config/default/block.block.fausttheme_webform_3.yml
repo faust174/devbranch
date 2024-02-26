@@ -1,26 +1,26 @@
-uuid: 6df42f74-5847-41c0-83ae-6557f0fc2ef3
+uuid: 05582a09-55e0-4754-abaa-1feed0be7402
 langcode: en
 status: true
 dependencies:
   config:
-    - webform.webform.subscribe
+    - webform.webform.comment
   module:
     - system
     - webform
   theme:
     - fausttheme
-id: fausttheme_webform_2
+id: fausttheme_webform_3
 theme: fausttheme
-region: sidebar
-weight: -17
+region: content
+weight: -8
 provider: null
 plugin: webform_block
 settings:
   id: webform_block
-  label: Webform
-  label_display: '0'
+  label: 'Leave a reply'
+  label_display: visible
   provider: webform
-  webform_id: subscribe
+  webform_id: comment
   default_data: ''
   redirect: false
   lazy: false

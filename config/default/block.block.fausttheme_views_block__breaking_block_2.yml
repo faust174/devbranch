@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__breaking_block_2
 theme: fausttheme
 region: sidebar
-weight: -13
+weight: -14
 provider: null
 plugin: 'views_block:breaking-block_2'
 settings:

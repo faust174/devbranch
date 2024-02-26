@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__pager_for_article_block_1
 theme: fausttheme
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: 'views_block:pager_for_article-block_1'
 settings:

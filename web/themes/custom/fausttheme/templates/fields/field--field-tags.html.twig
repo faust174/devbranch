@@ -1,0 +1,11 @@
+<div class="article-tags">
+  <p class="article-tag-title">TAGS</p>
+  {% for item in items %}
+    {% set content = item['content'] %}
+    {% set title = content['#title'] %}
+    {% set url = content['#url'].toString() %}
+    <div >
+      <a class="article-tag" href="{{ url }}">{{ title }}</a>
+    </div>
+{% endfor %}
+</div>

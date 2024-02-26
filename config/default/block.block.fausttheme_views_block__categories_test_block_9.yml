@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__categories_test_block_9
 theme: fausttheme
 region: content
-weight: -15
+weight: -18
 provider: null
 plugin: 'views_block:categories_test-block_9'
 settings:

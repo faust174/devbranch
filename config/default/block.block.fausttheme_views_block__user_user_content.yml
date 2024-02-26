@@ -1,25 +1,30 @@
-uuid: e58ce29d-7bbf-4e15-9cf9-747d574a41b4
+uuid: 2770af9f-de1c-41a4-a502-bbe69aeb19e7
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.user
   module:
+    - system
     - views
   theme:
     - fausttheme
-id: fausttheme_views_block__user_block_1
+id: fausttheme_views_block__user_user_content
 theme: fausttheme
 region: content
-weight: -19
+weight: -9
 provider: null
-plugin: 'views_block:user-block_1'
+plugin: 'views_block:user-user_content'
 settings:
-  id: 'views_block:user-block_1'
+  id: 'views_block:user-user_content'
   label: ''
   label_display: '0'
   provider: views
   context_mapping: {  }
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
