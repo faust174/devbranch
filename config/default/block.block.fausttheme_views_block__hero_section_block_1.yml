@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_views_block__hero_section_block_1
 theme: fausttheme
 region: hero_section
-weight: -17
+weight: -19
 provider: null
 plugin: 'views_block:hero_section-block_1'
 settings:

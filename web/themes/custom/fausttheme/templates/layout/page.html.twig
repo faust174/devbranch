@@ -78,6 +78,10 @@
     {{ page.content }}
   {% endblock %}
 
+{% block content_below %}
+  {{ page.content_below }}
+{% endblock %}
+
   {% block page_footer %}
     {% if page.footer %}
       {{ page.footer }}

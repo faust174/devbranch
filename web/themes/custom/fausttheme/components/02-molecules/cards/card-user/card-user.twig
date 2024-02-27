@@ -1,43 +1,28 @@
 {% set card__base_class = 'card' %}
 
-<div {{ bem(card__base_class, card__modifiers, card__blockname, card__extra_classes) }}>
+<div class="user-block">
   {# Image #}
   {% block card__img %}
     {% if card__image__src %}
-      <a href="{{ image_url }}">
+      <a href="{{ user_link }}">
         <img src="{{ card__image__src }}" alt="">
       </a>
     {% endif %}
   {% endblock %}
+  <div class="user-content">
+        <div class="user-name">
+          <a href="{{ user_link }}">
+            {{ author_name }}
+          </a>
+        </div>
 
-  <div {{ bem('content', card__content__modifiers, card__base_class) }}>
-    {% if card__link__url %}
-      {% include "@atoms/links/link/link.twig" with {
-        link_base_class: card__link__base_class|default('link'),
-        link_content: author_name,
-        link_url: author_page_url,
-      } %}
-    {% endif %}
+      <div class="user-website">
+        <a href="{{ user_website }}">{{ user_website }}</a>
+      </div>
 
-    {% if card__link__url %}
-      {% include "@atoms/links/link/link.twig" with {
-        link_base_class: card__link__base_class|default('link'),
-        link_content: link_content,
-        link_url: website_url,
-      } %}
-    {% endif %}
+      <div class="user-body">
+        {{ user_body }}
+      </div>
 
-    {% if card__body %}
-      {% include "@atoms/text/text/01-paragraph.twig" with {
-        paragraph_base_class: card__body__base_class|default('body'),
-        paragraph_blockname: card__base_class,
-        paragraph_content: card__body,
-      } %}
-    {% endif %}
-
-    {% include '@molecules/menus/social-menu/social-menu.twig' with {
-      image: social_menu_icon,
-      link_url: social_media_url,
-    }%}
   </div>
 </div>

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
+    - core.entity_view_mode.node.token
   module:
     - node
     - user
@@ -147,7 +148,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: default
+          view_mode: token
       query:
         type: views_query
         options:
@@ -210,6 +211,21 @@ display:
     position: 1
     display_options:
       enabled: true
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: token
+      defaults:
+        style: false
+        row: false
       display_extenders: {  }
       path: node
     cache_metadata:

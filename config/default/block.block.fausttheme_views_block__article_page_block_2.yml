@@ -5,14 +5,18 @@ dependencies:
   config:
     - views.view.article_page
   module:
+    - block_class
     - system
     - views
   theme:
     - fausttheme
+third_party_settings:
+  block_class:
+    classes: more-like-this
 id: fausttheme_views_block__article_page_block_2
 theme: fausttheme
-region: content
-weight: -17
+region: content_below
+weight: -20
 provider: null
 plugin: 'views_block:article_page-block_2'
 settings:

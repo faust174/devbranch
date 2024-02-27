@@ -18,6 +18,7 @@ regions:
   hero_section: Hero section
   content: Content
   sidebar: Sidebar
+  content_below: Content below
   footer: Footer
 logo: images/logo.png
 components:

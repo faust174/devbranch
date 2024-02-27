@@ -1,0 +1,27 @@
+{% set row = rows[0].content['#row'] %}
+{% set user_id = row.users_field_data_node_field_data_uid %}
+{% set user_entity = drupal_entity('user', user_id) %}
+
+{% set user_name = user_entity["#user"].name.value %}
+{% set user_body = user_entity["#user"].field_body.value %}
+{% set user_picture_url = user_entity["#user"].user_picture.entity.uri.value %}
+{% set image_url = file_url(user_picture_url) %}
+{% set field_social_value = user_entity["#user"].field_social.value %}
+{% set field_website_value = user_entity["#user"].field_website.value %}
+{% set user_url = url('entity.user.canonical', {'user': user_id}) %}
+
+
+{% include '@molecules/cards/card-user/card-user.twig' with {
+  author_name: user_name,
+  card__image__src: image_url,
+  user_link: user_url,
+  user_website: field_website_value,
+  user_body: user_body,
+} %}
+
+{% set user_url = url('entity.user.canonical', {'user': user_id}) %}
+
+
+
+
+

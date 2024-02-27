@@ -296,9 +296,11 @@ display:
           view_mode: more_article_page
       defaults:
         title: false
+        css_class: false
         style: false
         row: false
         sorts: false
+      css_class: ''
       display_description: ''
       display_extenders: {  }
     cache_metadata:
