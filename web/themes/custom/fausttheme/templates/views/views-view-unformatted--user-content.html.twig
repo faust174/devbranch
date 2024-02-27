@@ -1,8 +1,5 @@
 
-{#{% set first_row = rows[0] %}#}
-{#{% set first_row_content = first_row.content %}#}
-{#{% set username = row._entity.field_body.value %}#}
-{#{% set user_image = row._entity.field_user_image.entity.uri.value %}#}
+
 
 {% set row = rows[0].content['#row'] %}
 {% set user_id = row.users_field_data_node_field_data_uid %}
@@ -26,15 +23,6 @@
   user_website: field_website_value,
   user_body: user_body,
 } %}
-{#<ul>#}
-{#  {% for link_item in user_entity["#user"].field_social %}#}
-{#    <li>#}
-{#      <a href="{{ link_item.url }}">{{ link_item.title }}</a>#}
-{#    </li>#}
-{#  {% endfor %}#}
-{#</ul>#}
-
-
 
 {% set user_url = url('entity.user.canonical', {'user': user_id}) %}
 
