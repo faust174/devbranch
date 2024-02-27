@@ -5,10 +5,14 @@ dependencies:
   content:
     - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
   module:
+    - block_class
     - block_content
     - system
   theme:
     - fausttheme
+third_party_settings:
+  block_class:
+    classes: discover-more
 id: fausttheme_more
 theme: fausttheme
 region: sidebar

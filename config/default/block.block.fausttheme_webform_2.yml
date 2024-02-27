@@ -5,10 +5,14 @@ dependencies:
   config:
     - webform.webform.subscribe
   module:
+    - block_class
     - system
     - webform
   theme:
     - fausttheme
+third_party_settings:
+  block_class:
+    classes: subscribe-form
 id: fausttheme_webform_2
 theme: fausttheme
 region: sidebar
@@ -17,8 +21,8 @@ provider: null
 plugin: webform_block
 settings:
   id: webform_block
-  label: Webform
-  label_display: '0'
+  label: Subscribe
+  label_display: visible
   provider: webform
   webform_id: subscribe
   default_data: ''

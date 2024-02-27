@@ -8,49 +8,4 @@
       {% endembed %}
 
 
-{#  {% include '@molecules/cards/card-popular-teaser/card-popular-teaser.twig' with {#}
-{#    card__image__src: content.field_image,#}
-{#    card__heading: label#}
-{#  }%}#}
-
-
-
-
-
-{#  <div{{ content_attributes }}>#}
-{#    #}{#    {{ content.field_image }}#}
-{#    {% include '@molecules/text-with-media/text-with-media.twig' with {#}
-{#      image: content.field_image,#}
-{#      category: node.field_category.entity.name.value,#}
-{#      label: label,#}
-{#      author_name: author_name,#}
-{#      date: node.created.value|date('F j, Y'),#}
-{#    }#}
-{#    %}#}
-{#    {{ content.field_image_paragraph }}#}
-{#  </div>#}
-
-
-{#{{ dump(metadata) }}#}
-{#{% embed "@molecules/card/card.twig" with {#}
-{#  card__extra_classes: ["grid__item"],#}
-{#  card__heading: label,#}
-{#  card__body: content.body,#}
-{#  card__link__url: url,#}
-{#} %}#}
-
-
-
-
-
-
-{#  {% block card__img %}#}
-{#    {{ content.field_image }}#}
-{#  {% endblock %}#}
-
-{#  {% block card__info %}#}
-{#    {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}#}
-{#  {% endblock %}#}
-
-
 

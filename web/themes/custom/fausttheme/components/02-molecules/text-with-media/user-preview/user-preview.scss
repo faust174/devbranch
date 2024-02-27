@@ -1,0 +1,20 @@
+.author-container {
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+  margin-bottom: 10px;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  a {
+    text-decoration: none;
+    color: clr(text);
+  }
+}

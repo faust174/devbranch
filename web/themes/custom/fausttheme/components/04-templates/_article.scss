@@ -1,3 +1,6 @@
+.layout-container {
+  padding: 0 20px;
+}
 .main--with-sidebar {
   display: flex;
   flex-direction: column;
@@ -41,7 +44,7 @@
     color: clr(text);
     background-color: clr(background);
     padding: 2px;
-    border: lightgray solid 1px;
+    border: 1px solid clr(border);
     &:hover {
       background-color: clr(text);
       color: clr(background)
@@ -67,7 +70,7 @@
       left: 5px;
       right: 5px;
       height: 1px;
-      background-color: lightgray;
+      background-color: clr(border);
       margin-bottom: -15px;
     }
   }
@@ -80,10 +83,52 @@
 .comment_form {
   float:left;
   border: 1px solid clr(border);
+  input {
+    width: 100%;
+  }
 }
 .form_text_area {
   border: 1px solid clr(border);
 }
-.webform-submission-comment-form  {
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  margin: 30px 0;
+  .button {
+    background-color: clr(text-inverse);
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+.article-socials {
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12);
+  padding: 16px 0;
+  margin: 10px 0;
+  .social-menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+}
+.subscribe-form {
+  .button {
+    background-color: clr(text-inverse);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .form-text {
+    border: 1px solid clr(border);
+  }
+}
+.subscribe-form {
+  margin: 30px 0;
+}
+.discover-more img {
   width: 100%;
 }

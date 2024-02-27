@@ -5,10 +5,14 @@ dependencies:
   config:
     - webform.webform.comment
   module:
+    - block_class
     - system
     - webform
   theme:
     - fausttheme
+third_party_settings:
+  block_class:
+    classes: comment-form
 id: fausttheme_webform_3
 theme: fausttheme
 region: content

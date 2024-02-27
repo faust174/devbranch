@@ -1,0 +1,16 @@
+.more-like-this {
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color: clr(text-inverse);
+    }
+  }
+}
