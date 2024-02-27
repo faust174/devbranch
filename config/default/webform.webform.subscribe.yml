@@ -24,7 +24,9 @@ elements: |-
     '#submit__label': 'I want in '
   privacy_policy:
     '#type': checkbox
-    '#title': 'I''ve read and accept the <a href="#">Privacy Policy</a>'
+    '#title': Title
+    '#title_display': none
+    '#field_suffix': 'I''ve read and accept the <a href="#">Privacy Policy</a>'
 css: ''
 javascript: ''
 settings:

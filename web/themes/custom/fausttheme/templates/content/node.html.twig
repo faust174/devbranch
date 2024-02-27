@@ -14,15 +14,6 @@
   {{ title_suffix }}
 
   <div{{ content_attributes }}>
-
-    {% include '@molecules/text-with-media/text-with-media.twig' with {
-      image: content.field_image,
-      category: node.field_category.entity.name.value,
-      label: label,
-      author_name: author_name,
-      date: node.created.value|date('F j, Y'),
-    }
-    %}
     {{ content.field_image_paragraph }}
     {{ content.field_tags }}
   </div>

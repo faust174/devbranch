@@ -1,9 +1,9 @@
-uuid: e10ad2d9-e36d-4e4a-88bf-983d7fc1dd81
+uuid: e915f15d-52f4-4f9c-aed9-8a9c27e0f407
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.article_hero
     - field.field.node.article.comment
     - field.field.node.article.field_category
     - field.field.node.article.field_checkbox
@@ -11,17 +11,21 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_image_paragraph
     - field.field.node.article.field_tags
-    - image.style.medium
     - node.type.article
   module:
     - image
+    - layout_builder
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
-  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
-id: node.article.teaser
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.article_hero
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: article_hero
 content:
   field_category:
     type: entity_reference_label
@@ -35,10 +39,10 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: content
-      image_style: medium
+      image_link: ''
+      image_style: ''
       image_loading:
-        attribute: lazy
+        attribute: eager
     third_party_settings: {  }
     weight: 0
     region: content

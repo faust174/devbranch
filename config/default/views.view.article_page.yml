@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.article_hero
     - core.entity_view_mode.node.more_article_page
     - core.entity_view_mode.node.popular_teaser
     - field.storage.node.field_image
@@ -301,6 +302,42 @@ display:
         row: false
         sorts: false
       css_class: ''
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_image'
+  block_3:
+    id: block_3
+    display_title: hero
+    display_plugin: block
+    position: 3
+    display_options:
+      title: Hero
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: article_hero
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
       display_description: ''
       display_extenders: {  }
     cache_metadata:

@@ -5,10 +5,14 @@ dependencies:
   config:
     - system.menu.social-media
   module:
+    - block_class
     - menu_block
     - system
   theme:
     - fausttheme
+third_party_settings:
+  block_class:
+    classes: article-socials
 id: fausttheme_socialmedia
 theme: fausttheme
 region: sidebar

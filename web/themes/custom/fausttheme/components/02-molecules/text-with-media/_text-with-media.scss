@@ -16,11 +16,13 @@
   position: relative;
   width: 100%;
   height: auto;
-}
 
+}
 .image {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .overlay {
