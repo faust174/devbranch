@@ -1,11 +1,6 @@
-
-
-
 {% set row = rows[0].content['#row'] %}
 {% set user_id = row.users_field_data_node_field_data_uid %}
 {% set user_entity = drupal_entity('user', user_id) %}
-
-
 
 {% set user_name = user_entity["#user"].name.value %}
 {% set user_body = user_entity["#user"].field_body.value %}
