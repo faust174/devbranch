@@ -1,0 +1,19 @@
+uuid: 29c3dd59-b1ad-4fea-9282-a2a4d7a4114b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: basic_page
+label: article
+logic: or
+conditions:
+  6268349c-e461-4605-bdce-4c5391e18964:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6268349c-e461-4605-bdce-4c5391e18964
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+allow_other_conditions: false

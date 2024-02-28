@@ -3,10 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_visibility_groups.block_visibility_group.basic_page
     - webform.webform.comment
   module:
     - block_class
-    - system
+    - block_visibility_groups
     - webform
   theme:
     - fausttheme
@@ -29,7 +30,7 @@ settings:
   redirect: false
   lazy: false
 visibility:
-  request_path:
-    id: request_path
+  condition_group:
+    id: condition_group
     negate: false
-    pages: '/node/*'
+    block_visibility_group: basic_page

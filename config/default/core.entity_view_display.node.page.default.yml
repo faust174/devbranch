@@ -4,10 +4,298 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
     - node.type.page
+    - views.view.categories_test
+    - views.view.hero_section
+    - webform.webform.subscribe
+  content:
+    - 'block_content:test2:3ea28505-e091-440f-8195-c32b758e9f7e'
+    - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
   module:
+    - block_content
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Hero section top'
+          context_mapping: {  }
+        components:
+          3731c692-f1a6-4e7c-98f5-7f1ccd227cf8:
+            uuid: 3731c692-f1a6-4e7c-98f5-7f1ccd227cf8
+            region: content
+            configuration:
+              id: 'views_block:hero_section-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_fourcol_section
+        layout_settings:
+          label: 'Hero section'
+          context_mapping: {  }
+        components:
+          e5907a68-cb91-440b-adc8-b418ad3e6be9:
+            uuid: e5907a68-cb91-440b-adc8-b418ad3e6be9
+            region: first
+            configuration:
+              id: 'views_block:hero_section-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          0d90ae7c-4b32-4d86-9cbe-67e8406e413e:
+            uuid: 0d90ae7c-4b32-4d86-9cbe-67e8406e413e
+            region: second
+            configuration:
+              id: 'views_block:hero_section-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          41cd85c2-05ce-4fe2-990b-9607eb875110:
+            uuid: 41cd85c2-05ce-4fe2-990b-9607eb875110
+            region: third
+            configuration:
+              id: 'views_block:hero_section-block_5'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          332f7fc5-faf5-41b5-94e6-520fa7686946:
+            uuid: 332f7fc5-faf5-41b5-94e6-520fa7686946
+            region: fourth
+            configuration:
+              id: 'views_block:hero_section-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Join social media'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Breaking
+          context_mapping: {  }
+        components:
+          edb76300-85f2-438a-98cc-23dfece398b3:
+            uuid: edb76300-85f2-438a-98cc-23dfece398b3
+            region: content
+            configuration:
+              id: 'views_block:categories_test-block_3'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Politics
+          context_mapping: {  }
+          column_widths: 75-25
+        components:
+          16b01057-0b4e-475a-b709-00bf3ab4e6a4:
+            uuid: 16b01057-0b4e-475a-b709-00bf3ab4e6a4
+            region: first
+            configuration:
+              id: 'views_block:categories_test-block_5'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          1a45f456-216d-43c5-a051-3b3e17aae18d:
+            uuid: 1a45f456-216d-43c5-a051-3b3e17aae18d
+            region: second
+            configuration:
+              id: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+              label: More
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          6c6ded2e-0e0e-464e-8a2e-e08dc150690f:
+            uuid: 6c6ded2e-0e0e-464e-8a2e-e08dc150690f
+            region: second
+            configuration:
+              id: webform_block
+              label: Webform
+              label_display: '0'
+              provider: webform
+              context_mapping: {  }
+              webform_id: subscribe
+              default_data: ''
+              redirect: false
+              lazy: false
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Celebrity
+          context_mapping: {  }
+        components:
+          92ee0815-5260-4a62-865a-59a7baa218c7:
+            uuid: 92ee0815-5260-4a62-865a-59a7baa218c7
+            region: content
+            configuration:
+              id: 'views_block:categories_test-block_4'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Food & travel'
+          context_mapping: {  }
+        components:
+          d49ebbb9-4391-4c51-8122-78b8b9369c6b:
+            uuid: d49ebbb9-4391-4c51-8122-78b8b9369c6b
+            region: content
+            configuration:
+              id: 'views_block:categories_test-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Discover more'
+          context_mapping: {  }
+        components:
+          9fa23429-c94e-480c-89bd-df85b6ca1595:
+            uuid: 9fa23429-c94e-480c-89bd-df85b6ca1595
+            region: content
+            configuration:
+              id: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
+              label: 'Discover more '
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Exclusive content'
+          context_mapping: {  }
+        components:
+          56d96545-e3ea-49ff-a3bc-1a0d12f8dedd:
+            uuid: 56d96545-e3ea-49ff-a3bc-1a0d12f8dedd
+            region: content
+            configuration:
+              id: 'views_block:categories_test-block_6'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Recent posts'
+          context_mapping: {  }
+          column_widths: 75-25
+        components:
+          5d2a667e-ede7-470e-a19e-567e6ff6cbc5:
+            uuid: 5d2a667e-ede7-470e-a19e-567e6ff6cbc5
+            region: first
+            configuration:
+              id: 'views_block:categories_test-block_7'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          798e13ed-6b78-4f17-bf1b-1a3fd14ddb92:
+            uuid: 798e13ed-6b78-4f17-bf1b-1a3fd14ddb92
+            region: second
+            configuration:
+              id: 'views_block:categories_test-block_8'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -23,6 +311,9 @@ content:
     weight: 100
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true

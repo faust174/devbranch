@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_visibility_groups.block_visibility_group.basic_page
     - system.menu.social-media
   module:
     - block_class
+    - block_visibility_groups
     - menu_block
-    - system
   theme:
     - fausttheme
 third_party_settings:
@@ -34,7 +35,7 @@ settings:
   parent: 'social-media:'
   suggestion: social_media
 visibility:
-  request_path:
-    id: request_path
+  condition_group:
+    id: condition_group
     negate: false
-    pages: '/node/*'
+    block_visibility_group: basic_page
