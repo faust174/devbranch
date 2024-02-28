@@ -1,0 +1,14 @@
+uuid: fec78a27-4f8b-4b91-80a8-a2960d295d28
+langcode: en
+status: true
+dependencies: {  }
+name: article_popular_medium
+label: 'Article popular medium'
+effects:
+  e9fd9122-36a7-4355-9acb-5e4096093710:
+    uuid: e9fd9122-36a7-4355-9acb-5e4096093710
+    id: image_resize
+    weight: 1
+    data:
+      width: 280
+      height: 160

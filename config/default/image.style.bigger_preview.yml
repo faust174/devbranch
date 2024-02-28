@@ -1,0 +1,21 @@
+uuid: d0450b18-2619-422a-b998-f9ae9dadc84a
+langcode: en
+status: true
+dependencies: {  }
+name: bigger_preview
+label: 'Bigger preview'
+effects:
+  bd37f51b-0641-42b7-bf4c-a1f1296540a7:
+    uuid: bd37f51b-0641-42b7-bf4c-a1f1296540a7
+    id: image_resize
+    weight: 1
+    data:
+      width: 330
+      height: 230
+  2ee9361f-0344-4595-8555-a7cbdcbdd997:
+    uuid: 2ee9361f-0344-4595-8555-a7cbdcbdd997
+    id: image_resize
+    weight: 2
+    data:
+      width: 700
+      height: 500
