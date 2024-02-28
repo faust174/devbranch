@@ -1,6 +1,6 @@
 uuid: 3b993ffe-2463-4f39-a394-f604972da184
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.categories_test

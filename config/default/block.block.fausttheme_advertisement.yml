@@ -1,11 +1,12 @@
 uuid: fa0e2213-f4d2-409b-8ea8-867539f0852b
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
   module:
     - block_content
+    - block_visibility_groups
     - system
   theme:
     - fausttheme
@@ -27,4 +28,8 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: "<front>\r\n/news/*\r\n/user/*"
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

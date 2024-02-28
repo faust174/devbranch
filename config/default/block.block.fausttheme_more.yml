@@ -2,11 +2,14 @@ uuid: 846b5c4f-5ac4-4bf0-b834-9ce231054345
 langcode: en
 status: true
 dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.basic_page
   content:
     - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
   module:
     - block_class
     - block_content
+    - block_visibility_groups
     - system
   theme:
     - fausttheme
@@ -31,4 +34,8 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/news/*\r\n/node/*\r\n/user/*"
+    pages: "/news/*\r\n/user/*"
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: basic_page

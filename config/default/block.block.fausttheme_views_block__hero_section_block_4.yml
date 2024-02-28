@@ -1,6 +1,6 @@
 uuid: 81c59580-cebc-40c8-b3d4-ac009c7a9d36
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.hero_section

@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_visibility_groups.block_visibility_group.basic_page
     - views.view.pager_for_article
   module:
-    - system
+    - block_class
+    - block_visibility_groups
     - views
   theme:
     - fausttheme
@@ -23,7 +25,7 @@ settings:
   views_label: ''
   items_per_page: none
 visibility:
-  request_path:
-    id: request_path
+  condition_group:
+    id: condition_group
     negate: false
-    pages: '/node/*'
+    block_visibility_group: basic_page
