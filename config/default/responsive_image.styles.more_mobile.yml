@@ -1,0 +1,24 @@
+uuid: 1ac28a06-de59-4672-b8af-7f1b4a4b6444
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.bigger_preview
+    - image.style.more_mobile_preview
+  theme:
+    - fausttheme
+id: more_mobile
+label: 'More mobile'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: bigger_preview
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: more_mobile_preview
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: bigger_preview

@@ -1,7 +1,6 @@
 {% set card__base_class = 'card' %}
 
 <div class="user-block">
-  {# Image #}
   {% block card__img %}
     {% if card__image__src %}
       <a href="{{ user_link }}">
@@ -23,6 +22,14 @@
       <div class="user-body">
         {{ user_body }}
       </div>
-
+    <div class="author-social">
+      {% for item in field_social_value %}
+        <a href="{{ item.uri }}" class="social-icon">
+          {% include "@atoms/images/icons/_icon.twig" with {
+            icon__name: item.title,
+          } %}
+        </a>
+      {% endfor %}
+    </div>
   </div>
 </div>

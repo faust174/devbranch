@@ -11,15 +11,18 @@
 {% set user_url = url('entity.user.canonical', {'user': user_id}) %}
 
 
+
+<div class="author-wrapper">
 {% include '@molecules/cards/card-user/card-user.twig' with {
   author_name: user_name,
   card__image__src: image_url,
   user_link: user_url,
   user_website: field_website_value,
   user_body: user_body,
+  socials: field_social_value,
 } %}
+</div>
 
-{% set user_url = url('entity.user.canonical', {'user': user_id}) %}
 
 
 

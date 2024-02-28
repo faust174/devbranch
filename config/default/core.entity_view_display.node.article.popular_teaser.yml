@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_image_paragraph
     - field.field.node.article.field_tags
-    - image.style.wide
     - node.type.article
   module:
     - image
@@ -33,9 +32,9 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: wide
+      image_style: ''
       image_loading:
-        attribute: eager
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

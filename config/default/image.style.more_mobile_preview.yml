@@ -1,0 +1,14 @@
+uuid: 2688ead1-adbe-4b2b-ab23-933cc9c06b55
+langcode: en
+status: true
+dependencies: {  }
+name: more_mobile_preview
+label: 'More mobile preview'
+effects:
+  cc6a0982-91f6-488a-afd3-f646733dfaa9:
+    uuid: cc6a0982-91f6-488a-afd3-f646733dfaa9
+    id: image_resize
+    weight: 1
+    data:
+      width: 700
+      height: 500

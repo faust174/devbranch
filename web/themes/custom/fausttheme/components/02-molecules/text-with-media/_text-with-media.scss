@@ -16,11 +16,12 @@
   position: relative;
   width: 100%;
   height: auto;
-
+  max-height: 100%;
 }
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: flex;
   justify-content: center;
 }
@@ -34,20 +35,28 @@
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 0;
+
 }
 
 .category-title {
   font-size: 16px;
-  color: #fff;
+  color: clr(background);
   margin-bottom: 0;
   line-height: 1;
+  font-weight: 600;
+  &:hover {
+    color: clr(border);
+  }
 }
 
 .post-title {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
-
+  line-height: 1.1;
+  @include medium {
+    line-height: 1.5;
+  }
 }
 
 .author {
@@ -69,9 +78,17 @@
     margin-bottom: -15px;
   }
   @include medium {
-    padding-right: 20px;
-    border-right: 1px solid black;
-    margin-right: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    p {
+      line-height: 30px;
+    }
+    .authors_name {
+      padding-right: 20px;
+      border-right: 1px solid black;
+      margin-right: 20px;
+    }
     }
   }
 

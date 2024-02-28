@@ -15,6 +15,10 @@
 }
 .main-content {
   flex: 1;
+  @include medium {
+    padding-right: 40px;
+  }
+
 }
 .quote h3{
     font-weight: 700;
@@ -24,6 +28,9 @@
     font-style: italic;
     padding: 10px;
     text-align: center;
+  @include medium {
+    font-size: 30px;
+  }
 }
 .main-sidebar {
   order: 1;
