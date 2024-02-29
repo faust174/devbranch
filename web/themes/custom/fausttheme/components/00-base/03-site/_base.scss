@@ -14,10 +14,10 @@ body {
 *::before {
   box-sizing: inherit;
 }
-
+.main-page-content {
+  padding: 0 30px;
+}
 .main {
-  @include wrapper;
-
   display: block; /* Fix for IE weirdness */
 }
 

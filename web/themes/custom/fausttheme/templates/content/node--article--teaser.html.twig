@@ -72,19 +72,14 @@
 #}
 
 
-{% embed "@molecules/card/card.twig" with {
-  card__extra_classes: ["grid__item"],
+{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+  card__extra_classes: ["article-teaser"],
   card__heading: label,
-  card__body: content.body,
-  card__link__url: url,
+  heading_url: url,
+  date: node.created.value|date('F j, Y'),
 } %}
-  {% block card__img %}
-    {{ content.field_image }}
-  {% endblock %}
 
-  {% block card__info %}
-    {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-  {% endblock %}
-{% endembed %}
+
+
 
 

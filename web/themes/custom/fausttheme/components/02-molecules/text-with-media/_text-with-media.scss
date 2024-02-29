@@ -35,7 +35,17 @@
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 0;
-
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: clr(background);
+    margin-bottom: 0;
+    line-height: 1;
+    font-weight: 600;
+    &:hover {
+      color: clr(border);
+    }
+  }
 }
 
 .category-title {
@@ -100,4 +110,8 @@
     color: clr(text-inverse);
   }
 }
-
+.hero-main-marketing {
+  .author {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+{% set row = rows[0].content['#row'] %}
+{% set title = row._entity.title.value %}
+{% set node_id = row._entity.id %}
+{% set node_url = path('entity.node.canonical', {'node': node_id}) %}
+{% set field_image = row._entity.field_image.entity.uri.value %}
+{% set image_url = file_url(field_image) %}
+{% set image_with_link = '<a href="' ~ node_url ~ '"><img src="' ~ image_url ~ '" alt=""></a>' %}
+{% set category_label = '<a href="' ~ path('entity.taxonomy_term.canonical', {'taxonomy_term': row._entity.field_category.entity.id}) ~ '">' ~ row._entity.field_category.entity.name.value ~ '</a>' %}
+{% set created = row._entity.created.value %}
+{% set body = row._entity.field_image_paragraph.entity.field_text.value %}
+
+{% include '@molecules/text-with-media/text-with-media.twig' with {
+  image: image_with_link,
+  category: category_label,
+  label: title,
+  author_name: author_name,
+  date: node.created.value|date('F j, Y'),
+  body: body,
+}
+%}
