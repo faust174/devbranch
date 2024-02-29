@@ -1,0 +1,32 @@
+{% set card__base_class = 'card' %}
+<div  {{ bem('card-main', card__extra_classes) }}>
+  {% block card__img %}
+    {% if card__image__src %}
+     <div class="image-wrapper">
+      {{ card__image__src|raw }}
+     </div>
+    {% endif %}
+  {% endblock %}
+  <div class="category">
+    {{ category__label|raw }}
+  </div>
+  <div class="article-title">
+    {% if card__heading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 4,
+        heading: card__heading,
+        heading_url: url,
+      } %}
+    {% endif %}
+  </div>
+  {% include "@atoms/text/text/article-additional.twig" with {
+    caterogy: category__title,
+    date: created_on,
+  } %}
+  {% if card__body %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: card__body__base_class|default('body-teaser'),
+      paragraph_content: card__body,
+    } %}
+  {% endif %}
+</div>

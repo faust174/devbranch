@@ -1,8 +1,9 @@
 {% include '@molecules/text-with-media/text-with-media.twig' with {
   image: content.field_image,
-  category: node.field_category.entity.name.value,
+  category: content.field_category,
   label: label,
   author_name: author_name,
   date: node.created.value|date('F j, Y'),
 }
 %}
+

@@ -1,0 +1,8 @@
+{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+  card__extra_classes: ["article-teaser"],
+  card__heading: label,
+  heading_url: url,
+  category__label: content.field_category.0,
+  created_on: node.created.value|date('F j, Y'),
+} %}
+

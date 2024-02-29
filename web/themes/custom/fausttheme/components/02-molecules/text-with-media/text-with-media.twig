@@ -1,15 +1,14 @@
 
 <div class="title-container">
 <div class="image-container">
-  <a href="#" class="category-link">
     <div class="image">
-      {{ image }}
+      {{ image|raw }}
     </div>
     <div class="overlay">
-      <p class="category-title">{{ category }}</p>
+      <p class="category-title">{{ category|raw }}</p>
       <h2 class="post-title">{{ label }}</h2>
+      <p class="body-teaser-text">{{ body }}</p>
     </div>
-  </a>
 </div>
 <div class="author">
   <p class="authors_name">{% trans %}By: {{ author_name }}{% endtrans %}</p>

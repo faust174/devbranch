@@ -103,6 +103,19 @@ third_party_settings:
               items_per_page: none
             weight: 0
             additional: {  }
+          132c387f-ae08-4826-a28c-86f02e245cf8:
+            uuid: 132c387f-ae08-4826-a28c-86f02e245cf8
+            region: second
+            configuration:
+              id: 'views_block:hero_section-hero_main'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol

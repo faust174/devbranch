@@ -1,0 +1,19 @@
+{% for index, row in rows %}
+  {% set entity = row.content['#row']._entity %}
+  {% set title = entity.title.value %}
+  {% set node_url = path('entity.node.canonical', {'node': entity.id()}) %}
+  {% set field_image = entity.field_image.entity.uri.value %}
+  {% set image_url = file_url(field_image) %}
+  {% set image_with_link = '<a href="' ~ node_url ~ '"><img src="' ~ image_url ~ '" alt=""></a>' %}
+  {% set category_entity = entity.field_category.entity %}
+  {% set category_label = '<a href="' ~ path('entity.taxonomy_term.canonical', {'taxonomy_term': category_entity.id()}) ~ '">' ~ category_entity.name.value ~ '</a>' %}
+
+
+  {% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+    card__extra_classes: ["hero-finance-teaser"],
+    card__image__src: image_with_link,
+    card__heading: title,
+    url: node_url,
+    category__label: category_label,
+  } %}
+{% endfor %}

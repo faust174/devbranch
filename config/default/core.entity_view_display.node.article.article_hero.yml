@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - entity_reference_revisions
     - image
     - layout_builder
     - user
@@ -46,10 +47,18 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_image_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   comment: true
   field_checkbox: true
   field_description: true
-  field_image_paragraph: true
   field_tags: true
   links: true
