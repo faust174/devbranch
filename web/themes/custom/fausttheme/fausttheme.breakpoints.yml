@@ -9,7 +9,7 @@ fausttheme.small-large:
   mediaQuery: 'all and (min-width: 41em)'
 fausttheme.medium:
   label: medium
-  mediaQuery: 'all and (min-width: 720)'
+  mediaQuery: 'all and (min-width: 768)'
 fausttheme.large:
   label: large
   mediaQuery: 'all and (min-width: 1000)'

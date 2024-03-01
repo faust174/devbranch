@@ -1,0 +1,9 @@
+{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+  card__extra_classes: ["hero-finance"],
+  card__image__src: content.field_image.0,
+  category__label: content.field_category,
+  card__heading: label,
+  heading_url: url,
+  date: node.created.value|date('F j, Y'),
+} %}
+

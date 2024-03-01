@@ -8,34 +8,12 @@ $defaultColors: (
   text-hover: colors-vars.$dark-red,
   background: colors-vars.$white,
   border: colors-vars.$gray-lightest,
-  //primary: colors-vars.$blue,
-  //secondary: colors-vars.$purple,
-  //accent: colors-vars.$gray-dark,
-  //accent-high: colors-vars.$black,
-  //highlight: colors-vars.$gray-lighter,
-  //highlight-high: colors-vars.$gray-lightest,
-  //muted: colors-vars.$near-white,
-  //warning: colors-vars.$yellow-light,
-  //error: colors-vars.$red-light,
-  //message: colors-vars.$green-light,
+  background-main: colors-vars.$near-white,
 );
 
 $darkColors: (
   text: colors-vars.$white,
-  //text-inverse: colors-vars.$gray,
-  //background: colors-vars.$gray,
-  //background-inverse: colors-vars.$gray-light,
-  //background-section: colors-vars.$gray-dark,
-  //primary: colors-vars.$blue,
-  //secondary: colors-vars.$purple,
-  //accent: colors-vars.$gray-lightest,
-  //accent-high: colors-vars.$white,
-  //highlight: colors-vars.$gray-dark,
-  //highlight-high: colors-vars.$gray-darker,
-  //muted: colors-vars.$gray-darker,
-  //warning: colors-vars.$yellow-light,
-  //error: colors-vars.$red-light,
-  //message: colors-vars.$green-light,
+
 );
 
 ///////////

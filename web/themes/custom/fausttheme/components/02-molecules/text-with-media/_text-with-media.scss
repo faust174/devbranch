@@ -35,6 +35,7 @@
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 0;
+  overflow: hidden;
   a {
     text-decoration: none;
     font-size: 16px;
@@ -42,6 +43,15 @@
     margin-bottom: 0;
     line-height: 1;
     font-weight: 600;
+    @include medium {
+      font-size: 14px;
+    }
+    @include large {
+      font-size: 15px;
+    }
+    @include xl {
+      font-size: 16px;
+    }
     &:hover {
       color: clr(border);
     }
@@ -54,6 +64,15 @@
   margin-bottom: 0;
   line-height: 1;
   font-weight: 600;
+  @include medium {
+    font-size: 13px;
+  }
+  @include large {
+    font-size: 15px;
+  }
+  @include xl {
+    font-size: 16px;
+  }
   &:hover {
     color: clr(border);
   }
@@ -61,11 +80,22 @@
 
 .post-title {
   color: #fff;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.1;
-  @include medium {
-    line-height: 1.5;
+  a {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    @include medium {
+      font-size: 24px;
+    }
+    @include large {
+      font-size: 28px;
+    }
+    @include xl {
+      font-size: 30px;
+    }
+    @include medium {
+      line-height: 1.5;
+    }
   }
 }
 
@@ -110,8 +140,6 @@
     color: clr(text-inverse);
   }
 }
-.hero-main-marketing {
-  .author {
-    display: none;
-  }
-}
+
+
+

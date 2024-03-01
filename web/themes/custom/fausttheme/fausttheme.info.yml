@@ -8,8 +8,7 @@ dependencies:
   - drupal:emulsify_twig (^4.0)
 libraries:
   - fausttheme/global
-#  - fausttheme/google-fonts-work
-#  - fausttheme/google-fonts-serif
+  - fausttheme/fontawesome
 ckeditor_stylesheets:
   - dist/css/style.css
 regions:
