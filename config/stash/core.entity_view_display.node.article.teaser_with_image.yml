@@ -1,0 +1,56 @@
+uuid: e24b9c20-bb29-4b8e-ae98-ea4faf43802e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_with_image
+    - field.field.node.article.comment
+    - field.field.node.article.field_category
+    - field.field.node.article.field_checkbox
+    - field.field.node.article.field_description
+    - field.field.node.article.field_image
+    - field.field.node.article.field_image_paragraph
+    - field.field.node.article.field_tags
+    - image.style.wide
+    - node.type.article
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.teaser_with_image
+targetEntityType: node
+bundle: article
+mode: teaser_with_image
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment: true
+  field_checkbox: true
+  field_description: true
+  field_image_paragraph: true
+  field_tags: true
+  links: true

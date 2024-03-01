@@ -1,0 +1,30 @@
+uuid: 00b75612-bc81-4415-8b8e-20b89c75d8bc
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.pager
+  module:
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__pager_block_1
+theme: fausttheme
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:pager-block_1'
+settings:
+  id: 'views_block:pager-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'

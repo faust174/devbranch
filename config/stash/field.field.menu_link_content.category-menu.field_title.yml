@@ -1,0 +1,29 @@
+uuid: 7d20b6d5-a526-41f8-bd6f-53e9b5f1d511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_title
+    - system.menu.category-menu
+    - taxonomy.vocabulary.category
+id: menu_link_content.category-menu.field_title
+field_name: field_title
+entity_type: menu_link_content
+bundle: category-menu
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

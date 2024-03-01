@@ -1,0 +1,14 @@
+uuid: 6e096be6-17a1-4825-b4ec-34dd56da018b
+langcode: en
+status: true
+dependencies: {  }
+name: hero_desktop
+label: 'Hero desktop'
+effects:
+  799cd317-0f63-4599-ae60-945999e98312:
+    uuid: 799cd317-0f63-4599-ae60-945999e98312
+    id: image_resize
+    weight: 1
+    data:
+      width: 240
+      height: 170

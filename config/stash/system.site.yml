@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 4c7a1e4d-5360-480a-86b5-f811cb27e145
+name: NewsWeekPro
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/21
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

@@ -1,0 +1,25 @@
+uuid: 374b5aaa-3dba-483d-bc21-ffcc45bb3bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.left-header-menu
+  module:
+    - system
+  theme:
+    - fausttheme
+id: fausttheme_leftheadermenu
+theme: fausttheme
+region: header
+weight: -21
+provider: null
+plugin: 'system_menu_block:left-header-menu'
+settings:
+  id: 'system_menu_block:left-header-menu'
+  label: 'Left header menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: 90ed259f-ea0c-41f2-8ea1-3017927c212a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.popular_teaser
+label: 'Popular teaser'
+description: ''
+targetEntityType: node
+cache: true

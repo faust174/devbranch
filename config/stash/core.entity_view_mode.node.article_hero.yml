@@ -1,0 +1,11 @@
+uuid: d79a41a8-b93b-43fa-9998-080cb23c27b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.article_hero
+label: 'article hero'
+description: ''
+targetEntityType: node
+cache: true

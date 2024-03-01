@@ -1,0 +1,30 @@
+uuid: bd684559-8970-4eb1-856d-07569869a379
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:test2:3ea28505-e091-440f-8195-c32b758e9f7e'
+  module:
+    - block_content
+    - system
+  theme:
+    - fausttheme
+id: fausttheme_discovermore
+theme: fausttheme
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
+settings:
+  id: 'block_content:3ea28505-e091-440f-8195-c32b758e9f7e'
+  label: 'Discover more '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

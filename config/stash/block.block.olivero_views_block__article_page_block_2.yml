@@ -1,0 +1,29 @@
+uuid: 30dd49f4-2946-40b0-8665-f34041a97340
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_page
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__article_page_block_2
+theme: olivero
+region: content
+weight: -23
+provider: null
+plugin: 'views_block:article_page-block_2'
+settings:
+  id: 'views_block:article_page-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'

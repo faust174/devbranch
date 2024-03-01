@@ -1,0 +1,30 @@
+uuid: a212f7da-be38-4af4-bfb3-a283f33da097
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_more
+theme: olivero
+region: sidebar
+weight: -19
+provider: null
+plugin: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+settings:
+  id: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  label: More
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/*\r\n/node/*\r\n/user/*"

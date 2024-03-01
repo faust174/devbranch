@@ -1,0 +1,48 @@
+uuid: cd63774a-c6c5-44e3-8a31-958c14de789b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.main_page
+    - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+    - views.view.categories_test
+    - views.view.hero_section
+    - webform.webform.subscribe
+  content:
+    - 'block_content:test2:3ea28505-e091-440f-8195-c32b758e9f7e'
+    - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.main_page
+targetEntityType: node
+bundle: page
+mode: main_page
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  layout_builder__layout: true

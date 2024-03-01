@@ -1,0 +1,48 @@
+uuid: 93d1378c-9ac1-4945-bb2c-9ebb92604f52
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.popular_teaser
+    - field.field.node.article.comment
+    - field.field.node.article.field_category
+    - field.field.node.article.field_checkbox
+    - field.field.node.article.field_description
+    - field.field.node.article.field_image
+    - field.field.node.article.field_image_paragraph
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.popular_teaser
+targetEntityType: node
+bundle: article
+mode: popular_teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment: true
+  field_category: true
+  field_checkbox: true
+  field_description: true
+  field_image_paragraph: true
+  field_tags: true
+  links: true

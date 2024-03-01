@@ -1,0 +1,22 @@
+uuid: 8a619f77-a50d-4afc-aceb-d3cb0f251f95
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fausttheme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: fausttheme_content
+theme: fausttheme
+region: content
+weight: -20
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

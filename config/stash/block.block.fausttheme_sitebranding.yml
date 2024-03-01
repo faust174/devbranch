@@ -1,0 +1,23 @@
+uuid: c110b96d-13d5-4e68-b4e2-bb8053136c54
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fausttheme
+id: fausttheme_sitebranding
+theme: fausttheme
+region: header
+weight: -20
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

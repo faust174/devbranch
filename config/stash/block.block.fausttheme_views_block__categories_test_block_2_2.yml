@@ -1,0 +1,29 @@
+uuid: 23f362a4-bb69-428b-baea-430a9d36df50
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.categories_test
+  module:
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__categories_test_block_2_2
+theme: fausttheme
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:categories_test-block_2'
+settings:
+  id: 'views_block:categories_test-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

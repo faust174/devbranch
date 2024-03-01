@@ -1,0 +1,10 @@
+uuid: 429f794d-641b-4738-b0c6-3132f2180d76
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zglzjmYxi0G0ag9MZ02y0LSJOdpWRwJxyP_OvFojFyo
+id: basic
+label: test
+revision: 0
+description: ''

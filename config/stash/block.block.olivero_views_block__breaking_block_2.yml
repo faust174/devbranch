@@ -1,0 +1,29 @@
+uuid: a9ab8fc2-cc59-49e1-ad41-2db6e85562d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.breaking
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__breaking_block_2
+theme: olivero
+region: sidebar
+weight: -20
+provider: null
+plugin: 'views_block:breaking-block_2'
+settings:
+  id: 'views_block:breaking-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

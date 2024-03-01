@@ -1,0 +1,31 @@
+uuid: d0818b0b-2345-4f4c-a1f3-073adcb0024b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.basic_page
+    - views.view.pager_for_article
+  module:
+    - block_class
+    - block_visibility_groups
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__pager_for_article_block_1
+theme: fausttheme
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:pager_for_article-block_1'
+settings:
+  id: 'views_block:pager_for_article-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: basic_page

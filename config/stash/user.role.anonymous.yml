@@ -1,0 +1,30 @@
+uuid: efd212bb-7633-4010-8950-27112ea066a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - field_ui
+    - filter
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'administer user display'
+  - 'administer user form display'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'

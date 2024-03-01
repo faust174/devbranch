@@ -1,0 +1,6 @@
+{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+  card__extra_classes: ["hero-top"],
+  card__heading: label,
+  heading_url: url,
+  created_on: node.created.value|date('F j, Y'),
+} %}

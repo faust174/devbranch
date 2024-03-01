@@ -1,0 +1,29 @@
+uuid: c112b438-d60b-4efb-8f39-61b929cd4008
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.categories_test
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__categories_test_block_6_3
+theme: olivero
+region: content
+weight: -22
+provider: null
+plugin: 'views_block:categories_test-block_6'
+settings:
+  id: 'views_block:categories_test-block_6'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '3'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

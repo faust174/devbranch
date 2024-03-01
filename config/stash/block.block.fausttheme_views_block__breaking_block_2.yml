@@ -1,0 +1,29 @@
+uuid: 2c00d9c6-3ad1-48a0-addf-1b1ec418f19a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.breaking
+  module:
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__breaking_block_2
+theme: fausttheme
+region: sidebar
+weight: -14
+provider: null
+plugin: 'views_block:breaking-block_2'
+settings:
+  id: 'views_block:breaking-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

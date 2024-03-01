@@ -1,0 +1,12 @@
+uuid: 298a168b-b89c-41a6-a904-cdbb8a111243
+langcode: en
+status: true
+dependencies: {  }
+id: sub
+label: Sub
+recipients:
+  - sub@example.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

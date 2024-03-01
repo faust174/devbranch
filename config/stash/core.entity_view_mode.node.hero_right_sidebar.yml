@@ -1,0 +1,11 @@
+uuid: 0bca648f-476c-421e-9f35-8000e70c5d41
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.hero_right_sidebar
+label: 'Hero right sidebar'
+description: ''
+targetEntityType: node
+cache: true

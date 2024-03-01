@@ -1,0 +1,25 @@
+uuid: 9a1386e4-f4ce-4531-8793-e2ecd768cfeb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:108aaec4-bab4-4e30-95b8-4cc079cfb7ce'
+  module:
+    - block_content
+  theme:
+    - fausttheme
+id: fausttheme_copyright
+theme: fausttheme
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:108aaec4-bab4-4e30-95b8-4cc079cfb7ce'
+settings:
+  id: 'block_content:108aaec4-bab4-4e30-95b8-4cc079cfb7ce'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

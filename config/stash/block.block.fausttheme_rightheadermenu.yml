@@ -1,0 +1,31 @@
+uuid: a8a67308-9082-495a-9156-cd1e3c7e4d5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.right-header-menu
+  module:
+    - menu_block
+  theme:
+    - fausttheme
+id: fausttheme_rightheadermenu
+theme: fausttheme
+region: header
+weight: -19
+provider: null
+plugin: 'menu_block:right-header-menu'
+settings:
+  id: 'menu_block:right-header-menu'
+  label: 'Right header menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'right-header-menu:'
+  suggestion: right_header_menu
+visibility: {  }

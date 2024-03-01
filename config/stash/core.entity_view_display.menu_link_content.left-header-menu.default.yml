@@ -1,0 +1,31 @@
+uuid: 63ae35f4-e449-4202-9fb1-82cddc08b782
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.left-header-menu.field_image
+    - system.menu.left-header-menu
+  module:
+    - image
+id: menu_link_content.left-header-menu.default
+targetEntityType: menu_link_content
+bundle: left-header-menu
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,24 @@
+uuid: 7d57a10e-4d4b-49a2-b9f5-bfc27146d34c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.the_latest
+  module:
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__the_latest_block_1
+theme: fausttheme
+region: footer
+weight: -14
+provider: null
+plugin: 'views_block:the_latest-block_1'
+settings:
+  id: 'views_block:the_latest-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 21fde1aa-c7d8-4438-b6f1-6a7db68871cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - fausttheme
+id: fausttheme_mainnavigation_2
+theme: fausttheme
+region: navigation
+weight: -21
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

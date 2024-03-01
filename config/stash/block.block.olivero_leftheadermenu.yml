@@ -1,0 +1,25 @@
+uuid: 2070afeb-f227-4641-a884-96b84eea7ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.left-header-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_leftheadermenu
+theme: olivero
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:left-header-menu'
+settings:
+  id: 'system_menu_block:left-header-menu'
+  label: 'Left header menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

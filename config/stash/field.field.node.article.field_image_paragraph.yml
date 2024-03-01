@@ -1,0 +1,41 @@
+uuid: e9e00ce5-b040-410a-8467-4f2142e33e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_paragraph
+    - node.type.article
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.article.field_image_paragraph
+field_name: field_image_paragraph
+entity_type: node
+bundle: article
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+      quote: quote
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      image:
+        weight: 4
+        enabled: true
+      quote:
+        weight: 5
+        enabled: true
+      text:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions
