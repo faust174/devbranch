@@ -15,7 +15,13 @@ body {
   box-sizing: inherit;
 }
 .main-page-content {
-  padding: 0 30px;
+
+  position: relative;
+  padding: 0 10px;
+  @include xl {
+    padding: 0 130px;
+  }
+
 }
 .main {
   display: block; /* Fix for IE weirdness */
