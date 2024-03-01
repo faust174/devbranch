@@ -1,7 +1,7 @@
 .article-popular {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 130px;
   a {
     max-width: 100%;
     height: auto;
@@ -9,7 +9,6 @@
     flex: 0 0 30%;
     width: 30%;
     display: block;
-    order: 0;
     margin-left: 0;
     margin-right: auto;
   }
