@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 id: node.politics
-label: Politics
+label: 'Big image preview'
 description: ''
 targetEntityType: node
 cache: true

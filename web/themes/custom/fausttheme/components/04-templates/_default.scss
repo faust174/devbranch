@@ -10,7 +10,12 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
  * Layout Using Flexbox (IE11+).
  * Remove this and uncomment Grid code below to use CSS Grid.
 */
-
+.layout--onecol {
+  position: relative;
+}
+.layout__region--first {
+  position: relative;
+}
 .main {
   @include large {
     display: flex;
@@ -29,7 +34,12 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
     margin-bottom: 0;
   }
 }
-
+.block-link-wrapper {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .main-content {
   width: 100%;
 
