@@ -1,0 +1,15 @@
+uuid: b6f463f3-2bb9-4d80-b601-6236274f65fd
+langcode: en
+status: true
+dependencies: {  }
+name: politics_700x500
+label: 'politics (700x500)'
+effects:
+  0e70232b-4130-40e9-899a-6d456878f9d6:
+    uuid: 0e70232b-4130-40e9-899a-6d456878f9d6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 500
+      anchor: center-center

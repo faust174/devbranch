@@ -1,0 +1,15 @@
+uuid: d10305d4-39bc-4eef-828a-d1a2192a425d
+langcode: en
+status: true
+dependencies: {  }
+name: politics_330x230
+label: 'Politics (330x230)'
+effects:
+  5652d194-05fc-4a00-a40f-0c959b5c0897:
+    uuid: 5652d194-05fc-4a00-a40f-0c959b5c0897
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 330
+      height: 230
+      anchor: center-center

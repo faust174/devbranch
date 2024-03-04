@@ -1,0 +1,13 @@
+<div class="politics-top">{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+  card__extra_classes: ["politics"],
+  card__image__src: content.field_image.0,
+  card__heading: label,
+  heading_url: url,
+} %}
+
+{% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
+    image: author_picture,
+    author_name: author_name,
+    date: node.created.value|date('F j, Y'),
+}%}
+</div>

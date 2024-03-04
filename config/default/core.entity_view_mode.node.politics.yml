@@ -1,0 +1,11 @@
+uuid: e287cabb-a1ca-46a2-bd3f-abd1b7599974
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.politics
+label: Politics
+description: ''
+targetEntityType: node
+cache: true
