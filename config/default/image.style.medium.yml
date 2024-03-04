@@ -5,13 +5,13 @@ dependencies: {  }
 _core:
   default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
 name: medium
-label: 'Medium (220×220)'
+label: 'Medium '
 effects:
-  bddf0d06-42f9-4c75-a700-a33cafa25ea0:
-    uuid: bddf0d06-42f9-4c75-a700-a33cafa25ea0
-    id: image_scale
-    weight: 0
+  e646fc24-f294-4cf3-b04d-f1cb413a4870:
+    uuid: e646fc24-f294-4cf3-b04d-f1cb413a4870
+    id: image_scale_and_crop
+    weight: 1
     data:
-      width: 220
-      height: 220
-      upscale: false
+      width: 200
+      height: 200
+      anchor: center-center

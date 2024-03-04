@@ -1,0 +1,56 @@
+uuid: 9cc5b0b2-b56c-4fe5-8695-54355443e9ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image_breaking
+    - field.field.node.article.comment
+    - field.field.node.article.field_category
+    - field.field.node.article.field_checkbox
+    - field.field.node.article.field_description
+    - field.field.node.article.field_image
+    - field.field.node.article.field_image_paragraph
+    - field.field.node.article.field_tags
+    - node.type.article
+    - responsive_image.styles.breaking
+  module:
+    - layout_builder
+    - responsive_image
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.image_breaking
+targetEntityType: node
+bundle: article
+mode: image_breaking
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: breaking
+      image_link: content
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment: true
+  field_checkbox: true
+  field_description: true
+  field_image_paragraph: true
+  field_tags: true
+  links: true

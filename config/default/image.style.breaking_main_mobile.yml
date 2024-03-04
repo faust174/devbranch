@@ -1,0 +1,15 @@
+uuid: 3adc70b1-14e4-4ec7-bf4a-e554e92592c7
+langcode: en
+status: true
+dependencies: {  }
+name: breaking_main_mobile
+label: 'breaking main mobile'
+effects:
+  532713cb-2888-4d58-b488-19495203b88c:
+    uuid: 532713cb-2888-4d58-b488-19495203b88c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 770
+      height: 900
+      anchor: center-center

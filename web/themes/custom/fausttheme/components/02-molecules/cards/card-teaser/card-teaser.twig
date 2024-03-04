@@ -2,9 +2,9 @@
 <div  {{ bem('card-main', card__extra_classes) }}>
   {% block card__img %}
     {% if card__image__src %}
-     <div class="image-wrapper">
-      {{ card__image__src|raw }}
-     </div>
+      <div class="image-wrapper">
+        {{ card__image__src|raw }}
+      </div>
     {% endif %}
   {% endblock %}
   <div class="category">

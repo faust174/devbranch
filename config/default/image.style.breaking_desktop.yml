@@ -1,0 +1,15 @@
+uuid: b7f152e1-9b7c-43e1-b851-aca6f8b7fff4
+langcode: en
+status: true
+dependencies: {  }
+name: breaking_desktop
+label: 'Breaking desktop'
+effects:
+  f5df4bcb-0d3c-49dc-b6ca-f9cfa9265bc6:
+    uuid: f5df4bcb-0d3c-49dc-b6ca-f9cfa9265bc6
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 320
+      height: 390
+      anchor: center-center
