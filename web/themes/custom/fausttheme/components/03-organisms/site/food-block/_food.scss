@@ -1,0 +1,57 @@
+.food-section {
+  .politics-top {
+    h4 {
+      font-size: 16px;
+      font-family: $font-heading;
+    }
+  }
+ @include medium {
+   display: flex;
+ }
+}
+.food-atach {
+  .card__content {
+    min-width: 70%;
+  }
+  .article-popular {
+    margin-bottom: 10px;
+  }
+  @include medium {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .category-label {
+    display: none;
+  }
+  .image {
+    @include medium {
+      height: 96px;
+      width: 96px;
+    }
+  }
+}
+.food-block {
+  .block-link-wrapper {
+    @include medium {
+      margin-right: 40px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 5px;
+      right: 25px;
+      height: 2px;
+      background-color: clr(text-inverse);
+    }
+    a {
+      text-decoration: none;
+      color: clr(text-inverse);
+      text-transform: uppercase;
+      font-size: 14px;
+      &:hover {
+        color: clr(text);
+      }
+    }
+  }
+}
