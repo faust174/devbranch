@@ -46,7 +46,7 @@
     display: flex;
     .card__content {
       order: 1;
-      max-width: 70%;
+      min-width: 70%;
     }
     a {
       order: 2;

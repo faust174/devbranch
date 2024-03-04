@@ -1,0 +1,134 @@
+.layout--twocol-section--75-25 {
+  position: relative;
+  margin-top: 20px;
+  .layout__region--first {
+    flex: 0 0 100% !important;
+    @include medium {
+      flex: 0 1 75% !important;
+    }
+  }
+  .layout__region--second {
+    flex: 0 0 100% !important;
+    @include medium {
+      flex: 0 1 25% !important;
+    }
+}
+  @include large {
+    display: flex;
+    flex-wrap: nowrap !important;
+  }
+}
+.politics-section {
+  @include medium {
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+.politics-attach {
+  @include medium {
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  .card-main {
+    .article-additional {
+      margin-top: -5px;
+    }
+    padding: 0;
+    margin-bottom: 15px;
+    @include medium {
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.politics-top {
+  h4 {
+    font-family: $font-heading;
+    font-size: 24px;
+    @include medium {
+      font-size: 18px;
+      min-height: 70px;
+    }
+  }
+
+  .image {
+    @include medium {
+     max-height: 230px;
+     max-width: 100%;
+     object-fit: cover;
+   }
+  }
+  margin-right: 20px;
+    @include medium {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+        right: 5px;
+        height: 1px;
+        background-color: clr(border);
+      }
+    }
+  .author-container > a {
+    &:hover {
+      color: clr(text-inverse);
+    }
+  }
+}
+.block-link-wrapper {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include medium {
+    margin-right: 40px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    right: 25px;
+    height: 2px;
+    background-color: clr(text-inverse);
+    @include medium {
+      right: 45px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: clr(text-inverse);
+    text-transform: uppercase;
+    font-size: 14px;
+    &:hover {
+      color: clr(text);
+    }
+  }
+}
+.discover-more-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  @include large {
+    max-height: 424px;
+    max-width: 312px;
+    margin-top: 0;
+  }
+}
+.webform-submission-subscribe-node-21-form {
+  @include medium {
+    max-width: 312px;
+  }
+  input {
+    border: 1px solid clr(border);
+  }
+  .form-actions .button {
+      background-color: clr(text-inverse);
+  }
+}

@@ -1,7 +1,6 @@
 {% set row = rows[0].content['#row'] %}
 {% set node_id = row._entity.id %}
 {% set title = row._entity.title.value %}
-{% set title_link = '<a href="' ~ node_url ~ '">' ~ title ~ '</a>' %}
 {% set node_url = path('entity.node.canonical', {'node': node_id}) %}
 {% set field_image = row._entity.field_image.entity.uri.value %}
 {% set image_url = file_url(field_image) %}
@@ -15,7 +14,7 @@
   image: image_with_link,
   category: category_label,
   label: title,
-  url: title_link,
+  url: node_url,
   author_name: author_name,
   date: node.created.value|date('F j, Y'),
   body: body,

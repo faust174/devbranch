@@ -1,0 +1,14 @@
+<div {{ bem('block') }}>
+  {{ title_prefix }}
+  {% if label %}
+  <div class="block-link-wrapper">
+    <h2{{ title_attributes.addClass('h2') }}>{{ label }}</h2>
+    <a href="/news/{{ label }}">View all <i class="fas fa-arrow-right"></i></a>
+  </div>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
+

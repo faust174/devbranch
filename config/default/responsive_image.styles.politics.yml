@@ -1,0 +1,25 @@
+uuid: 906ba910-89d0-48f4-bdf0-6220ecf00fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.politics_330x230
+    - image.style.politics_700x500
+    - image.style.wide
+  theme:
+    - fausttheme
+id: politics
+label: Politics
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_330x230
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_700x500
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: wide

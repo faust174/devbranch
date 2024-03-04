@@ -32,12 +32,14 @@
     }
   }
 }
-.author-container > a {
-  @include medium {
-    display: none;
+
+  .author-container > a {
+    @include medium {
+      display: none;
+    }
+    @include xl {
+      display: block;
+    }
   }
-  @include xl {
-    display: block;
-  }
-}
+
 

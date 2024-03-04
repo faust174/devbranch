@@ -1,0 +1,49 @@
+uuid: 5fb75586-3c75-4092-aa66-0961b41c680e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.politics
+    - field.field.node.article.comment
+    - field.field.node.article.field_category
+    - field.field.node.article.field_checkbox
+    - field.field.node.article.field_description
+    - field.field.node.article.field_image
+    - field.field.node.article.field_image_paragraph
+    - field.field.node.article.field_tags
+    - node.type.article
+    - responsive_image.styles.politics
+  module:
+    - layout_builder
+    - responsive_image
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.politics
+targetEntityType: node
+bundle: article
+mode: politics
+content:
+  field_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: politics
+      image_link: content
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment: true
+  field_category: true
+  field_checkbox: true
+  field_description: true
+  field_image_paragraph: true
+  field_tags: true
+  links: true
