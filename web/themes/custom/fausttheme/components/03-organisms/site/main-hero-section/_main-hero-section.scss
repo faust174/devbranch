@@ -117,13 +117,14 @@
   .body-teaser-text {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     color: clr(background);
-    margin: 0;
+    margin: 10px;
     font-size: 16px;
     line-height: 1.4;
     font-weight: 500;
     padding-bottom: 10px;
   }
   .overlay {
+    pointer-events: none;
     text-align: left;
     padding-left: 10px;
     position: absolute;
@@ -136,20 +137,29 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+    * {
+      pointer-events: auto;
+    }
   }
-  .category-title a {
+  .post-title {
+    font-size: 30px;
+    margin: 10px;
+  }
+  .category-title {
+      margin: 10px;
+  a {
     padding: 5px 8px;
     border-radius: 2px;
     font-size: 12px;
     line-height: 1;
     text-transform: uppercase;
     color: clr(background);
-    margin-bottom: 0;
     font-weight: 600;
     background-color: clr(text-inverse);
     &:hover {
       background-color: clr(text);
     }
+  }
   }
   .author {
     display: none;
@@ -160,6 +170,13 @@
   margin-right: 10px;
 }
 .hero-top-section {
+  h4 {
+    font-size: 12px;
+  }
+  justify-content: center;
+  .card-main--hero-top {
+    max-width: 370px;
+  }
   padding: 10px;
   margin-right: -10px;
   margin-left: -10px;
@@ -167,8 +184,8 @@
   width: auto;
   @include medium {
     display: flex;
-    margin-left: -130px;
-    margin-right: -130px;
+    margin-left: -200px;
+    margin-right: -200px;
     margin-bottom: -90px;
     padding-bottom: 100px;
   }

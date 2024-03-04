@@ -1,0 +1,25 @@
+uuid: 2ab660b2-ac56-482f-9a21-5c115938be87
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.breaking_desktop
+    - image.style.breaking_main_mobile
+    - image.style.wide
+  theme:
+    - fausttheme
+id: breaking_main
+label: 'Breaking main'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: breaking_desktop
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: breaking_main_mobile
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: wide

@@ -1,11 +1,11 @@
-uuid: 90ed259f-ea0c-41f2-8ea1-3017927c212a
+uuid: a9b325f6-1ee8-4692-8118-a4627af76c3b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.popular_teaser
-label: 'Image title teaser'
+id: node.background_image
+label: 'background image'
 description: ''
 targetEntityType: node
 cache: true

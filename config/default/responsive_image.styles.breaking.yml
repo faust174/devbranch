@@ -1,0 +1,25 @@
+uuid: d6f05cde-454a-4505-b93c-ed439b19b175
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.medium
+    - image.style.thumbnail_96
+    - image.style.wide
+  theme:
+    - fausttheme
+id: breaking
+label: Breaking
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: thumbnail_96
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: medium
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: wide

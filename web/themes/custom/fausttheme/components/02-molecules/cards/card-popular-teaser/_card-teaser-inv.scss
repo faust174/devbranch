@@ -28,12 +28,32 @@
       width: 100%;
     }
     &:hover {
-    color: clr(text-inverse);
+      color: clr(text-inverse);
     }
   }
 }
 .article-popular-sidebar h2 {
   margin-top: 20px;
- padding-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 4px solid clr(text-inverse);
+}
+.category-label {
+  a {
+    text-decoration: none;
+    color: clr(text-inverse);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    @include medium {
+      font-size: 11px;
+    }
+    @include xl {
+      font-size: 12px;
+    }
+    &:hover {
+      color: clr(text);
+    }
+  }
 }
