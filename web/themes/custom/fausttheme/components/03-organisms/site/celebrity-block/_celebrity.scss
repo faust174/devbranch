@@ -1,0 +1,56 @@
+.celebrity-section {
+ @include medium {
+   display: flex;
+   justify-content: space-between;
+ }
+  .politics-top {
+    h4 {
+      font-size: 24px;
+    }
+    @include medium {
+      display: flex;
+      align-items: center;
+    }
+    .author-with-title {
+      margin-left: 10px;
+      width: 105%;
+    }
+    .image {
+      @include medium {
+        max-height: 230px;
+        min-width: 330px;
+        object-fit: cover;
+      }
+    }
+   @include medium {
+     display: flex;
+     align-items: center;
+   }
+    &::after {
+      height: 0;
+    }
+  }
+}
+.celebrity-attach {
+  @include medium {
+    display: flex;
+    align-items: center;
+  }
+  .politics-top {
+    &::after {
+      height: 0;
+    }
+    h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      min-height: auto;
+    }
+    .image {
+      @include medium {
+        max-height: 230px;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
