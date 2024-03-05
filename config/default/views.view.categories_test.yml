@@ -6,19 +6,21 @@ dependencies:
     - core.entity_view_mode.node.background_image
     - core.entity_view_mode.node.image_breaking
     - core.entity_view_mode.node.politics
+    - core.entity_view_mode.node.teaser_with_image
     - core.entity_view_mode.node.title_date
     - field.storage.node.body
     - field.storage.node.field_category
     - field.storage.node.field_image
+    - field.storage.node.field_image_paragraph
     - image.style.large
     - node.type.article
     - taxonomy.vocabulary.category
   content:
-    - 'taxonomy_term:category:0fbb221d-3acd-4a5c-8f19-45dc1bc925af'
     - 'taxonomy_term:category:4d32a97a-c157-4e82-a1a9-7bcfc85045fe'
     - 'taxonomy_term:category:5507679d-5769-4a49-a8a7-700ec49db102'
     - 'taxonomy_term:category:69a6b251-06a9-47b2-ad1a-d052cdedd929'
   module:
+    - entity_reference_revisions
     - image
     - node
     - taxonomy
@@ -640,14 +642,13 @@ display:
       tags:
         - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_image'
-  attachment_3:
-    id: attachment_3
-    display_title: 'Celebrity attachment'
+  attachment_2:
+    id: attachment_2
+    display_title: 'Exclusive attachment'
     display_plugin: attachment
-    position: 4
+    position: 6
     display_options:
-      enabled: false
-      title: 'Celebriry attachment'
+      title: 'Exclusive attachment'
       fields:
         title:
           id: title
@@ -778,15 +779,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        field_category:
+          id: field_category
+          table: node__field_category
+          field: field_category
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: uid
           plugin_id: field
           label: ''
           exclude: false
@@ -843,87 +842,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
       pager:
         type: some
         options:
-          offset: 2
+          offset: 1
           items_per_page: 4
       filters:
         status:
@@ -946,78 +868,32 @@ display:
           plugin_id: bundle
           value:
             article: article
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            3: 3
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: category
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
       filter_groups:
         operator: AND
         groups:
           1: AND
       style:
         type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-      row:
-        type: fields
         options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser_with_image
       defaults:
         title: false
+        css_class: false
         pager: false
         style: false
         row: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: exclusive-attach
       display_description: ''
       display_extenders: {  }
       displays:
-        block_4: block_4
+        block_6: block_6
       attachment_position: after
     cache_metadata:
       max-age: -1
@@ -1027,6 +903,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_image'
   attachment_4:
     id: attachment_4
@@ -3625,7 +3502,7 @@ display:
     display_plugin: block
     position: 4
     display_options:
-      title: Celebriry
+      title: Celebrity
       fields:
         title:
           id: title
@@ -4497,11 +4374,74 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_image_paragraph:
+          id: field_image_paragraph
+          table: node__field_image_paragraph
+          field: field_image_paragraph
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_revisions_entity_view
+          settings:
+            view_mode: default
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 1
       filters:
         status:
           id: status
@@ -4565,12 +4505,26 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         title: false
+        css_class: false
         pager: false
+        style: false
+        row: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: exclusive-block
       display_description: ''
       display_extenders: {  }
     cache_metadata:
@@ -4583,6 +4537,7 @@ display:
       tags:
         - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_image_paragraph'
   block_7:
     id: block_7
     display_title: Recent

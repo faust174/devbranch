@@ -1,14 +1,11 @@
 <div class="more-preview">
-
   {% set image_src = content.field_image.0 %}
-      {% embed '@molecules/cards/card-article-more/card-article-more.twig' with {
-        card__extra_classes: ["grid__item"],
-        card__image__src: image_src,
-        card__heading: label,
-        image_url: url,
-      } %}
-  {% endembed %}
-
+  {% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+    card__extra_classes: ["grid__item"],
+    card__image__src: image_src,
+    card__heading: label,
+    heading_url: url,
+  } %}
   {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
     image: author_picture,
     author_name: author_name,

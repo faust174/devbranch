@@ -10,3 +10,32 @@
 @import '04-templates/**/*.scss';
 @import '00-base/01-colors/colors-used.scss';
 
+@font-face {
+  src: url('/themes/custom/fausttheme/components/00-base/04-fonts/work-sans/WorkSansRegular.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/themes/custom/fausttheme/components/00-base/04-fonts/pt-serif/PTSerifBold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src:  url('/themes/custom/fausttheme/components/00-base/04-fonts/work-sans/WorkSansBold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src:  url('/themes/custom/fausttheme/components/00-base/04-fonts/work-sans/WorkSansSemiBold.woff') format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src:  url('/themes/custom/fausttheme/components/00-base/04-fonts/work-sans/WorkSansMedium.woff') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/themes/custom/fausttheme/components/00-base/04-fonts/pt-serif/PTSerifRegular.woff') format('woff');
+  font-weight: normal;
+}

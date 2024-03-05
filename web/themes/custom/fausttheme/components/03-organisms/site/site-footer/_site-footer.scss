@@ -1,4 +1,11 @@
 .footer {
+  @include medium {
+    margin-left: -200px;
+    margin-right: -200px;
+    margin-bottom: -90px;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
   background-color: #ededed;
   padding: 0 20px;
   @include large {

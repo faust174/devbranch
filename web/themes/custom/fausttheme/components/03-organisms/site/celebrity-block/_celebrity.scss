@@ -1,6 +1,12 @@
 .layout--onecol {
   margin-top: 20px;
 }
+.celebrity-block {
+  margin-top: 30px;
+  h2 {
+    text-align: center;
+  }
+}
 .celebrity-section {
  @include medium {
    display: flex;

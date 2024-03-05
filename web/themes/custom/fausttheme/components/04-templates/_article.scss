@@ -19,6 +19,11 @@
     padding-right: 40px;
   }
 }
+.article-popular-sidebar {
+  .views-row {
+    margin-bottom: 10px;
+  }
+}
 .quote h3{
     font-weight: 700;
     text-transform: none;
@@ -34,7 +39,17 @@
 .main-sidebar {
   order: 1;
 }
-
+.more-preview {
+  h4 {
+    font-size: 15px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include medium {
+    flex-direction: row;
+  }
+}
 @include medium {
   .main--with-sidebar {
     flex-direction: row;
@@ -88,13 +103,9 @@
 
 .comment_form {
   float:left;
-  border: 1px solid clr(border);
   input {
     width: 100%;
   }
-}
-.form_text_area {
-  border: 1px solid clr(border);
 }
 .comment-form {
   display: flex;
@@ -120,16 +131,19 @@
     padding-bottom: 16px;
   }
 }
-.subscribe-form {
-  .button {
-    background-color: clr(text-inverse);
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  .form-text {
-    border: 1px solid clr(border);
+.main-sidebar,
+.main-content {
+  .webform-main {
+    .button {
+      background-color: clr(text-inverse);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    .form-text {
+      border: 1px solid clr(border);
+    }
   }
 }
 .subscribe-form {
