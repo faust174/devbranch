@@ -1,0 +1,72 @@
+.recent-section {
+  .image-container {
+    display: flex !important;
+  }
+}
+.recent-posts-container {
+  margin-bottom: 10px;
+  @include medium {
+    display: flex;
+    align-items: center;
+  }
+  .image-wrapper {
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .author-with-title {
+    margin-left: 10px;
+    margin-right: 10px;
+    @include medium {
+      margin-left: 0;
+    }
+  }
+  h4 {
+    font-size: 26px;
+    @include medium {
+      font-size: 20px;
+    }
+    @include large {
+      font-size: 26px;
+    }
+  }
+  .category-author {
+    display: flex;
+    align-items: center;
+    .category {
+      margin-right: 20px;
+      a {
+        font-size: 13px;
+        color: clr(text);
+        &:hover {
+          color: clr(text-inverse);
+        }
+      }
+    }
+    .author-container {
+      a {
+        &:hover {
+          color: clr(text-inverse);
+        }
+      }
+      margin: 0;
+    }
+  }
+}
+.recent-attach {
+  @include medium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  margin-left: 10px;
+}
+.layout--twocol-section {
+  .recent-posts-block {
+   @include medium {
+     h2 {
+       text-align: center;
+       margin-left: 340px;
+     }
+   }
+  }
+}
+

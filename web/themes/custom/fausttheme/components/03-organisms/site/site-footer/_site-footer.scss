@@ -1,4 +1,9 @@
 .footer {
+  .webform-main {
+    .button {
+      background-color: clr(text);
+    }
+  }
   @include medium {
     margin-left: -200px;
     margin-right: -200px;

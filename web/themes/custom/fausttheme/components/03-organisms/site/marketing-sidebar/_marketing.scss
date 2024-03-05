@@ -1,0 +1,79 @@
+.marketing-image {
+  .image img {
+    height: 700px;
+    object-fit: cover;
+    @include medium {
+      height: 340px;
+    }
+    @include large {
+      height: 380px;
+    }
+    @include xl {
+      height: 420px;
+    }
+  }
+  .post-title {
+    font-size: 18px;
+    text-align: left;
+  }
+  .author {
+    display: none;
+  }
+  .category-title {
+    display: none;
+  }
+  .author-container {
+    margin-top: -45px;
+    margin-left: 20px;
+    .authors-image {
+      display: none;
+    }
+    z-index: 100;
+    position: absolute;
+    color: clr(background);
+
+    p {
+
+    }
+    a {
+
+      color: clr(background);
+      &:hover {
+        color: clr(border);
+      }
+    }
+  }
+  .overlay {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+    * {
+      pointer-events: auto;
+    }
+  }
+}
+.marketing-block {
+  position: relative;
+  margin-top: 85px;
+  margin-bottom: 30px;
+  h2 {
+    background-color: clr(text);
+    color: clr(background);
+    font-size: 20px;
+    font-family: $font-heading;
+    padding-top: 6px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    max-width: 130px;
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    top: -25px;
+    z-index: 10;
+    @include medium {
+    }
+  }
+}
