@@ -1,0 +1,44 @@
+{% set row = rows[0].content['#row'] %}
+{% set node_id = row._entity.id %}
+{% set title = row._entity.title.value %}
+{% set node_url = path('entity.node.canonical', {'node': node_id}) %}
+{% set field_image = row._entity.field_image.entity.uri.value %}
+{% set image_url = file_url(field_image) %}
+{% set image_with_link = '<a href="' ~ node_url ~ '"><img src="' ~ image_url ~ '" alt=""></a>' %}
+{% set category_label = '<a href="' ~ path('entity.taxonomy_term.canonical', {'taxonomy_term': row._entity.field_category.entity.id}) ~ '">' ~ row._entity.field_category.entity.name.value ~ '</a>' %}
+{% set created = row._entity.created.value %}
+{% set body = row._entity.field_image_paragraph.entity.field_text.value|slice(0, 130) ~ (row._entity.field_image_paragraph.entity.field_text.value|length > max_length ? '...' : '') %}
+{% set author = row._entity.getOwner() %}
+{% set author_url = path('entity.user.canonical', {'user': author.id}) %}
+{% set author_name = author.getDisplayName() %}
+{% set author_link = '<a href="' ~ author_url ~ '">' ~ author_name ~ '</a>' %}
+{% set author_image = file_url(author.fields.user_picture.entity.uri.0.value) %}
+{% set author_image_with_link = '<a href="' ~ node_url ~ '"><img src="' ~ author_image ~ '" alt=""></a>' %}
+
+
+<div class="recent-posts-container">
+{% include "@molecules/cards/card-teaser/card-teaser.twig" with {
+    card__image__src: image_with_link,
+  } %}
+  <div class="author-with-title">
+    <div class="article-title">
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 4,
+        heading: title,
+        heading_url: node_url,
+      } %}
+    </div>
+    <div class="category-author">
+      <div class="category"> {{ category_label|raw }}</div>
+    {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
+      image: author_image_with_link,
+      author_name: author_name,
+      authors_page_link: author_url,
+      date: node.created.value|date('F j, Y'),
+    }%}
+    </div>
+    {% include '@atoms/text/text/01-paragraph.twig' with {
+      paragraph_content: body,
+    } %}
+  </div>
+</div>

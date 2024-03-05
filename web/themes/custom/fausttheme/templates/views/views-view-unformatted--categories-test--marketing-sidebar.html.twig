@@ -1,0 +1,28 @@
+{% set row = rows[0].content['#row'] %}
+{% set node_id = row._entity.id %}
+{% set title = row._entity.title.value %}
+{% set node_url = path('entity.node.canonical', {'node': node_id}) %}
+{% set field_image = row._entity.field_image.entity.uri.value %}
+{% set image_url = file_url(field_image) %}
+{% set image_with_link = '<a href="' ~ node_url ~ '"><img src="' ~ image_url ~ '" alt=""></a>' %}
+{% set category_label = '<a href="' ~ path('entity.taxonomy_term.canonical', {'taxonomy_term': row._entity.field_category.entity.id}) ~ '">' ~ row._entity.field_category.entity.name.value ~ '</a>' %}
+{% set created = row._entity.created.value %}
+{% set author = row._entity.getOwner() %}
+{% set author_url = path('entity.user.canonical', {'user': author.id}) %}
+{% set author_name = author.getDisplayName() %}
+{% set author_link = '<a href="' ~ author_url ~ '">' ~ author_name ~ '</a>' %}
+<div class="marketing-image">
+{% include '@molecules/text-with-media/text-with-media.twig' with {
+  image: image_with_link,
+  category: category_label,
+  label: title,
+  url: node_url,
+}
+%}
+ {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
+   author_name: author_name,
+   authors_page_link: author_url,
+   date: node.created.value|date('F j, Y'),
+ }%}
+</div>
+
