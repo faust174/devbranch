@@ -1,0 +1,39 @@
+uuid: 79e031e2-d9fe-44bc-992f-4eb103ffc71e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:test2:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  module:
+    - block_class
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - fausttheme
+third_party_settings:
+  block_class:
+    classes: category-discover-more
+id: fausttheme_more_2
+theme: fausttheme
+region: sidebar
+weight: -16
+provider: null
+plugin: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+settings:
+  id: 'block_content:e9621162-f812-4f88-8e1d-a7732a3bf2d2'
+  label: More
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

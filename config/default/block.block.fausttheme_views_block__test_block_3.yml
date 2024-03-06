@@ -1,0 +1,35 @@
+uuid: 8869b004-3572-4da0-9ec7-687e2ae0c1c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.test
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - fausttheme
+id: fausttheme_views_block__test_block_3
+theme: fausttheme
+region: hero_section
+weight: 0
+provider: null
+plugin: 'views_block:test-block_3'
+settings:
+  id: 'views_block:test-block_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

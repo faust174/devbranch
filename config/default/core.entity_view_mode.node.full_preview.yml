@@ -1,0 +1,11 @@
+uuid: cf5728b7-d330-4618-b22e-a0557aba5417
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_preview
+label: 'full preview'
+description: ''
+targetEntityType: node
+cache: true

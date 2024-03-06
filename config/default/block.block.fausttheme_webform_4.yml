@@ -1,0 +1,40 @@
+uuid: ae927ab4-ba8d-4bd7-b4b1-cfbbdce1ce59
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.subscribe
+  module:
+    - block_class
+    - block_visibility_groups
+    - system
+    - webform
+  theme:
+    - fausttheme
+third_party_settings:
+  block_class:
+    classes: category-page-form
+id: fausttheme_webform_4
+theme: fausttheme
+region: sidebar
+weight: -17
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Subscribe
+  label_display: visible
+  provider: webform
+  webform_id: subscribe
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

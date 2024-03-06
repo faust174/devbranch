@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.menu_link_content.left-header-menu.field_image
+    - field.field.menu_link_content.left-header-menu.field_menu_icon
     - system.menu.left-header-menu
   module:
     - image
+    - text
 id: menu_link_content.left-header-menu.default
 targetEntityType: menu_link_content
 bundle: left-header-menu
@@ -27,5 +29,12 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_menu_icon:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden: {  }

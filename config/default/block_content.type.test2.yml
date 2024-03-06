@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: test2
-label: test2
+label: 'text with image'
 revision: 0
 description: ''

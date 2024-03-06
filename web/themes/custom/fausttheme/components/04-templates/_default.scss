@@ -27,10 +27,11 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 }
 .main-sidebar {
   margin-bottom: $space-double;
+  padding-left: 20px;
 
   @include large {
     order: 2;
-    width: $sidebar-width;
+    width: 28%;
     margin-bottom: 0;
   }
 }

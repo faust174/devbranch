@@ -6,9 +6,15 @@
     <p class="category-title">{{ category|raw }}</p>
     <a href="{{ url }}" class="post-title">{{ label|raw }}</a>
     <p class="body-teaser-text">{{ body }}</p>
+    <div class="author-alt">
+      <a href="{{ authors_link }}" class="authors_name-alt">{{ author_name }}</a>
+      <span>&ndash;</span>
+      <p class="authors_date-alt">{{ date }}</p>
+    </div>
+
   </div>
 </div>
 <div class="author">
-  <p class="authors_name">{% trans %}By: {{ author_name }}{% endtrans %}</p>
-  <p class="authors_date">{% trans %}Date: {{ date }}{% endtrans %}</p>
+  <p class="authors_name">{% trans %}<span>By: </span>{{ author_name }}{% endtrans %}</p>
+  <p class="authors_date">{% trans %}<span>Date: </span>{{ date }}{% endtrans %}</p>
 </div>

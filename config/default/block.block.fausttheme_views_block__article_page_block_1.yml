@@ -17,7 +17,7 @@ third_party_settings:
 id: fausttheme_views_block__article_page_block_1
 theme: fausttheme
 region: sidebar
-weight: -12
+weight: -19
 provider: null
 plugin: 'views_block:article_page-block_1'
 settings:

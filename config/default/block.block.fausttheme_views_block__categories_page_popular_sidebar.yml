@@ -1,0 +1,38 @@
+uuid: 3a9d60ce-8852-4934-a016-e444729c131b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.categories_page
+  module:
+    - block_class
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - fausttheme
+third_party_settings:
+  block_class:
+    classes: categories-popular-sidebar
+id: fausttheme_views_block__categories_page_popular_sidebar
+theme: fausttheme
+region: sidebar
+weight: -18
+provider: null
+plugin: 'views_block:categories_page-popular_sidebar'
+settings:
+  id: 'views_block:categories_page-popular_sidebar'
+  label: Popular
+  label_display: visible
+  provider: views
+  views_label: Popular
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

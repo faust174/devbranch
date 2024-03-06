@@ -372,10 +372,12 @@ display:
           view_mode: article_hero
       defaults:
         title: false
+        css_class: false
         pager: false
         style: false
         row: false
         arguments: false
+      css_class: article-hero
       display_description: ''
       display_extenders: {  }
     cache_metadata:

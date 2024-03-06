@@ -1,0 +1,41 @@
+uuid: e13e3719-3a4a-42a2-8e0f-9363bbdc6ead
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.category-page-menu
+  module:
+    - block_visibility_groups
+    - menu_block
+    - system
+  theme:
+    - fausttheme
+id: fausttheme_categorypagemenu
+theme: fausttheme
+region: hero_section
+weight: 0
+provider: null
+plugin: 'menu_block:category-page-menu'
+settings:
+  id: 'menu_block:category-page-menu'
+  label: 'Category page menu '
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: active_item
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'category-page-menu:'
+  suggestion: category_page_menu
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

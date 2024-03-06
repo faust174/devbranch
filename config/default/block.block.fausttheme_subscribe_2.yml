@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_subscribe_2
 theme: fausttheme
 region: sidebar
-weight: -15
+weight: -14
 provider: null
 plugin: 'block_content:07cff609-e47d-435d-8c05-b918faba4c24'
 settings:

@@ -103,16 +103,6 @@
   margin-bottom: 40px;
   line-height: 0.5;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-    right: 5px;
-    height: 1px;
-    background-color: clr(border);
-    margin-bottom: -15px;
-  }
   @include medium {
     flex-direction: row;
     align-items: center;
@@ -134,5 +124,22 @@
 
   &:hover {
     color: clr(text-inverse);
+  }
+}
+.author-alt {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  a {
+    text-decoration: none;
+    color: clr(text);
+    font-size: 13px;
+    margin-right: 10px;
+  }
+  @include medium {
+    font-size: 12px;
+  }
+  @include large {
+    font-size: 13px;
   }
 }

@@ -61,10 +61,11 @@
 }
 .layout--twocol-section {
   .recent-posts-block {
+    margin-top: 20px;
    @include medium {
      h2 {
        text-align: center;
-       margin-left: 340px;
+       margin-left: 320px;
      }
    }
   }

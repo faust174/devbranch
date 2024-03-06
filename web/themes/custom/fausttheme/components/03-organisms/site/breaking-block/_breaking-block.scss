@@ -141,6 +141,9 @@
 
 
 .breaking-block {
+  .author-alt {
+    display: none;
+  }
   background-color: clr(background-main);
   padding: 10px;
 }

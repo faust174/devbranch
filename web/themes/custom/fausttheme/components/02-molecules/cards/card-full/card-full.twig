@@ -1,0 +1,36 @@
+{% set card__base_class = 'card' %}
+<div class="full-preview"  {{ bem('card-main', card__extra_classes) }}>
+  {% block card__img %}
+    {% if card__image__src %}
+      <div class="image-wrapper">
+        {{ card__image__src|raw }}
+      </div>
+    {% endif %}
+  {% endblock %}
+  <div class="article-info">
+    {% if card__heading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 4,
+        heading: card__heading,
+        heading_url: url,
+      } %}
+    {% endif %}
+    <div class="category-author">
+      <div class="category">
+        {{ category__label|raw }}
+      </div>
+    {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
+      image: image,
+      authors_page_link: link,
+      author_name: author_name,
+      date: post_date,
+    } %}
+    </div>
+  {% if card__body %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: card__body__base_class|default('body-teaser'),
+      paragraph_content: card__body,
+    } %}
+  {% endif %}
+  </div>
+</div>

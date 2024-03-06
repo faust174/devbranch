@@ -17,7 +17,7 @@ third_party_settings:
 id: fausttheme_socialmedia
 theme: fausttheme
 region: sidebar
-weight: -19
+weight: -24
 provider: null
 plugin: 'menu_block:social-media'
 settings:

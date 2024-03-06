@@ -1,5 +1,5 @@
 .layout--onecol {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .celebrity-block {
   margin-top: 30px;
@@ -22,7 +22,8 @@
     }
     .author-with-title {
       margin-left: 10px;
-      width: 105%;
+      width: 100%;
+      max-width: 350px;
     }
     .image {
       @include medium {

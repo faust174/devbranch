@@ -1,0 +1,15 @@
+{% set body = content.field_image_paragraph.0['#paragraph'].field_text.value|slice(0, 130) ~ (content.field_image_paragraph.0['#paragraph'].field_text.value|length > max_length ? '...' : '') %}
+
+{% include "@molecules/cards/card-full/card-full.twig" with {
+  card__image__src: content.field_image.0,
+  card__heading: label,
+  heading_url: url,
+  post_date: node.created.value|date('F j, Y'),
+  image: author_picture,
+  author_name: author_name,
+  category__label: content.field_category.0,
+  card__body: body,
+} %}
+
+
+
