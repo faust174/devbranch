@@ -2,11 +2,8 @@ uuid: 49bc76a1-80d1-451d-9d98-e0c871dcf3f2
 langcode: en
 status: false
 dependencies:
-  config:
-    - views.view.hero_section
   module:
     - system
-    - views
   theme:
     - fausttheme
 id: fausttheme_views_block__hero_section_block_1

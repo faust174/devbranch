@@ -1,0 +1,15 @@
+uuid: bb68e613-51c9-4e73-87aa-04366a4d14f2
+langcode: en
+status: true
+dependencies: {  }
+name: article_full
+label: 'article full'
+effects:
+  da2f5ce7-2525-42ff-a2ca-aeb2256bd845:
+    uuid: da2f5ce7-2525-42ff-a2ca-aeb2256bd845
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 720
+      anchor: center-center

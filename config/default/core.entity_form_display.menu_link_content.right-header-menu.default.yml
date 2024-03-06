@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.menu_link_content.right-header-menu.field_menu_image
+    - field.field.menu_link_content.right-header-menu.field_right_menu_icon
     - image.style.thumbnail
     - system.menu.right-header-menu
   module:
     - image
     - link
     - menu_item_extras
+    - text
 id: menu_link_content.right-header-menu.default
 targetEntityType: menu_link_content
 bundle: right-header-menu
@@ -22,6 +24,14 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_right_menu_icon:
+    type: text_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield

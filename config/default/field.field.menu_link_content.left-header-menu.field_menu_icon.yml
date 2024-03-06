@@ -1,0 +1,24 @@
+uuid: cfdfe9ee-899f-4e3e-b023-4343a78af3dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_icon
+    - filter.format.full_html
+    - system.menu.left-header-menu
+  module:
+    - text
+id: menu_link_content.left-header-menu.field_menu_icon
+field_name: field_menu_icon
+entity_type: menu_link_content
+bundle: left-header-menu
+label: 'menu icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

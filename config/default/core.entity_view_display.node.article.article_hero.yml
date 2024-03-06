@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_image_paragraph
     - field.field.node.article.field_tags
+    - image.style.article_full
     - node.type.article
   module:
     - entity_reference_revisions
@@ -41,7 +42,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: article_full
       image_loading:
         attribute: eager
     third_party_settings: {  }

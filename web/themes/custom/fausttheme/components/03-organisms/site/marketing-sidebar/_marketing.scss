@@ -44,6 +44,15 @@
     }
   }
   .overlay {
+    .author-alt {
+      color: clr(background);
+      a {
+        color: clr(background);
+        &:hover {
+          color: clr(border);
+        }
+      }
+    }
     padding-left: 20px;
     padding-bottom: 20px;
     text-align: left;

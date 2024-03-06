@@ -1,0 +1,25 @@
+uuid: b9734a7c-2ecc-482a-a8a1-76df1b3475a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.article_full
+    - image.style.article_mobile
+    - image.style.wide
+  theme:
+    - fausttheme
+id: article_hero
+label: 'Article hero'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: article_full
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: article_mobile
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: wide

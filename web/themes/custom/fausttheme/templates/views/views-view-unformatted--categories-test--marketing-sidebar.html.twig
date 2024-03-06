@@ -17,12 +17,10 @@
   category: category_label,
   label: title,
   url: node_url,
+  author_name: author_name,
+  authors_link: author_url,
+  date: node.created.value|date('F j, Y'),
 }
 %}
- {% include '@molecules/text-with-media/user-preview/user-preview.twig' with {
-   author_name: author_name,
-   authors_page_link: author_url,
-   date: node.created.value|date('F j, Y'),
- }%}
 </div>
 

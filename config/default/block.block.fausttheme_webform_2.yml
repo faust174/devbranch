@@ -17,7 +17,7 @@ third_party_settings:
 id: fausttheme_webform_2
 theme: fausttheme
 region: sidebar
-weight: -17
+weight: -23
 provider: null
 plugin: webform_block
 settings:

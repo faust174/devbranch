@@ -9,9 +9,11 @@
 
 <button {{ add_attributes(button__attributes) }}>
   {% block button__content %}
-    <div class="{{ button__class }}"> {{ button__content }}
+    <div class="{{ button__class }}"> {{ button__content|raw }}
       {% if image %}
-        <img class="menu-icon" src="{{ button__icon }}" alt="&nbsp;">
+        <div class="menu-icon">
+          {{ button__icon|raw }}
+        </div>
       {% endif %}
     </div>
   {% endblock %}

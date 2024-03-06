@@ -25,9 +25,7 @@
     <div class="author-social">
       {% for item in field_social_value %}
         <a href="{{ item.uri }}" class="social-icon">
-          {% include "@atoms/images/icons/_icon.twig" with {
-            icon__name: item.title,
-          } %}
+          <i class="fa-brands fa-{{ item.title }}"></i>
         </a>
       {% endfor %}
     </div>

@@ -6,7 +6,6 @@ dependencies:
     - block_visibility_groups.block_visibility_group.basic_page
     - views.view.user
   module:
-    - block_class
     - block_visibility_groups
     - views
   theme:

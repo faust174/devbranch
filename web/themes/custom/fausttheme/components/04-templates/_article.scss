@@ -36,6 +36,25 @@
     font-size: 30px;
   }
 }
+.article-hero {
+ .post-title {
+   font-size: 46px;
+   margin: 0 10px;
+   font-family: $font-heading;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+  .category-title a {
+    font-size: 22px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+.overlay {
+  margin-bottom: 25px;
+}
+  .author-alt {
+    display: none;
+  }
+  margin-top: 30px;
+}
 .main-sidebar {
   order: 1;
 }

@@ -1,5 +1,6 @@
 .pager {
   margin: 2em 0;
+  display: flex;
 }
 
 .pager__items {
@@ -18,20 +19,21 @@
 }
 
 .pager__link {
-  padding: 0.5em;
+  padding: 6px 12px;
   color: clr(text);
   text-decoration: none;
 
   &.is-active,
   &:hover,
   &:focus {
-    background-color: clr(text);
-    color: clr(text-inverse);
+    background-color: clr(text-inverse);
+    color: clr(background);
   }
 
   &.is-active:hover,
   &.is-active:focus {
-    background-color: clr(accent);
+    background-color: clr(text-inverse);
+    pointer-events: none;
   }
 }
 

@@ -1,0 +1,30 @@
+.category-page-menu {
+  h2 {
+    font-family: $font-heading;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: none;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  .menu {
+    @include list-reset;
+    display: flex;
+    .menu__item a {
+      margin-right: 15px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: clr(text);
+      &:hover {
+        color: clr(text-inverse);
+      }
+    }
+  }
+}
+

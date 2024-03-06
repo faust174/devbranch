@@ -1,0 +1,25 @@
+uuid: 05842c72-9154-49ea-bdf0-41a2819dd86d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.full_preview
+    - image.style.politics_700x500
+    - image.style.wide
+  theme:
+    - fausttheme
+id: full_preview
+label: 'Full preview'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: full_preview
+    breakpoint_id: fausttheme.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: politics_700x500
+    breakpoint_id: fausttheme.small
+    multiplier: 1x
+breakpoint_group: fausttheme
+fallback_image_style: wide

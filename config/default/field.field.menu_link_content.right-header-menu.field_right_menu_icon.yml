@@ -1,0 +1,22 @@
+uuid: a61e9b89-3af0-4d8d-bb05-535cf66d3483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_right_menu_icon
+    - system.menu.right-header-menu
+  module:
+    - text
+id: menu_link_content.right-header-menu.field_right_menu_icon
+field_name: field_right_menu_icon
+entity_type: menu_link_content
+bundle: right-header-menu
+label: 'right menu icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text
