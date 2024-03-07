@@ -1,0 +1,26 @@
+{% set row = rows.0.content['#row']._entity %}
+{% set user_id = row.users_field_data_node_field_data_uid %}
+{% set user_name = row.name.value %}
+{% set user_body = row.field_body.value %}
+{% set user_picture_url = row.user_picture.entity.uri.value %}
+{% set image_url = file_url(user_picture_url) %}
+{% set field_social_value = row.field_social.value %}
+{% set field_website_value = user_entity["#user"].field_website.value %}
+
+<div class="author-info-wrapper">
+  <div class="image-socials">
+    <img src="{{ image_url }}" alt="">
+    <div class="social-user-menu">
+      {% for item in field_social_value %}
+        <a href="{{ item.uri }}" class="social-icon">
+          <i class="fa-brands fa-{{ item.title }}"></i>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="author-body">
+  <h3 class="user-name">{{ user_name }}</h3>
+  <p class="body-text">{{ user_body }}</p>
+  </div>
+</div>
+

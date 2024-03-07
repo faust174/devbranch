@@ -2,8 +2,10 @@
   position: relative;
 }
 .category-page-content {
+  .full-preview {
+    margin-bottom: -40px;
+  }
   .image-wrapper {
-    margin-bottom: -20px;
   }
   .body-teaser {
     margin-top: -10px;
@@ -35,7 +37,8 @@
     }
   }
 }
-.categories-sidebar {
+.categories-sidebar,
+.user-page-breaking {
   @include large {
     .image-container {
 
@@ -145,7 +148,6 @@
   }
 }
 .category-discover-more {
-
   @include medium {
     width: auto;
     max-width: 200px;

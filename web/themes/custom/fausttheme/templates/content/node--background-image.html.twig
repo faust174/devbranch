@@ -1,6 +1,6 @@
 {% include '@molecules/text-with-media/text-with-media.twig' with {
-  image: content.field_image.0,
-  category: content.field_category.0,
+  image: content.field_image,
+  category: content.field_category,
   label: label,
   article__url: url,
   date: node.created.value|date('F j, Y'),

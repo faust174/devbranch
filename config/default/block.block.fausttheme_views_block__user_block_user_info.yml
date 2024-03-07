@@ -1,9 +1,9 @@
-uuid: 92bf9e54-8f1f-42aa-852c-5d32439145ed
+uuid: 263dce1d-2849-4a8f-a14f-49114a44d9ef
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.categories_test
+    - views.view.user_block
   module:
     - block_class
     - block_visibility_groups
@@ -11,14 +11,17 @@ dependencies:
     - views
   theme:
     - fausttheme
-id: fausttheme_views_block__categories_test_block_9
+third_party_settings:
+  block_class:
+    classes: user-content
+id: fausttheme_views_block__user_block_user_info
 theme: fausttheme
-region: content
-weight: -18
+region: hero_section
+weight: 0
 provider: null
-plugin: 'views_block:categories_test-block_9'
+plugin: 'views_block:user_block-user_info'
 settings:
-  id: 'views_block:categories_test-block_9'
+  id: 'views_block:user_block-user_info'
   label: ''
   label_display: '0'
   provider: views
@@ -26,11 +29,11 @@ settings:
   views_label: ''
   items_per_page: none
 visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '/user/*'
   condition_group:
     id: condition_group
     negate: false
     block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user/*\r\n"

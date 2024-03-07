@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.background_image
+    - core.entity_view_mode.node.hero_sidebar
     - field.storage.node.field_category
     - field.storage.node.field_image
     - image.style.large
@@ -233,7 +235,7 @@ display:
       pager:
         type: mini
         options:
-          offset: 0
+          offset: 1
           items_per_page: 4
           total_pages: null
           id: 0
@@ -318,6 +320,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -628,10 +631,40 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: background_image
       defaults:
         title: false
+        css_class: false
         pager: false
+        style: false
+        row: false
         fields: false
+        sorts: false
+      css_class: user-page-breaking
       display_description: ''
       display_extenders: {  }
     cache_metadata:
@@ -650,6 +683,35 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: hero_sidebar
+      defaults:
+        style: false
+        row: false
+        sorts: false
       display_description: ''
       display_extenders: {  }
     cache_metadata:

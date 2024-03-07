@@ -16,6 +16,13 @@
     }
   }
 }
+.main-popular-block {
+  margin-left: 5px;
+  h2 {
+    z-index: 999;
+    position: relative;
+  }
+}
 .card-main--article-hero-fresh {
   position: relative;
   padding: 18px 0;
@@ -56,6 +63,9 @@
       }
     }
   }
+}
+.main-popular-block {
+
 }
 .hero-popular-section {
   .card-main {
@@ -184,6 +194,7 @@
   margin-right: 10px;
 }
 .hero-top-section {
+  z-index: -1;
   @include medium {
     margin-top: -67px;
   }
