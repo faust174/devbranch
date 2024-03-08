@@ -1,0 +1,33 @@
+{%
+  set classes = [
+  'views-view-entity-pager',
+  'entity-pager',
+  'count-word-' ~ count_word
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <ul class="entity-pager-list">
+    {% for key, link in links %}
+      {% if link %}
+        {% set listItemClasses = ['entity-pager-item', 'entity-pager-item-' ~ key] %}
+        {% if (key == 'prev' and title.prev['#markup'] is not empty) or (key == 'next' and title.next['#markup'] is not empty) %}
+          {% set listItemClasses = listItemClasses|merge(['entity-pager-item-with-content']) %}
+        {% endif %}
+        <li class="{{ listItemClasses|join(' ') }}">
+          {% if key == 'prev' %}
+            {% if title.prev['#markup'] is not empty %}
+              <p class="link-title">Previous article</p>
+              <a href="{{ link['#url'] }}">{{ title.prev }}</a>
+            {% endif %}
+          {% elseif key == 'next' %}
+            {% if title.next['#markup'] is not empty %}
+              <p class="link-title">Next article</p>
+              <a href="{{ link['#url'] }}">{{ title.next }}</a>
+            {% endif %}
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+

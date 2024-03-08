@@ -18,6 +18,10 @@
   }
 }
 .user-page-main-content {
+  margin-top: -90px;
+  .full-preview:hover .article-info .heading a {
+    color: clr(text-inverse);
+  }
   .full-preview {
    @include medium {
      margin-bottom: -40px;
@@ -62,7 +66,17 @@
   margin-left: auto;
   margin-right: auto;
   .author-info-wrapper {
-
+    .article-count {
+      margin-left: 20px;
+      border-radius: 2px;
+      color: clr(background);
+      background-color: clr(text-inverse);
+      font-family: $font-body  ;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
     .image-socials {
       text-align: center;
       img {
@@ -86,6 +100,11 @@
       }
     }
     .author-body {
+      .user-name {
+        display: flex;
+        align-items: center;
+      }
+      align-items: center;
       max-width: 730px;
       margin-left: 60px;
       margin-top: -40px;
@@ -127,27 +146,7 @@
       }
     }
   }
-
-  //.user-block {
-
-  //}
-  //.user-content {
-  //  .author-social {
-  //    position: absolute;
-  //    bottom: 30px;
-  //    left: 108px;
-
-  //  }
-  //  &::after {
-  //    content: none;
-  //  }
-  //  .user-name {
-  //    font-family: $font-heading;
-  //    font-size: 42px;
-  //    line-height: 1;
-  //    font-weight: 700;
-  //    text-transform: none;
-  //    pointer-events: none ;
-  //  }
-  //}
+}
+.user-page-sidebar-bottom {
+  padding-bottom: 30px;
 }

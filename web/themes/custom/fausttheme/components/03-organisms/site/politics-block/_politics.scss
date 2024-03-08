@@ -27,13 +27,22 @@
   }
 }
 .politics-attach {
+  h4 {
+    font-family: $font-body;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
   @include medium {
     margin-right: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    justify-items: left;
   }
   .card-main {
+   @include medium {
+     max-width: 330px;
+   }
     .article-additional {
       margin-top: -5px;
     }
@@ -49,14 +58,14 @@
 .politics-top {
   h4 {
     font-family: $font-heading;
-    font-size: 24px;
-    margin-bottom: 15px;
-    @include medium {
-      font-size: 18px;
-      min-height: 70px;
-    }
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 20px;
   }
-
+  &:hover .article-title a {
+    color: clr(text-inverse);
+  }
   .image {
     @include medium {
      max-height: 230px;
@@ -66,15 +75,6 @@
   }
   margin-right: 20px;
     @include medium {
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 5px;
-        right: 5px;
-        height: 1px;
-        background-color: clr(border);
-      }
     }
   .author-container > a {
     &:hover {
@@ -83,6 +83,14 @@
   }
 }
 .politics-block {
+  h2 {
+    font-family: $font-body;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  margin-top: 30px;
   .block-link-wrapper {
     @include medium {
       margin-right: 40px;
@@ -90,7 +98,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 45px;
+      top: 75px;
       left: 5px;
       right: 25px;
       height: 2px;

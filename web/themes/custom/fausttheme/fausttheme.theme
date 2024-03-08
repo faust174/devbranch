@@ -1,8 +1,57 @@
 <?php
 
+
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
+
+
 /**
- * @file
- * Functions to support theming.
+ * Implements hook_preprocess_HOOK().
  */
 
 
+function fausttheme_preprocess_entity_pager(&$variables) {
+  if (isset($variables["links"]["prev"]["#url"])) {
+    $previous_url = $variables["links"]["prev"]["#url"];
+    $previous_params = $previous_url->getRouteParameters();
+    $previous_node_id = $previous_params['node'];
+    $previous_node = Node::load($previous_node_id);
+    $previous_title = $previous_node ? $previous_node->getTitle() : '';
+  } else {
+    $previous_title = '';
+  }
+  if (isset($variables["links"]["next"]["#url"])) {
+    $next_url = $variables["links"]["next"]["#url"];
+    $next_params = $next_url->getRouteParameters();
+    $next_node_id = $next_params['node'];
+    $next_node = Node::load($next_node_id);
+    $next_title = $next_node ? $next_node->getTitle() : '';
+  } else {
+    $next_title = '';
+  }
+
+  $variables['title'] = [
+    'prev' => [
+      '#markup' => $previous_title,
+    ],
+    'next' => [
+      '#markup' => $next_title,
+    ],
+  ];
+}
+
+
+function fausttheme_preprocess_views_view_unformatted__user_block__user_info(&$variables) {
+  $row_entity = $variables['rows'][0]['content']['#row']->_entity;
+  $user_id = $row_entity->id();
+  $user = User::load($user_id);
+  if ($user instanceof User) {
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', 'article'); // Adjust the content type as needed.
+    $query->condition('uid', $user_id);
+    $query->accessCheck(FALSE); // Disable access checking for the query.
+    $nids = $query->execute();
+    $article_count = count($nids);
+    $variables['article_count'] = $article_count;
+  }
+}

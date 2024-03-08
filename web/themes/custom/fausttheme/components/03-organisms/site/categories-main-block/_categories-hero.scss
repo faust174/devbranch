@@ -4,7 +4,9 @@
     position: relative;
     overflow: hidden;
   }
-
+  .image-container:hover .post-title {
+    color: clr(border);
+  }
   .image-container:hover img {
     @include medium {
       transform: scale(1.1);
@@ -26,6 +28,7 @@
     pointer-events: none;
     text-align: left;
     padding-left: 10px;
+    padding-right: 10px;
     position: absolute;
     left: 0;
     height: 100%;

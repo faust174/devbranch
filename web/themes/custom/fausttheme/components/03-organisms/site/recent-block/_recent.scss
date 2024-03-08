@@ -1,9 +1,13 @@
 .recent-section {
+  margin-right: 20px;
   .image-container {
     display: flex !important;
   }
 }
 .recent-posts-container {
+  &:hover .article-title a {
+    color: clr(text-inverse);
+  }
   margin-bottom: 10px;
   @include medium {
     display: flex;
@@ -53,6 +57,15 @@
   }
 }
 .recent-attach {
+  margin-bottom: 40px;
+  .author-with-title {
+    h4 {
+      font-family: $font-body;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+  }
   @include medium {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -71,3 +84,16 @@
   }
 }
 
+.background-overlay-recent {
+  position: absolute;
+  top: 30px;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: -1;
+  font-size: 90px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: clr(border);
+  line-height: 1;
+}

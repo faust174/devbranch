@@ -14,8 +14,16 @@
   .card__content {
     min-width: 70%;
   }
+  .article-popular:hover .card__content a {
+    color: clr(text-inverse);
+  }
   .article-popular {
     margin-bottom: 10px;
+    .card__content {
+     @include medium {
+       margin-left: -10px;
+     }
+    }
   }
   @include medium {
     display: grid;
