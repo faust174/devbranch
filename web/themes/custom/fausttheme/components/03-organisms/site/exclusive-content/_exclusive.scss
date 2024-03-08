@@ -1,4 +1,7 @@
 .exclusive-block {
+ .image-container {
+   margin-bottom: 50px;
+ }
   @include medium {
     display: flex;
   }
@@ -7,19 +10,24 @@
   @include medium {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
     padding-left: 20px;
-    margin-top: -15px;
+    gap: 15px;
+  }
+  .card-main--hero-finance:hover .article-title a {
+    color: clr(text-inverse);
   }
   h4 {
     font-size: 18px;
+    @include medium {
+      max-width: 330px;
+    }
   }
   .image {
     max-width: 700px;
     max-height: 360px;
     @include medium {
       max-height: 180px;
-      max-width: 320px;
+      max-width: 330px;
     }
   }
   .category a {

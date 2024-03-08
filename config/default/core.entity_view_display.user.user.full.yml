@@ -1,32 +1,29 @@
-uuid: 2e5c1348-d088-46fa-89d6-b02ea50e9b83
+uuid: 168d5fbf-596b-439c-89a7-6ed9cbca0488
 langcode: en
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.user.full
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
     - field.field.user.user.field_website
     - field.field.user.user.user_picture
-    - views.view.breaking
-    - views.view.categories_test
-    - views.view.user_block
   module:
     - image
     - layout_builder
     - link
     - user
-    - views
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
-id: user.user.default
+id: user.user.full
 targetEntityType: user
 bundle: user
-mode: default
+mode: full
 content:
   field_body:
     type: basic_string
@@ -75,5 +72,4 @@ content:
     weight: 0
     region: content
 hidden:
-  layout_builder__layout: true
   member_for: true

@@ -1,8 +1,7 @@
-<div class="celebrity-block" {{ bem('block') }}>
+<div class="user-page-breaking-heading" {{ bem('block') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('h2') }}>{{ label }}</h2>
-    <div class="background-overlay-celebrity">{% trans %}Lifestyle{% endtrans %}</div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}

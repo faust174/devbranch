@@ -100,25 +100,6 @@
     color: clr(text);
   }
 }
-.entity-pager {
-  position: relative;
-  .entity-pager-list {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 5px;
-      right: 5px;
-      height: 1px;
-      background-color: clr(border);
-      margin-bottom: -15px;
-    }
-  }
-}
-.entity-pager-item {
-  background: clr(border);
-  padding: 4px;
-}
 
 .comment_form {
   float:left;
@@ -170,4 +151,44 @@
 }
 .discover-more img {
   width: 100%;
+}
+.entity-pager-list {
+  margin-top: 20px;
+  padding: 0;
+  text-align: left;
+  display: flex;
+}
+.entity-pager-list .entity-pager-item {
+  display: inline-block;
+  padding: 0 15px 15px 15px;
+  .link-title {
+    margin-bottom: 2px;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  a {
+    font-family: $font-heading;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: clr(text-inverse);
+    }
+  }
+}
+.entity-pager-list .entity-pager-item-next {
+  margin-left: 20px;
+  flex: 0 0 50%;
+}
+.entity-pager-list .entity-pager-item-prev {
+  flex: 0 0 50%;
+}
+.entity-pager-list .entity-pager-item-count {
+  text-align: center;
+}
+.entity-pager-item-with-content {
+  background-color: clr(background-main);
 }

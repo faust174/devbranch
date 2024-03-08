@@ -1,10 +1,28 @@
 .layout--onecol {
   margin-top: 40px;
 }
+.background-overlay-celebrity {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: -1;
+  font-size: 90px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: clr(border);
+  line-height: 1;
+}
 .celebrity-block {
-  margin-top: 30px;
-  h2 {
-    text-align: center;
+  margin-top: 70px;
+    h2 {
+      text-align: center;
+      font-family: $font-body;
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -1px;
   }
 }
 .celebrity-section {
@@ -21,15 +39,15 @@
       align-items: center;
     }
     .author-with-title {
-      margin-left: 10px;
-      width: 100%;
-      max-width: 350px;
+      padding-left: 20px;
+      max-width: 357px;
     }
     .image {
       @include medium {
         max-height: 230px;
-        min-width: 330px;
+        max-width: 335px;
         object-fit: cover;
+
       }
     }
    @include medium {

@@ -382,10 +382,23 @@ display:
     display_options:
       title: 'Hero top block'
       pager:
-        type: some
+        type: mini
         options:
           offset: 0
           items_per_page: 4
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       style:
         type: default
         options:
@@ -401,11 +414,13 @@ display:
       defaults:
         title: false
         css_class: false
+        use_ajax: false
         pager: false
         style: false
         row: false
         header: false
       css_class: hero-top-section
+      use_ajax: true
       display_description: ''
       header: {  }
       display_extenders: {  }
@@ -414,6 +429,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

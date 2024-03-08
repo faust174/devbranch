@@ -1,4 +1,7 @@
 .marketing-image {
+  &:hover .post-title {
+    color: clr(border);
+  }
   .image img {
     height: 700px;
     object-fit: cover;
