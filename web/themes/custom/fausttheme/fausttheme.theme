@@ -47,9 +47,9 @@ function fausttheme_preprocess_views_view_unformatted__user_block__user_info(&$v
   $user = User::load($user_id);
   if ($user instanceof User) {
     $query = \Drupal::entityQuery('node');
-    $query->condition('type', 'article'); // Adjust the content type as needed.
+    $query->condition('type', 'article');
     $query->condition('uid', $user_id);
-    $query->accessCheck(FALSE); // Disable access checking for the query.
+    $query->accessCheck(FALSE);
     $nids = $query->execute();
     $article_count = count($nids);
     $variables['article_count'] = $article_count;

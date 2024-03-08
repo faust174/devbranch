@@ -16,12 +16,12 @@
         <li class="{{ listItemClasses|join(' ') }}">
           {% if key == 'prev' %}
             {% if title.prev['#markup'] is not empty %}
-              <p class="link-title">Previous article</p>
+              <p class="link-title">{% trans %}Previous article{% endtrans %}</p>
               <a href="{{ link['#url'] }}">{{ title.prev }}</a>
             {% endif %}
           {% elseif key == 'next' %}
             {% if title.next['#markup'] is not empty %}
-              <p class="link-title">Next article</p>
+              <p class="link-title">{% trans %}Next article{% endtrans %}</p>
               <a href="{{ link['#url'] }}">{{ title.next }}</a>
             {% endif %}
           {% endif %}
