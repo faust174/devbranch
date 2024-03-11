@@ -7,7 +7,6 @@
         context).forEach(function (item) {
         const toggleExpand = item.querySelector('#toggle-expand');
         const menu = item.querySelector('#main-nav');
-        console.log(toggleExpand);
         if (menu) {
           const expandMenu = menu.querySelectorAll('.expand-sub');
 
