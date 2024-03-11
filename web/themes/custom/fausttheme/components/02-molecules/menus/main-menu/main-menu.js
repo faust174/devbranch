@@ -3,10 +3,11 @@
     attach(context) {
       once(
         'mainMenu',
-        '.header',
-        context).forEach( function () {
-        const toggleExpand = context.querySelector('#toggle-expand');
-        const menu = context.querySelector('#main-nav');
+        '.header-navigation',
+        context).forEach(function (item) {
+        const toggleExpand = item.querySelector('#toggle-expand');
+        const menu = item.querySelector('#main-nav');
+        console.log(toggleExpand);
         if (menu) {
           const expandMenu = menu.querySelectorAll('.expand-sub');
 

@@ -56,7 +56,6 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
   }
 }
 .back-to-top {
-  //display: none;
   position: fixed;
   bottom: 5px;
   right: 5px;
