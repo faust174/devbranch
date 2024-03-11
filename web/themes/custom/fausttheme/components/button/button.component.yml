@@ -1,10 +1,9 @@
-name: Burger button
+name: Button
 props:
   type: object
   required:
     - name
     - url
-    - class
   properties:
     name:
       type: string
