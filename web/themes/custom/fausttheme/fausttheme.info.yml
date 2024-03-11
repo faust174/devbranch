@@ -9,6 +9,7 @@ dependencies:
 libraries:
   - fausttheme/global
   - fausttheme/fontawesome
+  - fausttheme/back-button
 ckeditor_stylesheets:
   - dist/css/style.css
 regions:
