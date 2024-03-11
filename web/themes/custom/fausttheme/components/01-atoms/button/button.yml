@@ -1,0 +1,21 @@
+name: Burger button
+props:
+  type: object
+  required:
+    - name
+    - url
+    - class
+  properties:
+    name:
+      type: string
+      title: Title
+      description: Button name
+    url:
+      type: string
+      title: Link
+      description: Button link
+    class:
+      type: string
+      title: Class
+      description: Button classes to define button style
+

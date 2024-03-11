@@ -1,0 +1,12 @@
+.button-default {
+  a {
+    text-decoration: none;
+    color: clr(text);
+    font-size: 16px;
+    background-color: clr(backgorund);
+  }
+  button {
+    padding: 8px;
+    margin: 10px;
+  }
+}
