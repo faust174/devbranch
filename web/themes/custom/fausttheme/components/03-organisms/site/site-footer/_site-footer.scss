@@ -1,12 +1,14 @@
 .footer {
+
   .webform-main {
     .button {
       background-color: clr(text);
     }
   }
   @include medium {
-    margin-left: -200px;
-    margin-right: -200px;
+    overflow: hidden;
+    margin-left: -205px;
+    margin-right: -205px;
     margin-bottom: -90px;
     padding-right: 200px;
     padding-left: 200px;

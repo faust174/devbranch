@@ -28,3 +28,11 @@ tabs:
     dist/js/02-molecules/tabs/tabs.js: {}
   dependencies:
     - core/drupal
+
+
+back-button:
+  js:
+    dist/js/01-atoms/buttons/back-to-top.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

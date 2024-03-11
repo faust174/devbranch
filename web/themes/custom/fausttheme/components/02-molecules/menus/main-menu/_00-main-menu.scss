@@ -12,9 +12,7 @@ nav {
     text-align: center;
     border: 0;
   }
-
   &--open {
-
     padding-top: 50px;
     display: block;
     overflow-y: scroll;
@@ -34,10 +32,12 @@ nav {
     }
   }
 }
-
 /* UL */
 .main-menu {
+
   @include medium {
+    margin-right: -205px;
+    margin-left: -205px;
     &::after {
       content: "";
       position: absolute;
@@ -49,7 +49,7 @@ nav {
     }
     text-align: center;
     box-shadow: 0 4px 4px -2px rgba(0,0,0,0.2);
-    margin: 0 -220px;
+
   }
   @include list-reset;
 
