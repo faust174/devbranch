@@ -18,25 +18,35 @@ use GuzzleHttp\Client;
   category: new TranslatableMarkup("Custom Weather"),
 )]
 class WeatherInfoBlock extends BlockBase {
-
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $client = new Client();
-    $response = $client->request('GET', 'https://api.openweathermap.org/data/2.5/weather', [
-      'query' => [
-        'q' => 'Lutsk',
-        'appid' => 'c8e4bbc86dc0de8d0da33ec01aa9cbf2',
-        'units' => 'metric',
-      ],
-    ]);
-    $body = $response->getBody()->getContents();
-    $data = json_decode($body, TRUE);
-    return [
-      '#theme' => 'fausttheme_weather_info',
-      '#temp' => $data['main']['temp'],
-      '#wind' => $data['wind']['speed'],
-    ];
+    try {
+      $config = \Drupal::config('weather_info.settings');
+      $city = !empty($config->get('city')) ? $config->get('city') : 'Lutsk';
+      $apiKey = $config->get('api');
+      $client = new Client();
+      $response = $client->request('GET', 'https://api.openweathermap.org/data/2.5/weather', [
+        'query' => [
+          'q' => $city,
+          'appid' => $apiKey,
+          'units' => 'metric',
+        ],
+      ]);
+
+      $body = $response->getBody()->getContents();
+      $data = json_decode($body, TRUE);
+
+      return [
+        '#theme' => 'fausttheme_weather_info',
+        '#temp' => $data['main']['temp'],
+        '#wind' => $data['wind']['speed'],
+      ];
+    }
+    catch (\Exception $e) {
+      \Drupal::logger('weather_info')->error('An error occurred while fetching weather data: @error', ['@error' => $e->getMessage()]);
+      return [];
+    }
   }
 }
