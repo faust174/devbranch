@@ -1,0 +1,10 @@
+name: 'Weather Info'
+type: module
+description: 'Displays weather information using an API.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:config
+autoload:
+  psr-4:
+    Drupal\weather_info\: src/
