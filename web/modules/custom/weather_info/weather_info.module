@@ -1,11 +1,6 @@
 <?php
 
 /**
- * @file
- * Contains weather_info module functionality.
- */
-
-/**
  * Implements hook_theme().
  */
 function weather_info_theme($existing, $type, $theme, $path) {
