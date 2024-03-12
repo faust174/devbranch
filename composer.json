@@ -20,6 +20,7 @@
         "drupal/block_class": "^2.0",
         "drupal/block_visibility_groups": "^2.0",
         "drupal/bootstrap_barrio": "^5.5",
+        "drupal/coder": "^8.3",
         "drupal/components": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
@@ -39,7 +40,8 @@
         "drupal/twig_tweak": "^3.2",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_taxonomy_term_name_depth": "^7.2",
-        "drupal/webform": "^6.2"
+        "drupal/webform": "^6.2",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "conflict": {
         "drupal/drupal": "*"
