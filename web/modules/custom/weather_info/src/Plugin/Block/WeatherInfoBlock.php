@@ -17,7 +17,6 @@ use GuzzleHttp\Client;
   admin_label: new TranslatableMarkup("Weather Info Block"),
   category: new TranslatableMarkup("Custom Weather"),
 )]
-
 class WeatherInfoBlock extends BlockBase {
 
   /**
@@ -25,7 +24,6 @@ class WeatherInfoBlock extends BlockBase {
    */
   public function build() {
     $client = new Client();
-
     $response = $client->request('GET', 'https://api.openweathermap.org/data/2.5/weather', [
       'query' => [
         'q' => 'Lutsk',

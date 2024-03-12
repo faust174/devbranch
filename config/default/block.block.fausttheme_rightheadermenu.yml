@@ -11,7 +11,7 @@ dependencies:
 id: fausttheme_rightheadermenu
 theme: fausttheme
 region: header
-weight: -19
+weight: -22
 provider: null
 plugin: 'menu_block:right-header-menu'
 settings:

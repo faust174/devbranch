@@ -1,0 +1,25 @@
+uuid: 64fc1561-973e-4236-a39c-0421a80f6e92
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - weather_info
+  theme:
+    - fausttheme
+id: fausttheme_weatherinfoblock
+theme: fausttheme
+region: header
+weight: -23
+provider: null
+plugin: weather_info_block
+settings:
+  id: weather_info_block
+  label: 'Weather Info Block'
+  label_display: '0'
+  provider: weather_info
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
