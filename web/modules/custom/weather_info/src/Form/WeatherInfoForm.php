@@ -26,19 +26,7 @@ class WeatherInfoForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state):array {
 
-    $cities = [
-      'Lutsk' => $this->t('Lutsk'),
-      'London' => $this->t('London'),
-      'Luxembourg' => $this->t('Luxembourg'),
-    ];
-
     $config = $this->config('weather_info.settings');
-    $form['city'] = [
-      '#type' => 'select',
-      '#title' => $this->t('City'),
-      '#default_value' => $config->get('city'),
-      '#options' => $cities,
-    ];
     $form['api'] = [
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
@@ -57,7 +45,6 @@ class WeatherInfoForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state):void {
     $this->config('weather_info.settings')
-      ->set('city', $form_state->getValue('city'))
       ->set('api', $form_state->getValue('api'))
       ->save();
   }
