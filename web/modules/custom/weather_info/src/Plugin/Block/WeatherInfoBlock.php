@@ -22,28 +22,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   category: new TranslatableMarkup("Custom Weather"),
 )]
 class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterface {
-  /**
-   * The Config Factory.
-   *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected ConfigFactoryInterface $config;
-  /**
-   * The Logger service.
-   *
-   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
-   */
-  protected LoggerChannelFactoryInterface $logger;
 
   /**
-   * The HTTP client.
-   *
-   * @var \GuzzleHttp\ClientInterface
+   * Constructor for WeatherInfoBlock.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactoryInterface $config, LoggerChannelFactoryInterface $logger) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $config, protected LoggerChannelFactoryInterface $logger) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->config = $config;
-    $this->logger = $logger;
   }
 
   /**
