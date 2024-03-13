@@ -1,26 +1,23 @@
-uuid: 64fc1561-973e-4236-a39c-0421a80f6e92
+uuid: dc91d25b-ba2f-448a-828f-0afb550df29a
 langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - block_visibility_groups
-    - weather_info
+    - user
   theme:
     - fausttheme
-id: fausttheme_weatherinfoblock
+id: fausttheme_userlogin
 theme: fausttheme
 region: header
-weight: -23
+weight: -26
 provider: null
-plugin: weather_info_block
+plugin: user_login_block
 settings:
-  id: weather_info_block
-  label: 'Weather Info Block'
+  id: user_login_block
+  label: 'User login'
   label_display: '0'
-  provider: weather_info
-  city: London
-  api: c8e4bbc86dc0de8d0da33ec01aa9cbf2
+  provider: user
 visibility:
   condition_group:
     id: condition_group
