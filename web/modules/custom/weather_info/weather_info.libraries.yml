@@ -1,0 +1,4 @@
+weather_info:
+  css:
+    theme:
+      css/weather_info.css: {}
