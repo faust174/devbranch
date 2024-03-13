@@ -60,7 +60,6 @@ class WeatherInfoForm extends ConfigFormBase {
       ->set('city', $form_state->getValue('city'))
       ->set('api', $form_state->getValue('api'))
       ->save();
-    parent::submitForm($form, $form_state);
   }
 
 }
