@@ -1,0 +1,20 @@
+.weather-info {
+    font-size: 14px;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    i {
+        margin-right: 5px;
+    }
+    .weather-item {
+        margin-left: -40px;
+        display: flex;
+        align-items: center;
+        width: 100px;
+    }
+}
+.weather-icon {
+    width: 18px;
+    height: 18px;
+}
