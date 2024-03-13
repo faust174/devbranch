@@ -22,18 +22,16 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   category: new TranslatableMarkup("Custom Weather"),
 )]
 class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterface {
-
   /**
    * Constructor for WeatherInfoBlock.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, protected ConfigFactoryInterface $config, protected LoggerChannelFactoryInterface $logger) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
-
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition):static {
     return new static(
       $configuration,
       $plugin_id,
@@ -42,11 +40,10 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('logger.factory'),
     );
   }
-
   /**
    * {@inheritdoc}
    */
-  public function build() {
+  public function build():array {
     try {
       $config = $this->config->get('weather_info.settings');
       $city = !empty($config->get('city')) ? $config->get('city') : 'Lutsk';

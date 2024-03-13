@@ -12,19 +12,19 @@ class WeatherInfoForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames():array {
     return ['weather_info.settings'];
   }
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId():string {
     return 'weather_info_form';
   }
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state):array {
 
     $cities = [
       'Lutsk' => $this->t('Lutsk'),
@@ -55,11 +55,12 @@ class WeatherInfoForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state):void {
     $this->config('weather_info.settings')
       ->set('city', $form_state->getValue('city'))
       ->set('api', $form_state->getValue('api'))
       ->save();
     parent::submitForm($form, $form_state);
   }
+
 }
