@@ -19,7 +19,7 @@ settings:
   label: 'Weather Info Block'
   label_display: '0'
   provider: weather_info
-  city: London
+  city: Lutsk
   api: c8e4bbc86dc0de8d0da33ec01aa9cbf2
   0:
     city: Luxembourg

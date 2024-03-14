@@ -5,6 +5,7 @@ namespace Drupal\weather_info\Plugin\Block;
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -34,7 +35,8 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     $plugin_definition,
     protected ConfigFactoryInterface $config,
     protected LoggerChannelFactoryInterface $logger,
-    protected ClientInterface $httpClient) {
+    protected ClientInterface $httpClient,
+    protected CacheBackendInterface $cache) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
@@ -49,6 +51,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('config.factory'),
       $container->get('logger.factory'),
       $container->get('http_client'),
+      $container->get('cache.default'),
     );
   }
   /**
@@ -57,8 +60,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
   public function build(): array {
     $city = $this->configuration['city'];
     $cache_id = 'weather_info_block_' . $city;
-    $cache = \Drupal::cache();
-    if ($value = $cache->get($cache_id)) {
+    if ($value = $this->cache->get($cache_id)) {
       return $value->data;
     }
     try {
@@ -74,13 +76,16 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
       '#city' => $weatherData['name'],
+      '#cache' => [
+        'max-age' => 1800,
+      ],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
         ],
       ],
     ];
-    \Drupal::cache()->set($cache_id, $build, time() + 1800);
+    $this->cache->set($cache_id, $build);
     return $build;
   }
   /**
