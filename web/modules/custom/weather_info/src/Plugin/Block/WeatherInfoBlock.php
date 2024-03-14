@@ -23,6 +23,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   category: new TranslatableMarkup("Custom Weather"),
 )]
 class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
   /**
    * Constructor for WeatherInfoBlock.
    */
@@ -35,6 +36,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     protected ClientInterface $httpClient) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
+
   /**
    * {@inheritdoc}
    */
@@ -48,10 +50,11 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('http_client'),
     );
   }
+
   /**
    * {@inheritdoc}
    */
-  public function build():array {
+  public function build(): array {
     try {
       $weatherData = $this->weatherData();
     }
@@ -65,6 +68,10 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#theme' => 'fausttheme_weather_info',
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
+      '#city' => $weatherData['name'],
+      '#cache' => [
+        'max-age' => 1800,
+      ],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
@@ -72,6 +79,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       ],
     ];
   }
+
   /**
    * Receive the data from weather API.
    */
@@ -90,6 +98,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     $request = $response->getBody()->getContents();
     return json_decode($request, TRUE);
   }
+
   /**
    * {@inheritdoc}
    */
