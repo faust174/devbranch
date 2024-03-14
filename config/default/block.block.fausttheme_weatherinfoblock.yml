@@ -21,6 +21,12 @@ settings:
   provider: weather_info
   city: London
   api: c8e4bbc86dc0de8d0da33ec01aa9cbf2
+  0:
+    city: Luxembourg
+  1:
+    city: London
+  2:
+    city: Lutsk
 visibility:
   condition_group:
     id: condition_group

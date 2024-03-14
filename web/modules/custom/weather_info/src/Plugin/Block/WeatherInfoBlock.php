@@ -4,6 +4,7 @@ namespace Drupal\weather_info\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
@@ -23,6 +24,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   category: new TranslatableMarkup("Custom Weather"),
 )]
 class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
   /**
    * Constructor for WeatherInfoBlock.
    */
@@ -35,6 +37,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     protected ClientInterface $httpClient) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
+
   /**
    * {@inheritdoc}
    */
@@ -51,26 +54,34 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
   /**
    * {@inheritdoc}
    */
-  public function build():array {
+  public function build(): array {
+    $city = $this->configuration['city'];
+    $cache_id = 'weather_info_block_' . $city;
+    $cache = \Drupal::cache();
+    if ($value = $cache->get($cache_id)) {
+      return $value->data;
+    }
     try {
       $weatherData = $this->weatherData();
-    }
-    catch (\Exception $e) {
+    } catch (\Exception $e) {
       $this->logger->get('weather_info')->error('An error occurred while fetching weather data: @error', ['@error' => $e->getMessage()]);
     }
     if (empty($weatherData)) {
       return [];
     }
-    return [
+    $build = [
       '#theme' => 'fausttheme_weather_info',
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
+      '#city' => $weatherData['name'],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
         ],
       ],
     ];
+    \Drupal::cache()->set($cache_id, $build, time() + 1800);
+    return $build;
   }
   /**
    * Receive the data from weather API.
@@ -107,12 +118,10 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     ];
     return $form;
   }
-
   /**
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state):void {
     $this->configuration['city'] = $form_state->getValue('city');
   }
-
 }
