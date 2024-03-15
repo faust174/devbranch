@@ -5,3 +5,10 @@ weather_info.weather_info_form:
     _title: 'Configure Weather Info'
   requirements:
     _permission: 'administer site configuration'
+weather_info.user_form:
+  path: '/user/{user}/weather-info'
+  defaults:
+    _form: '\Drupal\weather_info\Form\UserWeatherInfoForm'
+    _title: 'User Weather Info Form'
+  requirements:
+    _permission: 'access user weather info form'

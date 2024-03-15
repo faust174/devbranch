@@ -55,3 +55,23 @@ function fausttheme_preprocess_views_view_unformatted__user_block__user_info(&$v
     $variables['article_count'] = $article_count;
   }
 }
+
+
+
+function custom_account_link_menu_links_discovered_alter(&$links) {
+  // Check if the user is logged in.
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    // Get the current user ID.
+    $uid = \Drupal::currentUser()->id();
+
+    // Alter the "My Account" menu link.
+    if (isset($links['user.page'])) {
+      $links['user.page']['url'] = \Drupal\Core\Url::fromRoute('entity.user.canonical', ['user' => $uid]);
+      // Add a submenu item for the weather info page.
+      $links['user.page']['below']['weather_info'] = [
+        'title' => 'Weather Info',
+        'url' => \Drupal\Core\Url::fromRoute('weather_info.route_name', ['user' => $uid]),
+      ];
+    }
+  }
+}

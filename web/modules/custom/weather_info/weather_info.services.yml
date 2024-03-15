@@ -1,0 +1,6 @@
+services:
+  weather_info.user_selected_city:
+    class: Drupal\weather_info\Service\UserSelectedCity
+    arguments:
+        - '@current_user'
+        - '@database'

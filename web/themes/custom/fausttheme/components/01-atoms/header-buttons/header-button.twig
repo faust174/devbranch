@@ -9,7 +9,7 @@
 
 <button {{ add_attributes(button__attributes) }}>
   {% block button__content %}
-    <div class="{{ button__class }}"> {{ button__content|raw }}
+    <div class="{{ button__class }}"> <a class="header-button-link" href="{{ button__link }}">{{ button__content|raw }}</a>
       {% if image %}
         <div class="menu-icon">
           {{ button__icon|raw }}

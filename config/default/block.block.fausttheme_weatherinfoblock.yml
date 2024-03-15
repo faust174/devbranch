@@ -1,4 +1,4 @@
-uuid: 64fc1561-973e-4236-a39c-0421a80f6e92
+uuid: 4cadc6e3-686a-4f77-8153-0d6472c501d7
 langcode: en
 status: true
 dependencies:
@@ -20,13 +20,6 @@ settings:
   label_display: '0'
   provider: weather_info
   city: Lutsk
-  api: c8e4bbc86dc0de8d0da33ec01aa9cbf2
-  0:
-    city: Luxembourg
-  1:
-    city: London
-  2:
-    city: Lutsk
 visibility:
   condition_group:
     id: condition_group

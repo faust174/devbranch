@@ -4,13 +4,14 @@ namespace Drupal\weather_info\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Cache\Cache;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Database\Connection;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\weather_info\Service\UserSelectedCity;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -36,10 +37,12 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     protected ConfigFactoryInterface $config,
     protected LoggerChannelFactoryInterface $logger,
     protected ClientInterface $httpClient,
+    protected AccountProxyInterface $currentUser,
+    protected Connection $database,
+    protected UserSelectedCity $userSelectedCity,
     protected CacheBackendInterface $cache) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
-
   /**
    * {@inheritdoc}
    */
@@ -51,6 +54,9 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('config.factory'),
       $container->get('logger.factory'),
       $container->get('http_client'),
+      $container->get('current_user'),
+      $container->get('database'),
+      $container->get('weather_info.user_selected_city'),
       $container->get('cache.default'),
     );
   }
@@ -58,14 +64,15 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
    * {@inheritdoc}
    */
   public function build(): array {
-    $city = $this->configuration['city'];
+    $city = $this->userSelectedCity->getUserSelectedCity();
     $cache_id = 'weather_info_block_' . $city;
     if ($value = $this->cache->get($cache_id)) {
       return $value->data;
     }
     try {
-      $weatherData = $this->weatherData();
-    } catch (\Exception $e) {
+      $weatherData = $this->weatherData($city);
+    }
+    catch (\Exception $e) {
       $this->logger->get('weather_info')->error('An error occurred while fetching weather data: @error', ['@error' => $e->getMessage()]);
     }
     if (empty($weatherData)) {
@@ -76,26 +83,21 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
       '#city' => $weatherData['name'],
-      '#cache' => [
-        'max-age' => 1800,
-      ],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
         ],
       ],
     ];
-    $this->cache->set($cache_id, $build);
+    $this->cache->set($cache_id, $build, time() + 1800);
     return $build;
   }
   /**
    * Receive the data from weather API.
    */
-  protected function weatherData():array {
-    $config_api = $this->config->get('weather_info.settings');
-    $apiKey = $config_api->get('api');
-    $config = $this->configuration;
-    $city = !empty($config['city']) ? $config['city'] : 'Lutsk';
+  protected function weatherData($city): array {
+    $config = $this->config->get('weather_info.settings');
+    $apiKey = $config->get('api');
     $response = $this->httpClient->request('GET', 'https://api.openweathermap.org/data/2.5/weather', [
       'query' => [
         'q' => $city,
@@ -103,30 +105,6 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
         'units' => 'metric',
       ],
     ]);
-    $request = $response->getBody()->getContents();
-    return json_decode($request, TRUE);
-  }
-  /**
-   * {@inheritdoc}
-   */
-  public function blockForm($form, FormStateInterface $form_state):array {
-    $cities = [
-      'Lutsk' => $this->t('Lutsk'),
-      'London' => $this->t('London'),
-      'Luxembourg' => $this->t('Luxembourg'),
-    ];
-    $form['city'] = [
-      '#type' => 'select',
-      '#title' => $this->t('City'),
-      '#options' => $cities,
-      '#default_value' => $this->configuration['city'] ?? 'Lutsk',
-    ];
-    return $form;
-  }
-  /**
-   * {@inheritdoc}
-   */
-  public function blockSubmit($form, FormStateInterface $form_state):void {
-    $this->configuration['city'] = $form_state->getValue('city');
+    return json_decode($response->getBody()->getContents(), TRUE);
   }
 }

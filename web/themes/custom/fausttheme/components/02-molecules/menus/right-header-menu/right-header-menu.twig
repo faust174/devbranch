@@ -5,7 +5,8 @@
       {% include "@atoms/header-buttons/header-button.twig" with {
         button__content: item.title,
         button__class: item.style,
-        button__icon: item.entity.fields.field_right_menu_icon.value
+        button__icon: item.entity.fields.field_right_menu_icon.value,
+        button__link: item.url,
       } %}
   {% endfor %}
 </div>
