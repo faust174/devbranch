@@ -60,6 +60,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('cache.default'),
     );
   }
+
   /**
    * {@inheritdoc}
    */
@@ -78,7 +79,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     if (empty($weatherData)) {
       return [];
     }
-    $build = [
+    return [
       '#theme' => 'fausttheme_weather_info',
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
@@ -92,6 +93,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     $this->cache->set($cache_id, $build, time() + 1800);
     return $build;
   }
+
   /**
    * Receive the data from weather API.
    */
@@ -107,4 +109,5 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     ]);
     return json_decode($response->getBody()->getContents(), TRUE);
   }
+
 }
