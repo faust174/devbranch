@@ -31,18 +31,11 @@ class UserSelectedCity {
    */
   public function getUserSelectedCity() {
     $uid = $this->currentUser->id();
-    try {
-      $query = $this->database->select('user_city_preferences', 'ucp')
-        ->fields('ucp', ['city'])
-        ->condition('uid', $uid)
-        ->execute();
-      $city = $query->fetchField();
-    }
-    catch (\Exception $e) {
-      $city = 'Lutsk';
-    }
-
-    return $city;
+    $query = $this->database->select('user_city_preferences', 'ucp')
+      ->fields('ucp', ['city'])
+      ->condition('uid', $uid)
+      ->execute();
+    return $query->fetchField();
   }
 
 }
