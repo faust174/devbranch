@@ -7,7 +7,7 @@ use Drupal\Core\Database\Connection;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\weather_info\Service\UserSelectedCity;
+use Drupal\weather_info\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -18,7 +18,7 @@ class UserWeatherInfoForm extends FormBase {
   /**
    * Constructs a new UserWeatherInfoForm object.
    */
-  public function __construct(protected ConfigFactoryInterface $config, protected Connection $database, protected AccountProxyInterface $currentUser, protected UserSelectedCity $userSelectedCity) {
+  public function __construct(protected ConfigFactoryInterface $config, protected Connection $database, protected AccountProxyInterface $currentUser, protected UserCityHandler $userCityHandler) {
   }
 
   /**
@@ -36,7 +36,7 @@ class UserWeatherInfoForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames(): array {
+  protected function getEditableConfigNames():array {
     return ['weather_info.settings'];
   }
 
@@ -50,8 +50,8 @@ class UserWeatherInfoForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state): array {
-    $selected_city = $this->userSelectedCity->getUserSelectedCity();
+  public function buildForm(array $form, FormStateInterface $form_state):array {
+    $selected_city = $this->userCityHandler->getUserSelectedCity();
     $cities = [
       'Lutsk' => $this->t('Lutsk'),
       'London' => $this->t('London'),
@@ -74,31 +74,13 @@ class UserWeatherInfoForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): void {
+  public function submitForm(array &$form, FormStateInterface $form_state):void {
     $selected_city = $form_state->getValue('city');
     $this->config->getEditable('weather_info.settings')
       ->set('city', $selected_city)
       ->save();
     $city = $form_state->getValue('city');
-    $uid = $this->currentUser->id();
-
-    $record = $this->database->select('user_city_preferences', 'ucp')
-      ->fields('ucp', ['city'])
-      ->condition('uid', $uid)
-      ->execute()
-      ->fetchAssoc();
-
-    if ($record) {
-      $this->database->update('user_city_preferences')
-        ->fields(['city' => $city])
-        ->condition('uid', $uid)
-        ->execute();
-    }
-    else {
-      $this->database->insert('user_city_preferences')
-        ->fields(['uid' => $uid, 'city' => $city])
-        ->execute();
-    }
+    $this->userCityHandler->setUserSelectedCity($city);
   }
 
 }

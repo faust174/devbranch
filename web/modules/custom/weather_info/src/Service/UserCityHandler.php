@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Provides the name of the city selected by the user.
  */
-class UserSelectedCity {
+class UserCityHandler {
 
   public function __construct(
     protected AccountProxyInterface $currentUser,
@@ -37,5 +37,22 @@ class UserSelectedCity {
       ->execute();
     return $query->fetchField();
   }
+  /**
+   * Sets the user's selected city.
+   */
+  public function setUserSelectedCity($city) {
+    $uid = $this->currentUser->id();
 
+    if ($this->getUserSelectedCity()) {
+      $this->database->update('user_city_preferences')
+        ->fields(['city' => $city])
+        ->condition('uid', $uid)
+        ->execute();
+    }
+    else {
+      $this->database->insert('user_city_preferences')
+        ->fields(['uid' => $uid, 'city' => $city])
+        ->execute();
+    }
+  }
 }

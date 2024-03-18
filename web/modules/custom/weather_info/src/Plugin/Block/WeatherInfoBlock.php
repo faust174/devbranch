@@ -11,7 +11,8 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
-use Drupal\weather_info\Service\UserSelectedCity;
+use Drupal\weather_info\Service\UserCityHandler;
+use Drupal\weather_info\Service\WeatherAPIConnectionHandler;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -39,10 +40,12 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     protected ClientInterface $httpClient,
     protected AccountProxyInterface $currentUser,
     protected Connection $database,
-    protected UserSelectedCity $userSelectedCity,
-    protected CacheBackendInterface $cache) {
+    protected UserCityHandler $userSelectedCity,
+    protected CacheBackendInterface $cache,
+    protected WeatherAPIConnectionHandler $weatherHandler) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
+
   /**
    * {@inheritdoc}
    */
@@ -58,6 +61,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('database'),
       $container->get('weather_info.user_selected_city'),
       $container->get('cache.default'),
+      $container->get('weather_info.weather_api_connection_handler'),
     );
   }
 
@@ -66,12 +70,8 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
    */
   public function build(): array {
     $city = $this->userSelectedCity->getUserSelectedCity();
-    $cache_id = 'weather_info_block_' . $city;
-    if ($value = $this->cache->get($cache_id)) {
-      return $value->data;
-    }
     try {
-      $weatherData = $this->weatherData($city);
+      $weatherData = $this->weatherHandler->getWeatherData($city);
     }
     catch (\Exception $e) {
       $this->logger->get('weather_info')->error('An error occurred while fetching weather data: @error', ['@error' => $e->getMessage()]);
@@ -84,30 +84,15 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
       '#city' => $weatherData['name'],
+      '#cache' => [
+        'max-age' => 1800,
+      ],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
         ],
       ],
     ];
-    $this->cache->set($cache_id, $build, time() + 1800);
-    return $build;
-  }
-
-  /**
-   * Receive the data from weather API.
-   */
-  protected function weatherData($city): array {
-    $config = $this->config->get('weather_info.settings');
-    $apiKey = $config->get('api');
-    $response = $this->httpClient->request('GET', 'https://api.openweathermap.org/data/2.5/weather', [
-      'query' => [
-        'q' => $city,
-        'appid' => $apiKey,
-        'units' => 'metric',
-      ],
-    ]);
-    return json_decode($response->getBody()->getContents(), TRUE);
   }
 
 }

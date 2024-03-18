@@ -9,18 +9,21 @@ use Drupal\Core\Form\FormStateInterface;
  * Provides a Weather Info form.
  */
 class WeatherInfoForm extends ConfigFormBase {
+
   /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames():array {
     return ['weather_info.settings'];
   }
+
   /**
    * {@inheritdoc}
    */
   public function getFormId():string {
     return 'weather_info_form';
   }
+
   /**
    * {@inheritdoc}
    */
@@ -48,4 +51,5 @@ class WeatherInfoForm extends ConfigFormBase {
       ->save();
     $this->messenger()->addStatus($this->t('The configuration options have been saved.'));
   }
+
 }
