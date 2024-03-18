@@ -75,10 +75,6 @@ class UserWeatherInfoForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state):void {
-    $selected_city = $form_state->getValue('city');
-    $this->config->getEditable('weather_info.settings')
-      ->set('city', $selected_city)
-      ->save();
     $city = $form_state->getValue('city');
     $this->userCityHandler->setUserSelectedCity($city);
   }

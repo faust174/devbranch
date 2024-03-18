@@ -37,22 +37,21 @@ class UserCityHandler {
       ->execute();
     return $query->fetchField();
   }
+
   /**
    * Sets the user's selected city.
    */
   public function setUserSelectedCity($city) {
     $uid = $this->currentUser->id();
 
-    if ($this->getUserSelectedCity()) {
-      $this->database->update('user_city_preferences')
-        ->fields(['city' => $city])
-        ->condition('uid', $uid)
-        ->execute();
-    }
-    else {
-      $this->database->insert('user_city_preferences')
-        ->fields(['uid' => $uid, 'city' => $city])
-        ->execute();
-    }
+    $query = $this->database->upsert('user_city_preferences')
+      ->key('uid')
+      ->fields([
+        'uid' => $uid,
+        'city' => $city,
+      ]);
+
+    $query->execute();
   }
+
 }

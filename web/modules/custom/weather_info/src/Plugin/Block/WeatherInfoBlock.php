@@ -69,7 +69,7 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
    * {@inheritdoc}
    */
   public function build(): array {
-    $city = $this->userSelectedCity->getUserSelectedCity();
+    $city = $this->userSelectedCity->getUserSelectedCity() ?? 'Lutsk';
     try {
       $weatherData = $this->weatherHandler->getWeatherData($city);
     }
