@@ -1,0 +1,9 @@
+services:
+  weather_info.user_selected_city:
+    class: Drupal\weather_info\Service\UserCityHandler
+    arguments:
+        - '@current_user'
+        - '@database'
+  weather_info.weather_api_connection_handler:
+    class: Drupal\weather_info\Service\WeatherAPIConnectionHandler
+    arguments: [ '@http_client', '@config.factory', '@cache.default' ]

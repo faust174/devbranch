@@ -1,0 +1,40 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function weather_info_schema() {
+  $schema = [];
+
+  $schema['user_city_preferences'] = [
+    'description' => 'Stores user-selected cities for weather info.',
+    'fields' => [
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'User ID.',
+      ],
+      'city' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Selected city.',
+      ],
+    ],
+    'primary key' => ['uid'],
+  ];
+
+  return $schema;
+}
+/**
+ * Implements hook_update_N().
+ */
+function weather_info_update_10001():void {
+  $schema = weather_info_schema();
+  $table = $schema['user_city_preferences'];
+
+  if (Drupal::database()->schema()->tableExists('user_city_preferences')) {
+    return;
+  }
+  Drupal::database()->schema()->createTable('user_city_preferences', $table);
+}

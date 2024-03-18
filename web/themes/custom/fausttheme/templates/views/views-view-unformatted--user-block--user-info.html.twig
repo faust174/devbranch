@@ -1,5 +1,5 @@
 {% set row = rows.0.content['#row']._entity %}
-{% set user_id = row.users_field_data_node_field_data_uid %}
+{% set user_id = row.uid.value %}
 {% set user_name = row.name.value %}
 {% set user_body = row.field_body.value %}
 {% set user_picture_url = row.user_picture.entity.uri.value %}
@@ -29,5 +29,6 @@
     </span>
   </h3>
   <p class="body-text">{{ user_body }}</p>
+    <a href="/user/{{ user_id }}/weather-info">{{ 'Weather customization' |t }}</a>
   </div>
 </div>
