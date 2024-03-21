@@ -84,14 +84,11 @@ class RegistrationForm extends RegisterForm {
   }
 
   /**
-   * {@inheritdoc}
+   *
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
-
-    $user_entity = $form_state->getFormObject()->getEntity();
-    $user_entity->save();
-    $uid = $user_entity->id();
+  public function save($form, FormStateInterface $form_state) {
+    parent::save($form, $form_state);
+    $uid = $form_state->getValue('uid');
     $values = $form_state->getValues();
     $selected_interests = [];
     foreach ($values['interests'] as $tid => $selected) {
