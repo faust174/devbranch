@@ -99,7 +99,6 @@ class RegistrationForm extends RegisterForm {
         $selected_interests[] = $tid;
       }
     }
-    $this->session->set('registration_city', $values['city']);
     $this->database->insert('user_data')
       ->fields([
         'uid' => $uid,

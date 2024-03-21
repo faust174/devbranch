@@ -20,7 +20,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 )]
 class RegistrationFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, protected AccountProxyInterface $currentUser) {
+  public function __construct(array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    protected AccountProxyInterface $currentUser) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 

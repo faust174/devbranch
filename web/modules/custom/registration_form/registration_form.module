@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
 * Implements hook_entity_build
 */
@@ -10,3 +12,4 @@ function registration_form_entity_type_build(array &$entity_types) {
   'Drupal\registration_form\Form\RegistrationForm'
   );
 }
+
