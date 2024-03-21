@@ -31,8 +31,8 @@ class UserCityHandler {
    */
   public function getUserSelectedCity() {
     $uid = $this->currentUser->id();
-    $query = $this->database->select('user_city_preferences', 'ucp')
-      ->fields('ucp', ['city'])
+    $query = $this->database->select('user_data', 'ud')
+      ->fields('ud', ['city'])
       ->condition('uid', $uid)
       ->execute();
     return $query->fetchField();
@@ -41,10 +41,10 @@ class UserCityHandler {
   /**
    * Sets the user's selected city.
    */
-  public function setUserSelectedCity($city) {
+  public function setUserSelectedCity($city):void {
     $uid = $this->currentUser->id();
 
-    $query = $this->database->upsert('user_city_preferences')
+    $query = $this->database->upsert('user_data')
       ->key('uid')
       ->fields([
         'uid' => $uid,
@@ -52,6 +52,17 @@ class UserCityHandler {
       ]);
 
     $query->execute();
+  }
+
+  /**
+   * Returns list of cities available.
+   */
+  public function getCities():array {
+    return [
+      'Lutsk',
+      'London',
+      'Luxembourg',
+    ];
   }
 
 }

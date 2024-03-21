@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Implements hook_schema().
  */
@@ -27,14 +28,21 @@ function weather_info_schema() {
   return $schema;
 }
 /**
- * Implements hook_update_N().
+ * Perform migration of data from user_city_preferences to user_data table.
  */
-function weather_info_update_10001():void {
-  $schema = weather_info_schema();
-  $table = $schema['user_city_preferences'];
+function weather_info_update_10002() {
+  $connection = \Drupal::database();
+  $query = $connection->select('user_city_preferences', 'ucp');
+  $query->fields('ucp', ['uid', 'city']);
+  $results = $query->execute()->fetchAll();
 
-  if (Drupal::database()->schema()->tableExists('user_city_preferences')) {
-    return;
+  foreach ($results as $result) {
+    $connection->insert('user_data')
+      ->fields([
+        'uid' => $result->uid,
+        'city' => $result->city,
+        'country' => 'Ukraine',
+      ])
+      ->execute();
   }
-  Drupal::database()->schema()->createTable('user_city_preferences', $table);
 }

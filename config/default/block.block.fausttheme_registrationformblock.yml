@@ -1,0 +1,29 @@
+uuid: 7a5ae978-33bd-4478-bb8e-d1663f055111
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - registration_form
+  theme:
+    - fausttheme
+third_party_settings:
+  block_class:
+    classes: registration-form-block
+id: fausttheme_registrationformblock
+theme: fausttheme
+region: header
+weight: 0
+provider: null
+plugin: 'Registration form block'
+settings:
+  id: 'Registration form block'
+  label: 'Registration form block'
+  label_display: '0'
+  provider: registration_form
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
