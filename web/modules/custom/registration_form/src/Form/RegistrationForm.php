@@ -84,7 +84,7 @@ class RegistrationForm extends RegisterForm {
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public function save($form, FormStateInterface $form_state) {
     parent::save($form, $form_state);
