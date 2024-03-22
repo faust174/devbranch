@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Locale\CountryManager;
 use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\registration_form\Service\UserDataHandler;
 use Drupal\user\RegisterForm;
 use Drupal\weather_info\Service\UserCityHandler;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -29,6 +30,7 @@ class RegistrationForm extends RegisterForm {
     protected Connection $database,
     protected SessionInterface $session,
     protected UserCityHandler $userCityHandler,
+    protected UserDataHandler $userDataHandler
   ) {
     parent::__construct($entity_repository, $language_manager, $entity_type_bundle_info, $time);
   }
@@ -46,6 +48,7 @@ class RegistrationForm extends RegisterForm {
     $container->get('database'),
     $container->get('session'),
     $container->get('weather_info.user_selected_city'),
+    $container->get('registration_form.user_data_handler'),
     );
   }
 
@@ -82,7 +85,13 @@ class RegistrationForm extends RegisterForm {
 
     return $form;
   }
+  protected function invalidateUserCacheTags() {
+    $cache_tags = [
+      'user_list',
+    ];
 
+    \Drupal::service('cache_tags.invalidator')->invalidateTags($cache_tags);
+  }
   /**
    * {@inheritdoc}
    */
@@ -96,21 +105,8 @@ class RegistrationForm extends RegisterForm {
         $selected_interests[] = $tid;
       }
     }
-    $this->database->insert('user_data')
-      ->fields([
-        'uid' => $uid,
-        'city' => $values['city'],
-        'country' => $values['country'],
-      ])
-      ->execute();
-    foreach ($selected_interests as $tid) {
-      $this->database->insert('user_interests')
-        ->fields([
-          'uid' => $uid,
-          'tid' => $tid,
-        ])
-        ->execute();
-    }
+    $this->userDataHandler->saveUserData($uid, $values['city'], $values['country'], $selected_interests);
+    $this->invalidateUserCacheTags();
   }
 
 }

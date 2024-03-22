@@ -4,12 +4,14 @@ namespace Drupal\weather_info\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\weather_info\Service\UserCityHandler;
 use Drupal\weather_info\Service\WeatherAPIConnectionHandler;
+use Drupal\weather_info\Service\WeatherInfoCacheService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -33,8 +35,10 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
     $plugin_definition,
     protected ConfigFactoryInterface $config,
     protected LoggerChannelFactoryInterface $logger,
-    protected UserCityHandler $userSelectedCity,
+    protected UserCityHandler $userCityHandler,
     protected WeatherAPIConnectionHandler $weatherHandler,
+    protected CacheBackendInterface $cache,
+    protected WeatherInfoCacheService $cacheService,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -51,14 +55,16 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
       $container->get('logger.factory'),
       $container->get('weather_info.user_selected_city'),
       $container->get('weather_info.weather_api_connection_handler'),
+      $container->get('cache.default'),
+      $container->get('cache_context.weather_data'),
     );
   }
 
   /**
    * {@inheritdoc}
    */
-  public function build(): array {
-    $city = $this->userSelectedCity->getUserSelectedCity() ?? 'Lutsk';
+  public function build() {
+    $city = $this->userCityHandler->getUserSelectedCity() ?? 'Lutsk';
     try {
       $weatherData = $this->weatherHandler->getWeatherData($city);
     }
@@ -67,23 +73,26 @@ class WeatherInfoBlock extends BlockBase implements ContainerFactoryPluginInterf
         ->error('An error occurred while fetching weather data: @error',
           ['@error' => $e->getMessage()]);
     }
+
     if (empty($weatherData)) {
       return [];
     }
-    return [
+    $build = [
       '#theme' => 'fausttheme_weather_info',
       '#temp' => $weatherData['main']['temp'],
       '#wind' => $weatherData['wind']['speed'],
       '#city' => $weatherData['name'],
-      '#cache' => [
-        'max-age' => 1800,
-      ],
       '#attached' => [
         'library' => [
           'weather_info/weather_info',
         ],
       ],
+      '#cache' => [
+        'max-age' => 1800,
+        'contexts' => ['weather_data'],
+      ],
     ];
+    return $build;
   }
 
 }

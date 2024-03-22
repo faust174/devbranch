@@ -1,15 +1,11 @@
 <?php
 
-use Drupal\Core\Form\FormStateInterface;
-
 /**
-* Implements hook_entity_build
-*/
-function registration_form_entity_type_build(array &$entity_types) {
+ * Implements hook_entity_type_build().
+ */
+function registration_form_entity_type_build(array &$entity_types):void {
 
   $entity_types['user']->setFormClass(
-  'register',
-  'Drupal\registration_form\Form\RegistrationForm'
+    'register', 'Drupal\registration_form\Form\RegistrationForm'
   );
 }
-

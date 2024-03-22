@@ -62,7 +62,6 @@ class RegistrationFormBlock extends BlockBase implements ContainerFactoryPluginI
       ],
       '#attached' => ['library' => ['core/drupal.dialog.ajax']],
     ];
-
     return $build;
   }
 
