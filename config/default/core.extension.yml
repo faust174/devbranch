@@ -47,6 +47,7 @@ module:
   quick_node_clone: 0
   redirect: 0
   redirect_404: 0
+  registration_form: 0
   responsive_image: 0
   search: 0
   shortcut: 0

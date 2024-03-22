@@ -24,20 +24,13 @@ class UserWeatherInfoForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container) {
+  public static function create(ContainerInterface $container):static {
     return new static(
       $container->get('config.factory'),
       $container->get('database'),
       $container->get('current_user'),
       $container->get('weather_info.user_selected_city'),
     );
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function getEditableConfigNames():array {
-    return ['weather_info.settings'];
   }
 
   /**
@@ -52,11 +45,8 @@ class UserWeatherInfoForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state):array {
     $selected_city = $this->userCityHandler->getUserSelectedCity();
-    $cities = [
-      'Lutsk' => $this->t('Lutsk'),
-      'London' => $this->t('London'),
-      'Luxembourg' => $this->t('Luxembourg'),
-    ];
+
+    $cities = $this->userCityHandler->getCities();
     $form['city'] = [
       '#type' => 'select',
       '#options' => $cities,

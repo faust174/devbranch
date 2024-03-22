@@ -8,15 +8,11 @@ dependencies:
     - field.field.user.user.field_social
     - field.field.user.user.field_website
     - field.field.user.user.user_picture
-    - views.view.breaking
-    - views.view.categories_test
-    - views.view.user_block
   module:
     - image
     - layout_builder
     - link
     - user
-    - views
 third_party_settings:
   layout_builder:
     enabled: false
@@ -37,11 +33,11 @@ content:
     region: content
   field_name:
     type: string
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_social:
     type: link
@@ -61,13 +57,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   user_picture:
     type: image
-    label: hidden
+    label: above
     settings:
-      image_link: content
+      image_link: ''
       image_style: ''
       image_loading:
         attribute: lazy

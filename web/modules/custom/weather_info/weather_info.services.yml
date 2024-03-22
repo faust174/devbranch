@@ -4,6 +4,12 @@ services:
     arguments:
         - '@current_user'
         - '@database'
+        - '@entity_type.manager'
   weather_info.weather_api_connection_handler:
     class: Drupal\weather_info\Service\WeatherAPIConnectionHandler
     arguments: [ '@http_client', '@config.factory', '@cache.default' ]
+  cache_context.weather_data:
+    class: Drupal\weather_info\Service\WeatherInfoCacheService
+    arguments: [ '@current_user', '@weather_info.user_selected_city' ]
+    tags:
+      - { name: cache.context }

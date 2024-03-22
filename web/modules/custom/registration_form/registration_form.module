@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function registration_form_entity_type_build(array &$entity_types):void {
+
+  $entity_types['user']->setFormClass(
+    'register', 'Drupal\registration_form\Form\RegistrationForm'
+  );
+}

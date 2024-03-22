@@ -21,7 +21,7 @@
   <div class="author-body">
   <h3 class="user-name">{{ user_name }}
     <span class="article-count">{{ article_count }}&nbsp;
-      {% if article_count > 0 and article_count != 1 %}
+      {% if article_count != 1 %}
       {% trans %}Posts{% endtrans %}
       {% else %}
       {% trans %}Post{% endtrans %}

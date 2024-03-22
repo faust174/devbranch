@@ -1,0 +1,7 @@
+name: 'Registration form'
+type: module
+description: 'Registration form for the new users.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:config

@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function registration_form_schema() {
+  $schema = [];
+  $schema['user_data'] = [
+    'description' => 'Stores data about registered users.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for db entry.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'User ID.',
+      ],
+      'city' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Selected city.',
+      ],
+      'country' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Selected country.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  $schema['user_interests'] = [
+    'description' => 'Stores user interests.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for db entry.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'User ID.',
+      ],
+      'tid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Taxonomy term ID.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function registration_form_10001():void {
+  $schema = registration_form_schema();
+  $table = $schema['user_data'];
+
+  if (Drupal::database()->schema()->tableExists('user_data')) {
+    return;
+  }
+  Drupal::database()->schema()->createTable('user_data', $table);
+}

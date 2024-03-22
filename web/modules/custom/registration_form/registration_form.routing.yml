@@ -1,0 +1,7 @@
+register_form.register_form:
+  path: 'register'
+  defaults:
+    _entity_form: 'register_form.register'
+    _title: 'Register'
+  requirements:
+    _permission: 'access content'

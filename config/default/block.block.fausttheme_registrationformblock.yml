@@ -1,24 +1,23 @@
-uuid: 4cadc6e3-686a-4f77-8153-0d6472c501d7
+uuid: baf28cd2-bb01-4c9d-a6e6-ea0f21b990a3
 langcode: en
 status: true
 dependencies:
   module:
     - block_visibility_groups
-    - weather_info
+    - registration_form
   theme:
     - fausttheme
-id: fausttheme_weatherinfoblock
+id: fausttheme_registrationformblock
 theme: fausttheme
 region: header
-weight: -22
+weight: 0
 provider: null
-plugin: weather_info_block
+plugin: 'Registration form block'
 settings:
-  id: weather_info_block
-  label: 'Weather Info Block'
+  id: 'Registration form block'
+  label: 'Registration form block'
   label_display: '0'
-  provider: weather_info
-  city: Lutsk
+  provider: registration_form
 visibility:
   condition_group:
     id: condition_group
