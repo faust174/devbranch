@@ -1,0 +1,5 @@
+name: 'Batch'
+type: module
+description: 'Provides batch update functionality.'
+core_version_requirement: ^10
+package: Custom
