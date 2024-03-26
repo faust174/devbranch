@@ -24,17 +24,10 @@ class BatchCommands extends DrushCommands {
    * @aliases upd_format
    */
   public function updateParagraphTextformat() {
-    $query = $this->entityTypeManager->getStorage('paragraph')
-      ->getQuery()
-      ->accessCheck(FALSE)
-      ->exists('field_quote');
-    $paragraphs = $query->execute();
-    $format = 'limited_html';
-
     $batch = [
       'title' => t('Bulk updating text format'),
       'operations' => [
-        [[$this, 'processItems'], [$paragraphs, $format]],
+        [[$this, 'processItems'], []],
       ],
     ];
 
@@ -46,42 +39,26 @@ class BatchCommands extends DrushCommands {
   /**
    * Process batch items.
    */
-  public function processItems($paragraphs, $format, &$context): void {
+  public function processItems(&$context): void {
     $limit = 11;
-    if (empty($context['sandbox']['progress'])) {
-      $context['sandbox']['progress'] = 0;
-      $context['sandbox']['max'] = count($paragraphs);
+    $format = 'limited_html';
+    $query = $this->entityTypeManager->getStorage('paragraph')
+      ->getQuery()
+      ->accessCheck(FALSE)
+      ->condition('field_quote.format', $format, '<>')
+      ->range(0, $limit);
+    $paragraphs = $query->execute();
+    if (empty($paragraphs)) {
+      $context['finished'] = 1;
+      return;
     }
-
-    if (empty($context['sandbox']['items'])) {
-      $context['sandbox']['items'] = $paragraphs;
+    $multipleParagraphs = $this->entityTypeManager
+      ->getStorage('paragraph')
+      ->loadMultiple($paragraphs);
+    foreach ($multipleParagraphs as $paragraph) {
+      $this->updateFormat($paragraph, $format);
     }
-
-    $counter = 0;
-    if (!empty($context['sandbox']['items'])) {
-
-      if ($context['sandbox']['progress'] != 0) {
-        array_splice($context['sandbox']['items'], 0, $limit);
-      }
-
-      $entity = \Drupal::entityTypeManager();
-      $multipleParagraphs = $entity
-        ->getStorage('paragraph')
-        ->loadMultiple($paragraphs);
-
-      foreach ($multipleParagraphs as $paragraph) {
-        if ($counter != $limit) {
-          $this->updateFormat($paragraph, $format);
-
-          $context['sandbox']['progress']++;
-          $counter++;
-        }
-      }
-    }
-
-    if ($context['sandbox']['progress'] != $context['sandbox']['max']) {
-      $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']['max'];
-    }
+    $context['finished'] = 0;
   }
 
   /**
