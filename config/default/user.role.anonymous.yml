@@ -10,7 +10,6 @@ dependencies:
     - field_ui
     - filter
     - media
-    - search
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -25,6 +24,5 @@ permissions:
   - 'access user profiles'
   - 'administer user display'
   - 'administer user form display'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view media'

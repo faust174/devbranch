@@ -19,7 +19,6 @@ dependencies:
     - entity_reference_revisions
     - image
     - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
@@ -78,3 +77,5 @@ hidden:
   field_category: true
   field_checkbox: true
   field_description: true
+  langcode: true
+  search_api_excerpt: true

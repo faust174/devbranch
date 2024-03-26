@@ -71,5 +71,7 @@ content:
     weight: 0
     region: content
 hidden:
+  langcode: true
   layout_builder__layout: true
   member_for: true
+  search_api_excerpt: true

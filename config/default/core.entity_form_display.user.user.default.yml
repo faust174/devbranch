@@ -28,6 +28,7 @@ hidden:
   field_name: true
   field_social: true
   field_website: true
+  langcode: true
   language: true
   path: true
   timezone: true
