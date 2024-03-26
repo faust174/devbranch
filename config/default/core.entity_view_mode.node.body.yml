@@ -1,0 +1,11 @@
+uuid: cb7272ab-f365-412c-ba06-c005c0577599
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.body
+label: body
+description: ''
+targetEntityType: node
+cache: true
