@@ -1,0 +1,7 @@
+services:
+  batch.commands:
+    class: Drupal\batch\Commands\BatchCommands
+    tags:
+      - { name: drush.command }
+    arguments:
+      [ '@entity_type.manager' ]

@@ -27,6 +27,7 @@ function weather_info_schema() {
 
   return $schema;
 }
+
 /**
  * Perform migration of data from user_city_preferences to user_data table.
  */
