@@ -34,6 +34,7 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - linkPlugin
   plugins:
     ckeditor5_codeBlock:
       languages:
@@ -95,6 +96,8 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor_plugin_link:
+      default_color: '#e34f30'
 image_upload:
   status: true
   scheme: public

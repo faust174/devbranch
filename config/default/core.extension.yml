@@ -12,6 +12,7 @@ module:
   block_visibility_groups: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor_plugin: 0
   comment: 0
   components: 0
   config: 0

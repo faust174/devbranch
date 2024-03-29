@@ -1,0 +1,28 @@
+uuid: 84a09001-2ed8-4379-961c-c8f2b98de956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_test
+    - filter.format.basic_html
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.quote
+  module:
+    - text
+id: paragraph.quote.field_test
+field_name: field_test
+entity_type: paragraph
+bundle: quote
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_with_summary

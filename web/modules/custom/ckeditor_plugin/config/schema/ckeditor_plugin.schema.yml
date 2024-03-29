@@ -1,0 +1,8 @@
+ckeditor5.plugin.ckeditor_plugin_link:
+  type: mapping
+  label: 'CKEditor Link Plugin Configuration'
+  mapping:
+    default_color:
+      type: string
+      label: 'Default Color for Links'
+      description: 'Specify the default color for links in hexadecimal format (e.g., #000000 for black).'

@@ -72,6 +72,8 @@ field_settings:
       separator: |+
 
 
+
+
       fields:
         - 'entity:node/field_image_paragraph'
         - 'entity:node/title'
