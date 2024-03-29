@@ -88,7 +88,8 @@ export default class LinkPluginView {
 
   insertLink(title, link, textColor, bgColor) {
     const command = this.editor.commands.get('insertLinkPlugin');
-    command.execute(title, link, textColor, bgColor);
+    const correctedLink = link.startsWith('http') ? link : `http://${link}`;
+    command.execute(title, correctedLink, textColor, bgColor);
   }
 }
 

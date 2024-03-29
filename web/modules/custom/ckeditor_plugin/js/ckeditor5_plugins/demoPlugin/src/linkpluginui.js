@@ -23,7 +23,6 @@ export default class LinkPluginUI extends Plugin {
 
       this.listenTo(buttonView, 'execute', () => {
         const linkPluginView = new LinkPluginView(editor, defaultColor);
-        console.log(defaultColor);
         linkPluginView.openModal();
       });
 
