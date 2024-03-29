@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.quote.field_quote
+    - field.field.paragraph.quote.field_test
     - paragraphs.paragraphs_type.quote
   module:
     - text
@@ -19,6 +20,16 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_test:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
 hidden:
   created: true

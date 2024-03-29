@@ -28,3 +28,4 @@ components:
     organisms: components/03-organisms
     templates: components/04-templates
     pages: components/05-pages
+ckeditor5-stylesheets: false

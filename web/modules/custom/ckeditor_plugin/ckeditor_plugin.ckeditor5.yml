@@ -1,0 +1,22 @@
+ckeditor_plugin_link:
+  ckeditor5:
+    plugins:
+      - demoPlugin.LinkPlugin
+  drupal:
+    label: Styled link
+    library: ckeditor_plugin/demobox
+    admin_library: ckeditor_plugin/admin.demobox
+    class: Drupal\ckeditor_plugin\Plugin\CKEditor5Plugin\LinkPlugin
+    toolbar_items:
+      linkPlugin:
+        label: Styled link
+        class: style-link
+    elements:
+      - <h2>
+      - <h2 class="simple-box-title">
+      - <a>
+      - <span>
+      - <div>
+      - <div class="simple-box-description">
+      - <section>
+      - <section class="simple-box">
