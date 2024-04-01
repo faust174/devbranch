@@ -1,0 +1,11 @@
+uuid: a77190b0-32de-43db-bf3d-81431cd30b0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.store
+id: node.store
+target_entity_type_id: node
+target_bundle: store
+default_langcode: site_default
+language_alterable: false
