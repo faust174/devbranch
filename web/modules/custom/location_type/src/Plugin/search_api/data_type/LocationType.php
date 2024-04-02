@@ -5,7 +5,7 @@ namespace Drupal\location_type\Plugin\search_api\data_type;
 use Drupal\search_api\DataType\DataTypePluginBase;
 
 /**
- * Provides a date range data type.
+ * Provides a custom location data type.
  *
  * @SearchApiDataType(
  *   id = "location_type",
