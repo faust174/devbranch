@@ -1,0 +1,6 @@
+name: 'Location type'
+type: module
+description: 'Custom location type.'
+core_version_requirement: ^10
+package: Custom
+

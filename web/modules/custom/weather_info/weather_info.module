@@ -7,9 +7,10 @@ function weather_info_theme($existing, $type, $theme, $path) {
   return [
     'fausttheme_weather_info' => [
       'variables' => [
-        'temp' => null,
-        'wind' => null,
+        'temp' => NULL,
+        'wind' => NULL,
       ],
     ],
   ];
+
 }

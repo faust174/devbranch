@@ -1,0 +1,12 @@
+uuid: 8928bb2b-bb7f-4e37-906f-822ad3a40604
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__solr_search__page_1
+name: 'search_api:views_page__solr_search__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

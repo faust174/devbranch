@@ -1,18 +1,15 @@
-uuid: 58fcdac4-00c7-40b1-a04e-83ec74f225e0
+uuid: 45a56f83-8c92-47e6-bdc0-d661a2b53f1e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image_paragraph
-    - field.storage.paragraph.field_text
-    - field.storage.node.field_category
+    - field.storage.node.field_location
     - search_api.server.solr_server
   module:
     - search_api_solr
-    - paragraphs
-    - node
+    - location_type
     - search_api
-    - taxonomy
+    - node
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -60,65 +57,25 @@ third_party_settings:
       specific_languages:
         en: '0'
       use_universal_collation: false
-id: content
-name: Content
+id: location
+name: Location
 description: ''
 read_only: false
 field_settings:
-  aggregated_field:
-    label: 'Aggregated field'
-    property_path: aggregated_field
-    type: 'solr_text_custom:ngram'
-    configuration:
-      type: union
-      separator: |+
-
-
-
-
-      fields:
-        - 'entity:node/field_image_paragraph'
-        - 'entity:node/title'
-  field_category:
-    label: Category
+  field_location:
+    label: Location
     datasource_id: 'entity:node'
-    property_path: field_category
-    type: integer
+    property_path: field_location
+    type: location_type
     dependencies:
       config:
-        - field.storage.node.field_category
-  field_text:
-    label: 'Body » Paragraph » Text'
-    datasource_id: 'entity:node'
-    property_path: 'field_image_paragraph:entity:field_text'
-    type: 'solr_text_custom:ngram'
-    dependencies:
-      config:
-        - field.storage.node.field_image_paragraph
-        - field.storage.paragraph.field_text
-      module:
-        - paragraphs
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: 'solr_text_custom:ngram'
-    dependencies:
-      module:
-        - node
+        - field.storage.node.field_location
 datasource_settings:
   'entity:node':
     bundles:
       default: false
       selected:
-        - article
-    languages:
-      default: true
-      selected: {  }
-  'entity:taxonomy_term':
-    bundles:
-      default: true
-      selected: {  }
+        - store
     languages:
       default: true
       selected: {  }
@@ -130,9 +87,7 @@ processor_settings:
   entity_type: {  }
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range:
-    weights:
-      preprocess_index: 0
+  solr_date_range: {  }
 tracker_settings:
   default:
     indexing_order: fifo

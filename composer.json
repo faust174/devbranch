@@ -30,6 +30,7 @@
         "drupal/entity_pager": "^1.0",
         "drupal/facets": "^2.0",
         "drupal/fontawesome": "^2.26",
+        "drupal/geofield": "^1.57",
         "drupal/menu_block": "^1.10",
         "drupal/menu_item_extras": "^3.0",
         "drupal/owlcarousel": "^3.0",
