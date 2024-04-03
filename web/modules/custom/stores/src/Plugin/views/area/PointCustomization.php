@@ -37,17 +37,46 @@ class PointCustomization extends AreaPluginBase {
       '#title' => $this->t('Point color'),
       '#type' => 'textfield',
       '#default_value' => $this->options['color'],
+      '#element_validate' => [
+        [$this, 'validateColorField'],
+      ],
     ];
     $form['size'] = [
       '#title' => $this->t('Point size'),
       '#type' => 'textfield',
       '#default_value' => $this->options['size'],
+      '#element_validate' => [
+        [$this, 'validateNumberField'],
+      ],
     ];
     $form['zoom'] = [
       '#title' => $this->t('Map zoom'),
       '#type' => 'textfield',
       '#default_value' => $this->options['zoom'],
+      '#element_validate' => [
+        [$this, 'validateNumberField'],
+      ],
     ];
+  }
+
+  /**
+   * Validation for number fields.
+   */
+  public function validateNumberField($element, FormStateInterface $form_state) {
+    $value = $element['#value'];
+    if (!is_numeric($value) || $value <= 0) {
+      $form_state->setError($element, $this->t('Please enter a valid positive number.'));
+    }
+  }
+
+  /**
+   * Validation for color field.
+   */
+  public function validateColorField($element, FormStateInterface $form_state) {
+    $value = $element['#value'];
+    if (!preg_match('/^#[a-f0-9]{6}$/i', $value)) {
+      $form_state->setError($element, $this->t('Please enter a valid hexadecimal color code (e.g., #RRGGBB).'));
+    }
   }
 
   /**
