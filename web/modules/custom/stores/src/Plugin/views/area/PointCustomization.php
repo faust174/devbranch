@@ -70,7 +70,7 @@ class PointCustomization extends AreaPluginBase {
    * {@inheritdoc}
    */
   public function render($empty = FALSE) {
-    $id = $this->view->current_display;
+    $id = $this->view->id() . '_' . $this->view->current_display;
     foreach ($this->view->result as $item) {
       $field_location_value = $item->_entity->get('field_location')->getValue();
       $field_location_values[] = $field_location_value;
