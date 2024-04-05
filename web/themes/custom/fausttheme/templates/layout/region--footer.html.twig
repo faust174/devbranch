@@ -51,13 +51,14 @@
 
 
     {% for key, element in elements %}
-      {% if key not in ['fausttheme_site_branding', 'fausttheme_mainnavigation', 'fausttheme_aboutus', 'fausttheme_socialmedia_2', 'fausttheme_company', 'fausttheme_views_block__the_latest_block_1', 'fausttheme_webform', 'fausttheme_copyright'] %}
+      {% if key not in ['fausttheme_site_branding', 'fausttheme_mainnavigation', 'fausttheme_aboutus', 'fausttheme_socialmedia_2', 'fausttheme_company', 'fausttheme_views_block__the_latest_block_1', 'fausttheme_webform', 'fausttheme_copyrightblock'] %}
         {{ element['#markup']}}
       {% endif %}
     {% endfor %}
   </div>
 
-  {% if elements['fausttheme_copyright'] is defined %}
-      {{ elements['fausttheme_copyright'] }}
+  {% if elements['fausttheme_copyrightblock'] is defined %}
+      {{ elements['fausttheme_copyrightblock'] }}
   {% endif %}
 {% endblock %}
+

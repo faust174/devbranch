@@ -1,0 +1,18 @@
+uuid: 8470d740-9880-427d-8698-e30100e2d89c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.right-header-menu
+id: menu_link_content.right-header-menu.title
+field_name: title
+entity_type: menu_link_content
+bundle: right-header-menu
+label: 'Menu link title'
+description: 'The text to be used for this link in the menu.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

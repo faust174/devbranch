@@ -1,0 +1,18 @@
+uuid: 1043bebf-775a-44f9-b521-4d198a4d0508
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.category-menu
+id: menu_link_content.category-menu.description
+field_name: description
+entity_type: menu_link_content
+bundle: category-menu
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

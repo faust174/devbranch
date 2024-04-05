@@ -1,0 +1,17 @@
+uuid: 7e5081e5-c535-4db1-8366-e9b14eebefa6
+langcode: en
+status: true
+dependencies: {  }
+id: global_configurations
+label: 'Global configurations'
+token: false
+context:
+  show_warning: true
+  group:
+    language: true
+  fallback:
+    language: ''
+menu:
+  path: /admin/custom_config
+  weight: 0
+  description: ''

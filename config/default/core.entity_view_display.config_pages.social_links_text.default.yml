@@ -1,0 +1,23 @@
+uuid: fd057a74-6c73-4015-9dbc-a600e0131a22
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.social_links_text
+    - field.field.config_pages.social_links_text.field_social_media
+  module:
+    - text
+id: config_pages.social_links_text.default
+targetEntityType: config_pages
+bundle: social_links_text
+mode: default
+content:
+  field_social_media:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

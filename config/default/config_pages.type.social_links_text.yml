@@ -1,0 +1,17 @@
+uuid: 17d3d925-e2db-4bd1-8d1e-1c3e7a405613
+langcode: en
+status: true
+dependencies: {  }
+id: social_links_text
+label: ' Social links text'
+token: false
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''

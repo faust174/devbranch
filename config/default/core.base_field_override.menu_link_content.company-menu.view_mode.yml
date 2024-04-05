@@ -1,0 +1,20 @@
+uuid: 56139a77-cc32-486c-8261-65c0d4e46092
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.company-menu
+  module:
+    - menu_item_extras
+id: menu_link_content.company-menu.view_mode
+field_name: view_mode
+entity_type: menu_link_content
+bundle: company-menu
+label: 'View mode'
+description: 'Per item view mode selector.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

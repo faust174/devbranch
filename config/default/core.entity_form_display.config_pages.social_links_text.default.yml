@@ -1,0 +1,24 @@
+uuid: b615463b-0e99-4777-a645-699599509090
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.social_links_text
+    - field.field.config_pages.social_links_text.field_social_media
+  module:
+    - text
+id: config_pages.social_links_text.default
+targetEntityType: config_pages
+bundle: social_links_text
+mode: default
+content:
+  field_social_media:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  label: true
