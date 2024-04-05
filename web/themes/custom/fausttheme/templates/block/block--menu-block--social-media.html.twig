@@ -25,8 +25,9 @@
  * @see template_preprocess_block()
  */
 #}
+{% set config = config_pages_field('global_configurations', 'field_social_media_text', 'default') %}
 <div {{ bem('block') }}>
-    <h2{{ title_attributes.addClass('h2') }}>{{ social_media_text }}</h2>
+    <h2{{ title_attributes.addClass('h2') }}>{{ config }}</h2>
   {% block content %}
     {{ content }}
   {% endblock %}
