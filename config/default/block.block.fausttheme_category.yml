@@ -5,7 +5,6 @@ dependencies:
   config:
     - facets.facet.category
   module:
-    - block_class
     - block_visibility_groups
     - facets
     - system
