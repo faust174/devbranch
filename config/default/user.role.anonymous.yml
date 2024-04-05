@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.plain_text_token
     - filter.format.restricted_html
   module:
     - comment
@@ -24,5 +25,6 @@ permissions:
   - 'access user profiles'
   - 'administer user display'
   - 'administer user form display'
+  - 'use text format plain_text_token'
   - 'use text format restricted_html'
   - 'view media'

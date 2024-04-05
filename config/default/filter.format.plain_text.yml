@@ -1,29 +1,47 @@
 uuid: a39e3492-b691-4c1a-8e1c-2e9b761c2211
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - editor
+    - token_filter
 _core:
   default_config_hash: JLMwODO0epnA_H-jFlH9ezVfa5YBJniRv3MmLqYNl_Q
 name: 'Plain text'
 format: plain_text
 weight: 10
 filters:
-  filter_autop:
-    id: filter_autop
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
     provider: filter
     status: true
     weight: 0
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: "<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type='1 A I'> <li> <dl> <dt> <dd> <h2 id='jump-*'> <h3 id> <h4 id> <h5 id> <h6 id>"
+      filter_html_help: true
+      filter_html_nofollow: false
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: true
     weight: -10
     settings: {  }
-  filter_url:
-    id: filter_url
-    provider: filter
+  token_filter:
+    id: token_filter
+    provider: token_filter
     status: true
     weight: 0
     settings:
-      filter_url_length: 72
+      replace_empty: '0'

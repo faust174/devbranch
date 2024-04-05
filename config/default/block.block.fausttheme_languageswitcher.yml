@@ -1,0 +1,26 @@
+uuid: c5f19ddf-6cc0-46dc-9ef7-2d8e63f03191
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - language
+  theme:
+    - fausttheme
+id: fausttheme_languageswitcher
+theme: fausttheme
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

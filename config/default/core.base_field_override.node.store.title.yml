@@ -1,0 +1,18 @@
+uuid: 85338695-c951-4097-bad4-ddf3122cc61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.store
+id: node.store.title
+field_name: title
+entity_type: node
+bundle: store
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

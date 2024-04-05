@@ -1,0 +1,18 @@
+uuid: c605d793-1d1f-436f-b2b9-e0164656f288
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.company-menu
+id: menu_link_content.company-menu.changed
+field_name: changed
+entity_type: menu_link_content
+bundle: company-menu
+label: Changed
+description: 'The time that the menu link was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
