@@ -11,7 +11,7 @@ _core:
 id: fausttheme_content
 theme: fausttheme
 region: content
-weight: -20
+weight: -28
 provider: null
 plugin: system_main_block
 settings:

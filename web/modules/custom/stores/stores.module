@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function stores_views_data_alter(array &$data) {
+  $data['views']['our_stores'] = [
+    'title' => t('Stores customization'),
+    'help' => t('Configure how the stores shown on the map.'),
+    'area' => [
+      'id' => 'our_stores',
+    ],
+  ];
+}
+

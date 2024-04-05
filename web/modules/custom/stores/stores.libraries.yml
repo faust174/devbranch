@@ -1,0 +1,9 @@
+leaflet:
+  version: 1.9.4
+  js:
+    ../../../libraries/leaflet/dist/leaflet.js: {}
+    js/map.js: {}
+  css:
+    theme:
+      ../../../libraries/leaflet/dist/leaflet.css: {}
+

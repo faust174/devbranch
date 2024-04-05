@@ -1,0 +1,6 @@
+name: 'Stores'
+type: module
+description: 'Displays stores on the map using leaflet library.'
+core_version_requirement: ^10
+package: Custom
+

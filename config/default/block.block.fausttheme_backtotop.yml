@@ -12,7 +12,7 @@ dependencies:
 id: fausttheme_backtotop
 theme: fausttheme
 region: content
-weight: 0
+weight: -21
 provider: null
 plugin: 'block_content:6f92e808-c2f3-4541-bc2a-6a11fffd8ca0'
 settings:
