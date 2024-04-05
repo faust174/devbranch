@@ -43,7 +43,7 @@ class PointCustomization extends AreaPluginBase {
       '#type' => 'textfield',
       '#default_value' => $this->options['size'],
       '#element_validate' => [
-        [$this, 'validateNumberField'],
+              [$this, 'validateNumberField'],
       ],
     ];
     $form['zoom'] = [
@@ -51,7 +51,7 @@ class PointCustomization extends AreaPluginBase {
       '#type' => 'textfield',
       '#default_value' => $this->options['zoom'],
       '#element_validate' => [
-        [$this, 'validateNumberField'],
+              [$this, 'validateNumberField'],
       ],
     ];
   }
@@ -70,13 +70,14 @@ class PointCustomization extends AreaPluginBase {
    * {@inheritdoc}
    */
   public function render($empty = FALSE) {
+    $id = $this->view->current_display;
     foreach ($this->view->result as $item) {
       $field_location_value = $item->_entity->get('field_location')->getValue();
       $field_location_values[] = $field_location_value;
     }
 
     $build['#attached']['library'][] = 'stores/leaflet';
-    $build['#attached']['drupalSettings'] = [
+    $build['#attached']['drupalSettings'][$id] = [
       'stores' => [
         'color' => $this->options['color'],
         'size' => $this->options['size'],
@@ -84,7 +85,7 @@ class PointCustomization extends AreaPluginBase {
         'locations' => $field_location_values,
       ],
     ];
-    $build['#markup'] = ' <div id="map"></div>';
+    $build['#markup'] = ' <div class="leaflet__map" data-view-id = ' . $id . '></div>';
     return $build;
   }
 
