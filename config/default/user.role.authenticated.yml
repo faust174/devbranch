@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.plain_text_token
     - filter.format.webform_default
   module:
     - comment
@@ -29,5 +30,6 @@ permissions:
   - 'post comments'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format plain_text_token'
   - 'use text format webform_default'
   - 'view media'

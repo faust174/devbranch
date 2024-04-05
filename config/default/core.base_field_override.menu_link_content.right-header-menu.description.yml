@@ -1,0 +1,18 @@
+uuid: 02140604-4360-466f-a14d-5c4b7fdb372e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.right-header-menu
+id: menu_link_content.right-header-menu.description
+field_name: description
+entity_type: menu_link_content
+bundle: right-header-menu
+label: Description
+description: 'Shown when hovering over the menu link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

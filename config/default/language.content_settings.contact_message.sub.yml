@@ -1,0 +1,11 @@
+uuid: 4a987595-5a42-4046-b19c-91b2f830e3e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.sub
+id: contact_message.sub
+target_entity_type_id: contact_message
+target_bundle: sub
+default_langcode: site_default
+language_alterable: false

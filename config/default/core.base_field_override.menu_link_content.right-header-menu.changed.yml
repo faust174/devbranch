@@ -1,0 +1,18 @@
+uuid: 44b562ef-a317-443c-baa6-33dde386960e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.right-header-menu
+id: menu_link_content.right-header-menu.changed
+field_name: changed
+entity_type: menu_link_content
+bundle: right-header-menu
+label: Changed
+description: 'The time that the menu link was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

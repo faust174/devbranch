@@ -1,0 +1,24 @@
+uuid: 4c217167-dc96-4b50-8ed0-bba81cb24103
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.social_links_text
+    - field.storage.config_pages.field_social_media
+    - filter.format.plain_text_token
+  module:
+    - text
+id: config_pages.social_links_text.field_social_media
+field_name: field_social_media
+entity_type: config_pages
+bundle: social_links_text
+label: 'Social media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text_token
+field_type: text
