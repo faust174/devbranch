@@ -17,18 +17,17 @@ class CustomDestinationPlugin extends DestinationBase {
   /**
    * {@inheritdoc}
    */
-  public function getIds() {
+  public function getIds():array {
     return [
       'uid' => [
         'type' => 'integer',
       ],
     ];
   }
-
   /**
    * {@inheritDoc}
    */
-  public function import(Row $row, array $old_destination_id_values = []) {
+  public function import(Row $row, array $old_destination_id_values = []):void {
     $data = [
       'uid' => $row->getSourceProperty('uid'),
       'city' => $row->getSourceProperty('city'),
