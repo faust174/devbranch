@@ -63,9 +63,9 @@ field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymGraphFilterFactory
+          ignoreCase: true
           synonyms: synonyms_uk.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
@@ -125,9 +125,9 @@ unstemmed_field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymGraphFilterFactory
+          ignoreCase: true
           synonyms: synonyms_uk.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
@@ -367,10 +367,10 @@ text_files:
     якого
     якої
     якщо
+  protwords: |
+
+  accents: ''
   synonyms: |
     drupal, durpal
   nouns: |
 
-  protwords: |
-
-  accents: ''

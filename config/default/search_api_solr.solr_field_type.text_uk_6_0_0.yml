@@ -39,8 +39,8 @@ field_type:
           words: stopwords_uk.txt
         -
           class: solr.SnowballPorterFilterFactory
-          language: Russian
           protected: protwords_uk.txt
+          language: Russian
         -
           class: solr.RemoveDuplicatesTokenFilterFactory
     -
@@ -62,17 +62,17 @@ field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymFilterFactory
+          ignoreCase: true
           synonyms: synonyms_uk.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
           words: stopwords_uk.txt
         -
           class: solr.SnowballPorterFilterFactory
-          language: Russian
           protected: protwords_uk.txt
+          language: Russian
         -
           class: solr.RemoveDuplicatesTokenFilterFactory
 unstemmed_field_type:
@@ -123,9 +123,9 @@ unstemmed_field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymFilterFactory
+          ignoreCase: true
           synonyms: synonyms_uk.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
@@ -365,10 +365,10 @@ text_files:
     якого
     якої
     якщо
+  protwords: |
+
+  accents: ''
   synonyms: |
     drupal, durpal
   nouns: |
 
-  protwords: |
-
-  accents: ''

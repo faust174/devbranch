@@ -1,0 +1,25 @@
+id: migration_custom_fields
+migration_group: users_data
+migration_tags:
+  - users
+label: 'Migration from CSV file to Custom Table'
+source:
+  plugin: csv
+  path: 'modules/custom/migration_csv/assets/migration.csv'
+  delimiter: ","
+  header_offset: 0
+  ids:
+    - uid
+  column_names:
+    0:
+      uid: 'User ID'
+    4:
+      city: 'City'
+    5:
+      country: 'Country'
+process:
+  uid: uid
+  city: city
+  country: country
+destination:
+  plugin: custom_destination_plugin
