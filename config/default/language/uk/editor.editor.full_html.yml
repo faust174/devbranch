@@ -2,31 +2,5 @@ settings:
   plugins:
     ckeditor5_codeBlock:
       languages:
-        -
-          label: 'Простий текст'
-        -
-          label: C
-        -
-          label: 'C#'
-        -
-          label: C++
-        -
-          label: CSS
-        -
-          label: Різниця
-        -
-          label: HTML
-        -
-          label: Java
-        -
-          label: JavaScript
-        -
-          label: PHP
-        -
-          label: Пітон
-        -
-          label: Ruby
-        -
-          label: TypeScript
-        -
+        13:
           label: XML

@@ -38,6 +38,8 @@
         "drupal/geofield": "^1.57",
         "drupal/menu_block": "^1.10",
         "drupal/menu_item_extras": "^3.0",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.6",
         "drupal/owlcarousel": "^3.0",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",
