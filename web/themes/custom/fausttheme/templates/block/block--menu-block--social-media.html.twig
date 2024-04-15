@@ -28,8 +28,8 @@
 {% set config = config_pages_field('social_links_text', 'field_social_media', 'default') %}
 <div {{ bem('block') }}>
   <h2{{ title_attributes.addClass('h2') }}>
-    {% if config is empty %}
-      Follow us
+    {% if config[0] is empty %}
+      {% trans %}Follow us{% endtrans %}
     {% else %}
       {{ config }}
     {% endif %}
