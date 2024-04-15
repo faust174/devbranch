@@ -25,9 +25,15 @@
  * @see template_preprocess_block()
  */
 #}
-{% set config = config_pages_field('global_configurations', 'field_social_media_text', 'default') %}
+{% set config = config_pages_field('social_links_text', 'field_social_media', 'default') %}
 <div {{ bem('block') }}>
-    <h2{{ title_attributes.addClass('h2') }}>{{ config }}</h2>
+  <h2{{ title_attributes.addClass('h2') }}>
+    {% if config[0] is empty %}
+      {% trans %}Follow us{% endtrans %}
+    {% else %}
+      {{ config }}
+    {% endif %}
+  </h2>
   {% block content %}
     {{ content }}
   {% endblock %}

@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -50,21 +51,33 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $field_copyrights = $this->configPagesLoaderService->getFieldView('global_configurations', 'field_copyrights');
-    unset($field_copyrights['#title']);
-    $field_copyrights['#cache']['tags'] = ['config_pages:1'];
-    $field_copyrights['#attributes'] = ['class' => ['copyright']];
-    return $field_copyrights;
+    $loader = $this->configPagesLoaderService;
+    if ($entity = $loader->load('global_configurations')) {
+      $copyright = $entity->get('field_copyrights')->view('default');
+    }
+    else {
+      $entityTypeManager = $this->entityTypeManager;
+      $cache = $entityTypeManager->getDefinition('config_pages')->getListCacheTags();
+      $copyright = [
+        '#markup' => $this->t('Copyright'),
+        '#cache' => [
+          'tags' => $cache,
+        ],
+      ];
+    }
+    return $copyright;
   }
 
   /**
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    $form = parent::blockForm($form, $form_state);
     $form['copyright_link'] = [
-      '#markup' => $this->t('Copyrights text can be edited <a href="/admin/custom_config/">here</a>.'),
+      '#type' => 'link',
+      '#title' => $this->t('Configure your block here'),
+      '#url' => Url::fromRoute('config_pages.global_configurations'),
     ];
+
     return $form;
   }
 
