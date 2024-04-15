@@ -51,21 +51,21 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $field_copyrights = $this->configPagesLoaderService->getFieldView('global_configurations', 'field_copyrights', 'default');
-    $field_copyrights['#attributes'] = ['class' => ['copyright']];
-    if (empty($field_copyrights['#items'])) {
-      $config_pages = $this->entityTypeManager->getStorage('config_pages')->load('global_configurations');
-      $cache = $config_pages->getCacheTags();
-      $build = [
-        '#markup' => $this->t('Copyright'),
-        '#cache' => ['tags' => $cache],
-        '#attributes' => ['class' => ['copyright']],
-      ];
-      return $build;
+    $loader = $this->configPagesLoaderService;
+    if ($entity = $loader->load('global_configurations')) {
+      $copyright = $entity->get('field_copyrights')->view('default');
     }
     else {
-      return $field_copyrights;
+      $entityTypeManager = $this->entityTypeManager;
+      $cache = $entityTypeManager->getDefinition('config_pages')->getListCacheTags();
+      $copyright = [
+        '#markup' => $this->t('Copyright'),
+        '#cache' => [
+          'tags' => $cache,
+        ],
+      ];
     }
+    return $copyright;
   }
 
   /**
