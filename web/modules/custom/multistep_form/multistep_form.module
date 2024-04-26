@@ -1,0 +1,27 @@
+<?php
+//
+///**
+// * @file
+// */
+//
+///**
+// *
+// */
+//function theme_custom_multistep_progress(array $variables) {
+//  $steps = $variables['steps'];
+//  $current_step = $variables['current_step'];
+//
+//  $output = '<div class="custom-progress-bar">';
+//  foreach ($steps as $step_num => $step_label) {
+//    $classes = ['step'];
+//    if ($step_num == $current_step) {
+//      $classes[] = 'current';
+//    }
+//    $output .= '<div class="' . implode(' ', $classes) . '">';
+//    $output .= '<a href="?step=' . $step_num . '">' . $step_label . '</a>';
+//    $output .= '</div>';
+//  }
+//  $output .= '</div>';
+//
+//  return $output;
+//}

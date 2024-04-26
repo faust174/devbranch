@@ -1,0 +1,42 @@
+step_order:
+  - product
+  - address
+  - payment
+enable_step1: 0
+disable_step1: 0
+disable_step2: 1
+disable_step3: 0
+disable_: 1
+disable_disable: 0
+label_disable: ''
+disable_address: 0
+disable_payment: 0
+disable_product: 0
+label_payment: null
+label_product: null
+label_address: null
+label_: ''
+disable_1: 0
+disable_2: 0
+disable_3: 0
+weight_product: '1'
+weight_address: '2'
+weight_payment: '3'
+disable_Product: '1'
+weight_Product: '1'
+disable_Address: 0
+weight_Address: '2'
+disable_Payment: 0
+weight_Payment: '2'
+disable_steps: false
+disable_prodict: null
+step_settings:
+  Product:
+    weight: 0
+    disabled: false
+  Address:
+    weight: 1
+    disabled: false
+  Payment:
+    weight: 2
+    disabled: false

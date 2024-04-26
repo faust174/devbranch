@@ -54,6 +54,7 @@ module:
   migrate_plus: 0
   migrate_source_csv: 0
   migration_csv: 0
+  multistep_form: 0
   mysql: 0
   node: 0
   options: 0
