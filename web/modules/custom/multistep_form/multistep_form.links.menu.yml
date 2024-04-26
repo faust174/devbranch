@@ -1,0 +1,6 @@
+multistep_form.custom_multistep_form_settings:
+  title: 'Multistep Form'
+  description: 'Configure settings for Weather Info block.'
+  parent: system.admin_config_content
+  route_name: multistep_form.custom_multistep_form
+

@@ -1,0 +1,29 @@
+uuid: c545eab7-ed6c-4e1f-8c9d-ddac7253565d
+langcode: en
+status: false
+dependencies:
+  config:
+    - config_pages.type.social_links_text
+    - core.entity_view_mode.config_pages.full
+    - field.field.config_pages.social_links_text.field_social_media
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: config_pages.social_links_text.full
+targetEntityType: config_pages
+bundle: social_links_text
+mode: full
+content:
+  field_social_media:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

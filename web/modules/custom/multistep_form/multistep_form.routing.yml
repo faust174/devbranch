@@ -1,0 +1,14 @@
+multistep_form.custom_multistep_form:
+  path: '/admin/config/multistep-form'
+  defaults:
+    _form: '\Drupal\multistep_form\Form\CustomMultistepForm'
+    _title: 'Multistep Form'
+  requirements:
+    _permission: 'administer site configuration'
+multistep_form.configuration:
+  path: '/admin/config/multistep-form-configuration'
+  defaults:
+    _form: '\Drupal\multistep_form\Form\MultistepFormConfiguration'
+    _title: 'Multistep Form Configuration'
+  requirements:
+    _permission: 'administer site configuration'
