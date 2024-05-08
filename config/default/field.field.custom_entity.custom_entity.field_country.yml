@@ -1,0 +1,20 @@
+uuid: dc57f5f0-ab22-4ca5-aa8a-8de6a2d38b03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.custom_entity.field_country
+  module:
+    - custom_entity
+id: custom_entity.custom_entity.field_country
+field_name: field_country
+entity_type: custom_entity
+bundle: custom_entity
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

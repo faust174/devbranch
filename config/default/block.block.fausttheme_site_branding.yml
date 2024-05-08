@@ -11,7 +11,7 @@ _core:
 id: fausttheme_site_branding
 theme: fausttheme
 region: footer
-weight: -19
+weight: -25
 provider: null
 plugin: system_branding_block
 settings:

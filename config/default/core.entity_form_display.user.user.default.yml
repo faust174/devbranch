@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_additional
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
@@ -21,6 +22,16 @@ content:
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_additional:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   contact: true

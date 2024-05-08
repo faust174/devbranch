@@ -11,7 +11,7 @@ dependencies:
 id: fausttheme_company
 theme: fausttheme
 region: footer
-weight: -15
+weight: -22
 provider: null
 plugin: 'menu_block:company-menu'
 settings:

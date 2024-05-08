@@ -11,7 +11,7 @@ dependencies:
 id: fausttheme_copyright
 theme: fausttheme
 region: footer
-weight: -11
+weight: -19
 provider: null
 plugin: 'block_content:108aaec4-bab4-4e30-95b8-4cc079cfb7ce'
 settings:

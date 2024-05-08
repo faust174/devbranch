@@ -4,6 +4,7 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.user.token
+    - field.field.user.user.field_additional
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
@@ -72,6 +73,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_additional: true
   langcode: true
   member_for: true
   search_api_excerpt: true
