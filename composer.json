@@ -36,6 +36,7 @@
         "drupal/facets": "^2.0",
         "drupal/fontawesome": "^2.26",
         "drupal/geofield": "^1.57",
+        "drupal/inline_entity_form": "^3.0@RC",
         "drupal/menu_block": "^1.10",
         "drupal/menu_item_extras": "^3.0",
         "drupal/migrate_plus": "^6.0",

@@ -1,0 +1,11 @@
+entity.custom_entity.settings:
+  title: 'Custom entity'
+  description: 'Configure a Custom entity entity type.'
+  route_name:  entity.custom_entity.settings
+  parent: system.admin_structure
+
+entity.custom_entity.collection:
+  title: 'Custom entities'
+  description: 'List of custom entities.'
+  route_name: entity.custom_entity.collection
+  parent: system.admin_content

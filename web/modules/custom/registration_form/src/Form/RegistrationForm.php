@@ -85,6 +85,10 @@ class RegistrationForm extends RegisterForm {
 
     return $form;
   }
+
+  /**
+   *
+   */
   protected function invalidateUserCacheTags() {
     $cache_tags = [
       'user_list',
@@ -92,6 +96,7 @@ class RegistrationForm extends RegisterForm {
 
     \Drupal::service('cache_tags.invalidator')->invalidateTags($cache_tags);
   }
+
   /**
    * {@inheritdoc}
    */

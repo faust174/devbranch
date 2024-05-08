@@ -1,0 +1,3 @@
+administer custom_entity:
+  title: 'Administer custom entities'
+  restrict access: true

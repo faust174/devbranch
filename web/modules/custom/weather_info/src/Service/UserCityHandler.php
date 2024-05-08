@@ -54,7 +54,7 @@ class UserCityHandler {
     }
     else {
       $this->database->insert('user_data')
-        ->fields(['uid' => $uid, 'city' => $city])
+        ->fields(['uid' => $uid, 'city' => $city, 'country' => 'UA'])
         ->execute();
     }
   }
