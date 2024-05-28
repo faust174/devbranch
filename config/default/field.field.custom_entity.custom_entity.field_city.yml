@@ -1,0 +1,20 @@
+uuid: fb0ea8e9-f38c-433c-b8c8-8fc9553db466
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.custom_entity.field_city
+  module:
+    - custom_entity
+id: custom_entity.custom_entity.field_city
+field_name: field_city
+entity_type: custom_entity
+bundle: custom_entity
+label: City
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

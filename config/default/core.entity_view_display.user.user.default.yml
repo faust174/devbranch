@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_additional
     - field.field.user.user.field_body
     - field.field.user.user.field_name
     - field.field.user.user.field_social
@@ -24,6 +25,14 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_additional:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_body:
     type: basic_string
     label: hidden

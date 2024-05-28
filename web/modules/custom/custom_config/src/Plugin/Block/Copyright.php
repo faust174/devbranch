@@ -53,7 +53,8 @@ class Copyright extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     $loader = $this->configPagesLoaderService;
     if ($entity = $loader->load('global_configurations')) {
-      $copyright = $entity->get('field_copyrights')->view('default');
+      $copyright = $entity->get('field_copyrights')->view('full');
+      $copyright['#attributes']['class'][] = 'copyright';
     }
     else {
       $entityTypeManager = $this->entityTypeManager;

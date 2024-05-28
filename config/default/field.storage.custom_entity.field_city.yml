@@ -1,0 +1,19 @@
+uuid: e11d9ba4-c417-4471-bb52-5ce6798cb627
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity
+id: custom_entity.field_city
+field_name: field_city
+entity_type: custom_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 1f3c58a6-7407-423b-b288-c1e25deb8a7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_entity
+id: custom_entity.field_country
+field_name: field_country
+entity_type: custom_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,5 +1,5 @@
 services:
   registration_form.user_data_handler:
     class: Drupal\registration_form\Service\UserDataHandler
-    arguments: ['@database']
+    arguments: ['@database', '@entity_type.manager']
 

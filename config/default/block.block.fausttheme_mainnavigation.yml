@@ -11,7 +11,7 @@ dependencies:
 id: fausttheme_mainnavigation
 theme: fausttheme
 region: footer
-weight: -18
+weight: -26
 provider: null
 plugin: 'menu_block:main'
 settings:

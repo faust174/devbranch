@@ -1,0 +1,20 @@
+uuid: 580557e8-49ef-4135-a487-42763b7d54e9
+langcode: uk
+status: true
+dependencies:
+  module:
+    - custom_entity
+    - user
+id: user.field_additional
+field_name: field_additional
+entity_type: user
+type: entity_reference
+settings:
+  target_type: custom_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

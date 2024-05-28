@@ -1,11 +1,13 @@
 {% set row = rows.0.content['#row']._entity %}
 {% set user_id = row.uid.value %}
 {% set user_name = row.name.value %}
+{% set user_entity = drupal_entity('user', user_id) %}
 {% set user_body = row.field_body.value %}
 {% set user_picture_url = row.user_picture.entity.uri.value %}
 {% set image_url = file_url(user_picture_url) %}
 {% set field_social_value = row.field_social.value %}
 {% set field_website_value = user_entity["#user"].field_website.value %}
+{% set user_city = user_entity["#user"].field_city.value %}
 
 <div class="author-info-wrapper">
   <div class="image-socials">

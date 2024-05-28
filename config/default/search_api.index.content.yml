@@ -78,6 +78,7 @@ field_settings:
 
 
 
+
       fields:
         - 'entity:node/field_image_paragraph'
         - 'entity:node/title'
